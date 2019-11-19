@@ -26,6 +26,14 @@ module PE_test();
 
     wire done;
 
+    reg [(`BIN_LEN-1):0] weights [(`OUTPUT_CHANNEL-1):0][(`KERNEL_HEIGHT-1):0][(`KERNEL_WIDTH-1):0];
+    reg [(`BIN_LEN-1):0] one_dim_weights [(`OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH-1):0];
+    reg [(`OUTPUT_CHANNEL_LOG-1):0] output_channel_index [(`OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH-1):0];
+    reg [(`KERNEL_HEIGHT_LOG-1):0] kernel_height_index [(`OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH-1):0];
+    reg [(`KERNEL_WIDTH_LOG-1):0] kernel_width_index [(`OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH-1):0];
+
+    integer last_index_num, rand_num;
+
     processing_element PE(
         .clock(clock),
         .reset(reset),
@@ -52,6 +60,101 @@ module PE_test();
         .done(done)
     );
 
+    task weight_sort;
+        integer largest_index;
+        integer weight_tmp;
+        integer output_channel_index_temp;
+        integer height_index_temp;
+        integer width_index_temp;
+        for(int i = 0; i < `OUTPUT_CHANNEL; i++) begin
+            for(int j = 0; j < `KERNEL_HEIGHT; j++) begin
+                for(int k = 0; k < `KERNEL_WIDTH; k++) begin
+                    one_dim_weights[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k] = weights[i][j][k];
+                    output_channel_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k] = i;
+                    kernel_height_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k] = j;
+                    kernel_width_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k] = k;
+                end
+            end
+        end
+        for(int i = `OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH-1; i >= 0 ; i--) begin
+            largest_index = 0;
+            for(int j = 0; j <= i ; j++) begin
+                if(one_dim_weights[j] > one_dim_weights[largest_index]) begin
+                    largest_index = j;
+                end
+            end
+            weight_tmp = one_dim_weights[largest_index];
+            output_channel_index_temp = output_channel_index[largest_index];
+            height_index_temp = kernel_height_index[largest_index];
+            width_index_temp = kernel_width_index[largest_index];
+
+            one_dim_weights[largest_index] = one_dim_weights[i];
+            output_channel_index[largest_index] = output_channel_index[i];
+            kernel_height_index[largest_index] = kernel_height_index[i];
+            kernel_width_index[largest_index] = kernel_width_index[i];
+
+            one_dim_weights[i] = weight_tmp;
+            output_channel_index[i] = output_channel_index_temp;
+            kernel_height_index[i] = height_index_temp;
+            kernel_width_index[i] = width_index_temp;
+        end
+    endtask
+
+    task delta_process;
+        integer last_index_num;
+        last_index_num = 0;
+        delta_sims[0] = 1;
+        delta_vals[0] = $clog2(one_dim_weights[1] - one_dim_weights[0]);
+        for(int i = 2; i < `OUTPUT_CHANNEL*`KERNEL_HEIGHT*`KERNEL_WIDTH; i++) begin
+            if(one_dim_weights[i] == one_dim_weights[i-1]) begin
+                delta_sims[last_index_num] = delta_sims[last_index_num] + 1;
+            end else begin
+                last_index_num = last_index_num + 1;
+                delta_sims[last_index_num] = 1;
+                delta_vals[last_index_num] = $clog2(one_dim_weights[i] - one_dim_weights[i-1]);
+            end
+        end
+    endtask
+
+    task random_index_producer;
+        integer last_index_num;
+        integer rand_num;
+        last_index_num = 0;
+        rand_num = 0;
+        for(int i = 0; i < `OUTPUT_CHANNEL; i++) begin
+            for(int j = 0; j < `KERNEL_HEIGHT; j++) begin
+                for(int k = 0; k < `KERNEL_WIDTH; k++) begin
+                    rand_num = $urandom() % 2;
+                    if(rand_num) begin
+                        rand_num = $urandom() % 10;
+                        index_vals[last_index_num][(`INDEX_WIDTH - 2) : 0] = rand_num;
+                        index_vals[last_index_num][`INDEX_WIDTH - 1] = 1'b1;
+                        last_index_num = last_index_num + 1;
+                    end
+                    index_vals[last_index_num][(`OUTPUT_CHANNEL_LOG+`KERNEL_HEIGHT_LOG+`KERNEL_WIDTH_LOG-1) : `KERNEL_HEIGHT_LOG+`KERNEL_WIDTH_LOG] = output_channel_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k];
+                    index_vals[last_index_num][(`KERNEL_HEIGHT_LOG+`KERNEL_WIDTH_LOG-1) : `KERNEL_WIDTH_LOG] = kernel_height_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k];
+                    index_vals[last_index_num][(`KERNEL_WIDTH_LOG-1) : 0] = kernel_width_index[i*`KERNEL_HEIGHT*`KERNEL_WIDTH + j*`KERNEL_WIDTH + k];
+                    index_vals[last_index_num][`INDEX_WIDTH - 1] = 1'b0;
+                    last_index_num = last_index_num + 1;
+                end
+            end
+        end
+        index_vals[last_index_num] = 0;
+        index_vals[last_index_num][`INDEX_WIDTH - 1] = 1'b1;
+        last_index_num = last_index_num + 1;
+    endtask
+
+    task random_weight_producer;
+        for(int i = 0; i < `OUTPUT_CHANNEL; i++) begin
+            for(int j = 0; j < `KERNEL_HEIGHT; j++) begin
+                for(int k = 0; k < `KERNEL_WIDTH; k++) begin
+                    weights[i][j][k] = ($urandom() % (2**`BIN_LEN)) + 1;
+                end
+            end
+        end
+        weights[$urandom() % `OUTPUT_CHANNEL][$urandom() % `KERNEL_HEIGHT][$urandom() % `KERNEL_WIDTH] = 0;
+    endtask
+
     always begin
         #5;
         clock = ~clock;
@@ -77,58 +180,16 @@ module PE_test();
         @(negedge clock);
         reset = 0;
         @(negedge clock);
+
+        random_weight_producer();
+        weight_sort();
+        delta_process();
+        random_index_producer();
+
+        weight_val = one_dim_weights[0];
         input_val = 1;
         input_width_index = 1;
         input_height_index = 1;
-        weight_val = 0;
-
-        delta_vals[0] = 0;
-        delta_sims[0] = 2;
-
-        delta_vals[1] = 0;
-        delta_sims[1] = 2;
-
-        delta_vals[2] = 0;
-        delta_sims[2] = 4;
-
-        delta_vals[3] = 0;
-        delta_sims[3] = 1;
-
-        delta_vals[4] = 0;
-        delta_sims[4] = 3;
-
-        delta_vals[5] = 0;
-        delta_sims[5] = 2;
-
-        delta_vals[6] = 0;
-        delta_sims[6] = 1;
-
-        index_vals[0] = {1'b0, 2'd3, 1'd0, 1'd1};
-        index_vals[1] = {1'b1, 4'd1};
-        index_vals[2] = {1'b0, 2'd1, 1'd0, 1'd0};
-        index_vals[3] = {1'b0, 2'd2, 1'd1, 1'd0};
-        index_vals[4] = {1'b1, 4'd2};
-        index_vals[5] = {1'b0, 2'd0, 1'd0, 1'd1};
-        index_vals[6] = {1'b0, 2'd3, 1'd1, 1'd0};
-        index_vals[7] = {1'b1, 4'd1};
-        index_vals[8] = {1'b0, 2'd1, 1'd1, 1'd0};
-        index_vals[9] = {1'b1, 4'd1};
-        index_vals[10] = {1'b0, 2'd2, 1'd0, 1'd1};
-        index_vals[11] = {1'b1, 4'd3};
-        index_vals[12] = {1'b0, 2'd0, 1'd0, 1'd0};
-        index_vals[13] = {1'b0, 2'd2, 1'd1, 1'd1};
-        index_vals[14] = {1'b1, 4'd2};
-        index_vals[15] = {1'b0, 2'd1, 1'd0, 1'd1};
-        index_vals[16] = {1'b1, 4'd3};
-        index_vals[17] = {1'b0, 2'd0, 1'd1, 1'd0};
-        index_vals[18] = {1'b0, 2'd3, 1'd1, 1'd1};
-        index_vals[19] = {1'b1, 4'd2};
-        index_vals[20] = {1'b0, 2'd1, 1'd1, 1'd1};
-        index_vals[21] = {1'b0, 2'd0, 1'd1, 1'd1};
-        index_vals[22] = {1'b1, 4'd5};
-        index_vals[23] = {1'b0, 2'd2, 1'd0, 1'd0};
-        index_vals[24] = {1'b0, 2'd3, 1'd0, 1'd0};
-        index_vals[25] = {1'b1, 4'd0};
 
         @(negedge clock);
 

@@ -6,11 +6,11 @@ module index_down_counter (
     input enable,
     input init,
 
-    input [(`INDEX_NUM_LOG - 1):0] count_init,
+    input [(`OUTPUT_CHANNEL_LOG+`KERNEL_HEIGHT_LOG+`KERNEL_WIDTH_LOG - 1):0] count_init,
     output zero
 );
 
-    reg [(`INDEX_NUM_LOG - 1):0] count;
+    reg [(`OUTPUT_CHANNEL_LOG+`KERNEL_HEIGHT_LOG+`KERNEL_WIDTH_LOG - 1):0] count;
 
     always@(posedge clock)begin
         if(reset)begin
