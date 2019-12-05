@@ -4,7 +4,7 @@
 `define BIN_LEN 4
 `define DELTA_LEN 2         //roof(log2(max(shifts)))
 `define DELTA_SIM_LEN 3     //roof(log2(max(weights equal to eachother)))
-`define DELTA_NUM 7        //number of unique weights
+`define DELTA_NUM 64        //number of unique weights
 `define INDEX_NUM 64        //It should be around `OUTPUT_CHANNEL * `KERNEL_HEIGHT * `KERNEL_WIDTH. With new index num compression
 `define OUT_BIN_LEN 8
 `define INPUT_CHANNEL 3
