@@ -14,14 +14,13 @@ module processing_element(
     input [(`BIN_LEN - 1) : 0] weight_val,
     input [(`DELTA_LEN - 1) : 0] delta_val,
 
-    output reg [(`OUT_BIN_LEN - 1) : 0] w_val
+    output [(`OUT_BIN_LEN - 1) : 0] w_val
 
 );
 
 
     wire [(`OUT_BIN_LEN - 1) : 0] mult_val;
-    reg [(`OUT_BIN_LEN - 1) : 0] shift_val;
-    reg [(`OUT_BIN_LEN - 1) : 0] accumulator, next_accumulator;
+    wire [(`OUT_BIN_LEN - 1) : 0] shift_val;
 
     multiplier mult_inst(
         .input_val1(input_val),
@@ -39,23 +38,17 @@ module processing_element(
         .output_val(shift_val)
     );
 
-    always@(*) begin
-        next_accumulator = accumulator;
-        if(mult_enable) begin
-            next_accumulator = mult_val;
-        end else if(delta_count_down_restart) begin
-            next_accumulator = accumulator + shift_val;
-        end
-    end
+    accumulator accumulator_inst(
+        .clock(clock),
+        .reset(reset),
+        .enable(enable),
+        .mult_enable(mult_enable),
+        .shift_enable(delta_count_down_restart),
 
-    always@(posedge clock) begin
-        if(reset) begin
-            accumulator = 0;
-        end else if(enable) begin
-            accumulator = next_accumulator;
-        end
-    end
+        .mult_val(mult_val),
+        .shift_val(shift_val),
 
-    assign w_val = next_accumulator;
+        .w_val(w_val)
+    );
 
 endmodule
