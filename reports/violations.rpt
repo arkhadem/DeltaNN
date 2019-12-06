@@ -1,0 +1,13 @@
+Error: Cannot read file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-58)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : processing_unit
+Version: O-2018.06
+Date   : Thu Dec  5 22:23:41 2019
+****************************************
+
+This design has no violated constraints.
+
+1

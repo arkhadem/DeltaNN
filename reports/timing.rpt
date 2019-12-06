@@ -1,0 +1,888 @@
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Error: Could not read the following target libraries:
+NanGate_15nm_OCL_typical_conditional_ccs.db 
+ (UIO-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Warning: Can't read link_library file 'NanGate_15nm_OCL_typical_conditional_ccs.db'. (UID-3)
+Information: Updating design information... (UID-85)
+Warning: Design 'processing_unit' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 10
+        -transition_time
+Design : processing_unit
+Version: O-2018.06
+Date   : Thu Dec  5 22:23:38 2019
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/CONTROL2_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/Z_4 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N22 (net)     1     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]/next_state (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/CONTROL2_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/Z_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N17 (net)     8     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]/synch_enable (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[4]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/CONTROL2_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/Z_3 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N21 (net)     1     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]/next_state (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/CONTROL2_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/Z_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N17 (net)     8     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]/synch_enable (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[3]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/CONTROL2_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/Z_2 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N20 (net)     1     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]/next_state (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/CONTROL2_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/Z_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N17 (net)     8     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]/synch_enable (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[2]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/CONTROL2_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/Z_1 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N19 (net)     1     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]/next_state (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/CONTROL2_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/Z_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N17 (net)     8     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]/synch_enable (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[1]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/CONTROL2_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C56/Z_0 (*SELECT_OP_2.8_2.1_8)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N18 (net)     1     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]/next_state (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: PE_enables_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  PE_enables_reg[0]/clocked_on (**SEQGEN**)               0.00      0.00       0.00 r
+  PE_enables_reg[0]/Q (**SEQGEN**)                        0.00      0.00       0.00 r
+  PE_enables[0] (net)                          18                   0.00       0.00 r
+  C808/B (GTECH_AND2)                                     0.00      0.00       0.00 r
+  C808/Z (GTECH_AND2)                                     0.00      0.00       0.00 r
+  _2_net_ (net)                                 4                   0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (processing_element_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/enable (net)             0.00       0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (accumulator_47)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/enable (net)     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/A (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C72/Z (GTECH_AND2)     0.00     0.00     0.00 r d 
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N27 (net)     2     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/CONTROL2_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/C55/Z_0 (*SELECT_OP_3.1_3.1_1)     0.00     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/N17 (net)     8     0.00     0.00 r
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]/synch_enable (**SEQGEN**)     0.00     0.00     0.00 r
+  data arrival time                                                            0.00
+
+  clock clock (rise edge)                                           2.39       2.39
+  clock network delay (ideal)                                       0.00       2.39
+  PE_channel[0].PE_row[0].PE_column[0].PEs/accumulator_inst/accumulator_reg[0]/clocked_on (**SEQGEN**)     0.00     2.39 r
+  library setup time                                                0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][1][0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][1][0]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][1][0]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][1][0]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][1][0] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][1][0] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][1][0] (net)                                     0.00       0.00 r
+  output_vals[0][0][1][0] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][7]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][7]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][7]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][7]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][7] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][7] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][7] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][7] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][6]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][6]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][6]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][6]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][6] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][6] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][6] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][6] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][5]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][5]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][5]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][5] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][5] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][5] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][5] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][4]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][4]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][4]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][4]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][4] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][4] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][4] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][4] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][3]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][3]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][3]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][3]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][3] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][3] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][3] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][3] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][2]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][2]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][2]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][2]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][2] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][2] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][2] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][2] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][1]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][1]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][1]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][1] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][1] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][1] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][1] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: output_buffer_inst/output_vals_reg[0][0][0][0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: output_vals[0][0][0][0]
+            (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  output_buffer_inst/output_vals_reg[0][0][0][0]/clocked_on (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals_reg[0][0][0][0]/Q (**SEQGEN**)     0.00     0.00     0.00 r
+  output_buffer_inst/output_vals[0][0][0][0] (net)     1            0.00       0.00 r
+  output_buffer_inst/output_vals[0][0][0][0] (output_buffer)        0.00       0.00 r
+  output_vals[0][0][0][0] (net)                                     0.00       0.00 r
+  output_vals[0][0][0][0] (out)                           0.00      0.00       0.00 r
+  data arrival time                                                            0.00
+
+  max_delay                                                         2.39       2.39
+  output external delay                                             0.00       2.39
+  data required time                                                           2.39
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           2.39
+  data arrival time                                                            0.00
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.39
+
+
+  Startpoint: done_reg (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: done (output port)
+  Path Group: output_grp
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                        Fanout     Trans      Incr       Path      Attributes
+  ------------------------------------------------------------------------------------------
+  done_reg/clocked_on (**SEQGEN**)         0.00      0.00       0.00 r
+  done_reg/Q (**SEQGEN**)                  0.00      0.00       0.00 r
+  done (net)                     1                   0.00       0.00 r
+  done (out)                               0.00      0.00       0.00 r
+  data arrival time                                             0.00
+
+  max_delay                                          2.39       2.39
+  output external delay                              0.00       2.39
+  data required time                                            2.39
+  ------------------------------------------------------------------------------------------
+  data required time                                            2.39
+  data arrival time                                             0.00
+  ------------------------------------------------------------------------------------------
+  slack (MET)                                                   2.39
+
+
+1

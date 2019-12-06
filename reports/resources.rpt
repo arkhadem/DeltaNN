@@ -1,0 +1,6304 @@
+ 
+****************************************
+Report : resources
+Design : processing_unit
+Version: O-2018.06
+Date   : Thu Dec  5 22:23:41 2019
+****************************************
+
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+
+No implementations to report
+
+Multiplexor Report
+
+================================================================================
+| Cell                  | Width  | Data  | Select |         Reference          |
+================================================================================
+| C731                  | 2      | 64    | 6      | *MUX_OP_64_6_2_1           |
+| C762                  | 2      | 64    | 6      | *MUX_OP_64_6_2             |
+| C793                  | 2      | 64    | 6      | *MUX_OP_64_6_2             |
+| C794                  | 5      | 64    | 6      | *MUX_OP_64_6_5             |
+| C795                  | 5      | 64    | 6      | *MUX_OP_64_6_5             |
+| C796                  | 5      | 64    | 6      | *MUX_OP_64_6_5             |
+| C797                  | 3      | 64    | 6      | *MUX_OP_64_6_3             |
+| C798                  | 3      | 64    | 6      | *MUX_OP_64_6_3             |
+| C799                  | 3      | 64    | 6      | *MUX_OP_64_6_3             |
+| C800                  | 4      | 64    | 6      | *MUX_OP_64_6_4             |
+| C801                  | 4      | 64    | 6      | *MUX_OP_64_6_4             |
+| C802                  | 4      | 64    | 6      | *MUX_OP_64_6_4             |
+| C803                  | 1      | 64    | 6      | *MUX_OP_64_6_1             |
+| C804                  | 1      | 64    | 6      | *MUX_OP_64_6_1             |
+| C805                  | 1      | 64    | 6      | *MUX_OP_64_6_1             |
+================================================================================
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_6_1_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_inc_width6
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : index_down_counter_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : index_down_counter_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : delta_down_counter_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : delta_down_counter_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_46
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_45
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_44
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_43
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_42
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_41
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_41
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_41
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_41
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_40
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_40
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_40
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_40
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_39
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_39
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_39
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_39
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_38
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_38
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_38
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_38
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_37
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_37
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_37
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_37
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_36
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_36
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_36
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_36
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_35
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_35
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_35
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_35
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_34
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_33
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_32
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_31
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_31
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_31
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_31
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_30
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_30
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_30
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_30
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_29
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_28
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_27
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_27
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_27
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_27
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_26
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_26
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_26
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_26
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_25
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_25
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_25
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_25
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_24
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_24
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_24
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_24
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_23
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_22
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_22
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_22
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_22
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_21
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_21
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_21
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_21
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_20
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_20
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_20
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_20
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_19
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_19
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_19
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_19
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_18
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_17
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_17
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_17
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_17
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_16
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_15
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_14
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_13
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_13
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_13
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_13
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_12
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_11
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_10
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_9
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_8
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_7
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_7
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_7
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_7
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_6
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_5
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_3
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_2
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_1
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_0
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : index_down_counter_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_4_1_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : delta_down_counter_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_3_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_dec_width3
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : output_buffer
+****************************************
+
+No implementations to report
+
+Multiplexor Report
+
+================================================================================
+| Cell                  | Width  | Data  | Select |         Reference          |
+================================================================================
+| output_buffer_inst/C59238 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+| output_buffer_inst/C59239 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+| output_buffer_inst/C59240 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+| output_buffer_inst/C59241 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+| output_buffer_inst/C59242 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+| output_buffer_inst/C59243 | 2  | 64    | 6      | *MUX_OP_64_6_2             |
+================================================================================
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_2_1_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *SUB_UNS_OP_1_1_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_sub_width2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : processing_element_47
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : accumulator_47
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ADD_UNS_OP_8_8_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_add_width8
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : shifter_47
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *ASH_UNS_UNS_OP_8_4_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DW01_ash_A_width8_SH_width4
+****************************************
+
+No implementations to report
+
+Resource sharing reports are created during the compile command,
+so the design must be compiled before resource sharing can be reported.
+ 
+****************************************
+Design : multiplier_47
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : *MULT_UNS_OP_4_4_8
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DW02_mult_A_width4_B_width4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width4_B_width4
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r55      | DW01_add     | width=6    |               | FS_1                 |
+===============================================================================
+
+
+No implementations to report
+1
