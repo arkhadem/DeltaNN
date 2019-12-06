@@ -20,7 +20,7 @@ set link_library [concat  "*" $target_library]
 #/* The following lines must be updated for every           */
 #/* new design                                              */
 #/***********************************************************/
-set search_path [ list "./" "/library/"]
+set search_path [ list "./" "./library/"]
 set src_files [list "sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
