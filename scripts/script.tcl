@@ -4,8 +4,11 @@
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set output_path ./outputs
-set report_path ./reports
+set design_path "/home/arkhadem/Downloads/Delta/DeltaNN"
+set output_path $design_path/outputs
+set report_path $design_path/reports
+set library_path $design_path/library
+set source_path $design_path/HDL
 
 #/***********************************************************/
 #/* The rest of this file may be left alone for most small  */
@@ -13,7 +16,7 @@ set report_path ./reports
 #/* when synthesizing your final project.                   */
 #/***********************************************************/
 set SYN_DIR ./
-set target_library "NanGate_15nm_OCL_typical_conditional_ccs.db"
+set target_library "$library_path/NanGate_15nm_OCL_typical_conditional_ccs.db"
 set link_library [concat  "*" $target_library]
 
 #/***********************************************************/
@@ -21,12 +24,12 @@ set link_library [concat  "*" $target_library]
 #/* new design                                              */
 #/***********************************************************/
 set search_path [ list "./" "./library/"]
-set src_files [list "./HDL/sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv"]
+set src_files [list "$source_path/sys_defs.svh $source_path/accumulator.sv $source_path/delta_down_counter.sv $source_path/index_down_counter.sv $source_path/shifter.sv $source_path/multiplier.sv $source_path/output_buffer.sv $source_path/processing_element.sv $source_path/processing_unit.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
 set reset_name reset
-set CLK_PERIOD 250
+set CLK_PERIOD 200
 
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */
