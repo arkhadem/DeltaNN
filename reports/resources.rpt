@@ -3,7 +3,7 @@
 Report : resources
 Design : processing_unit
 Version: O-2018.06
-Date   : Thu Dec  5 23:25:04 2019
+Date   : Thu Dec  5 23:57:57 2019
 ****************************************
 
 Resource Sharing Report for design processing_unit in file
@@ -220,7 +220,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -289,7 +289,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -358,7 +358,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -427,7 +427,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -496,7 +496,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -565,7 +565,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -634,7 +634,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -703,7 +703,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -772,7 +772,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -841,7 +841,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -910,7 +910,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -979,7 +979,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1048,7 +1048,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1117,7 +1117,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1186,7 +1186,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1255,7 +1255,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1324,7 +1324,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1393,7 +1393,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1462,7 +1462,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1531,7 +1531,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1600,7 +1600,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1669,7 +1669,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1738,7 +1738,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1807,7 +1807,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1876,7 +1876,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -1945,7 +1945,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2014,7 +2014,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2083,7 +2083,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2152,7 +2152,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2221,7 +2221,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2290,7 +2290,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2359,7 +2359,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2428,7 +2428,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2497,7 +2497,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2566,7 +2566,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2635,7 +2635,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2704,7 +2704,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2773,7 +2773,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2842,7 +2842,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2911,7 +2911,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -2980,7 +2980,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -3049,7 +3049,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -3118,7 +3118,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -3187,7 +3187,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -3256,7 +3256,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
@@ -3325,7 +3325,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_22             | DW01_add         | cla                |                |
+| add_22             | DW01_add         | rpl                |                |
 ===============================================================================
 
 
