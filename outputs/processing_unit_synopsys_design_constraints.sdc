@@ -1,12 +1,11 @@
 ###################################################################
 
-# Created by write_sdc on Thu Dec  5 22:33:43 2019
+# Created by write_sdc on Thu Dec  5 23:14:48 2019
 
 ###################################################################
 set sdc_version 2.1
 
 set_units -time ps -resistance kOhm -capacitance fF -voltage V -current uA
-set_wire_load_mode top
 create_clock [get_ports clock]  -period 2.39  -waveform {0 1.195}
 group_path -name input_grp  -from [list [get_ports clock] [get_ports reset] [get_ports enable] [get_ports \
 {input_vals[2][3][3][3]}] [get_ports {input_vals[2][3][3][2]}] [get_ports      \

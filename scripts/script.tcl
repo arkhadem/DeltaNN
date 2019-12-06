@@ -21,7 +21,7 @@ set link_library [concat  "*" $target_library]
 #/* new design                                              */
 #/***********************************************************/
 set search_path [ list "./" "./library/"]
-set src_files [list "sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv"]
+set src_files [list "./sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
@@ -115,8 +115,8 @@ set DRIVING_CELL dffacs1
 #/*************operation cons**************/
 #/*OP_WCASE = WCCOM;
 #OP_BCASE = BCCOM;*/
-set WIRE_LOAD "tsmcwire"
-set LOGICLIB lec25dscc25_TT
+#set WIRE_LOAD "tsmcwire"
+#set LOGICLIB lec25dscc25_TT
 #/*****************************/
 
 #/* Sourcing the file that sets the Search path and the libraries(target,link) */
@@ -126,8 +126,8 @@ set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $des
 
 #/* if we didnt find errors at this point, run */
 if {  $dc_shell_status != [list] } {
-  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
-  set_wire_load_mode top
+  #set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  #set_wire_load_mode top
   set_fix_multiple_port_nets -outputs -buffer_constants
   group_path -from [all_inputs] -name input_grp
   group_path -to [all_outputs] -name output_grp

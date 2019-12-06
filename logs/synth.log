@@ -46,8 +46,8 @@ set link_library [concat  "*" $target_library]
 #/***********************************************************/
 set search_path [ list "./" "./library/"]
 ./ ./library/
-set src_files [list "sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv"]
-{sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv}
+set src_files [list "./sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv"]
+{./sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv}
 set design_name processing_unit
 processing_unit
 read_file -f sverilog $src_files
@@ -289,7 +289,8 @@ set AVG_FANOUT_LOAD 10
 ###############################################################
 analyze -library WORK -format sverilog $src_files
 Running PRESTO HDLC
-Error:  Unable to open file `sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv': in search_path {./ ./library/}. (VER-41)
+Compiling source file ./sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv
+Error:  Unable to open file `./sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv': No such file or directory. (VER-41)
 *** Presto compilation terminated with 1 errors. ***
 0
 elaborate $design_name
@@ -320,7 +321,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     O-2018.06
-Date:        Thu Dec  5 22:29:57 2019
+Date:        Thu Dec  5 23:11:03 2019
 ****************************************
 
                    Name                                            Total
@@ -1447,18 +1448,16 @@ dffacs1
 #/*************operation cons**************/
 #/*OP_WCASE = WCCOM;
 #OP_BCASE = BCCOM;*/
-set WIRE_LOAD "tsmcwire"
-tsmcwire
-set LOGICLIB lec25dscc25_TT
-lec25dscc25_TT
+#set WIRE_LOAD "tsmcwire"
+#set LOGICLIB lec25dscc25_TT
 #/*****************************/
 #/* Sourcing the file that sets the Search path and the libraries(target,link) */
 set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
 ./processing_unit.chk
 #/* if we didnt find errors at this point, run */
 if {  $dc_shell_status != [list] } {
-  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
-  set_wire_load_mode top
+  #set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  #set_wire_load_mode top
   set_fix_multiple_port_nets -outputs -buffer_constants
   group_path -from [all_inputs] -name input_grp
   group_path -to [all_outputs] -name output_grp
@@ -1502,8 +1501,6 @@ if {  $dc_shell_status != [list] } {
 } else {
    quit
 }
-Error: Can't find the specified library 'lec25dscc25_TT' in memory. (UID-131)
-Error: Wire load 'tsmcwire' not found. (UID-40)
 Error: Cannot find the specified driving cell in memory.   (UID-993)
 Current design is 'processing_unit'.
 Information: Evaluating DesignWare library utilization. (UISN-27)
@@ -1639,23 +1636,6 @@ Information: Updating design information... (UID-85)
   Processing 'shifter_46_DW01_ash_0'
   Processing 'accumulator_47_DW01_add_0'
   Processing 'shifter_47_DW01_ash_0'
-  Allocating blocks in 'DW02_mult_A_width4_B_width4'
-  Building model 'DW01_MUX'
-  Processing 'DW01_MUX'
-  Building model 'DW01_mmux_width2'
-  Processing 'DW01_mmux_width2'
-  Building model 'DW01_mmux_width3'
-  Processing 'DW01_mmux_width3'
-  Building model 'DW01_mmux_width4'
-  Processing 'DW01_mmux_width4'
-  Building model 'DW01_mmux_width5'
-  Processing 'DW01_mmux_width5'
-  Building model 'DW01_NAND2'
-  Processing 'DW01_NAND2'
-  Building model 'DW01_add_width6' (cla)
-  Processing 'DW01_add_width6'
-  Building model 'DW02_mult_A_width4_B_width4' (csa)
-  Processing 'DW02_mult_A_width4_B_width4'
   Processing 'multiplier_45_DW02_mult_0'
   Processing 'multiplier_45_DW01_add_0'
   Processing 'multiplier_44_DW02_mult_0'
@@ -1770,29 +1750,30 @@ Information: Updating design information... (UID-85)
   Mapping Optimization (Phase 13)
   Mapping Optimization (Phase 14)
   Mapping Optimization (Phase 15)
+  Mapping Optimization (Phase 16)
 
                                   TOTAL                                                  
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:01:13    8730.1    352.99  213860.6      28.0                                0.00  
-    0:01:13    8730.1    352.99  213860.6      28.0                                0.00  
-    0:01:13    8925.8    352.99  188972.3       0.0                                0.00  
+    0:01:11    8730.1    352.99  213860.6      28.0                                0.00  
+    0:01:11    8730.1    352.99  213860.6      28.0                                0.00  
+    0:01:12    8925.8    352.99  188972.3       0.0                                0.00  
     0:01:29    9339.0    203.29  135774.7       0.0                                0.00  
     0:01:30    9339.0    205.38  136778.5       0.0                                0.00  
     0:01:30    9339.0    205.38  136778.5       0.0                                0.00  
     0:01:31    9338.1    205.38  136779.4       0.0                                0.00  
     0:01:31    9338.1    205.38  136779.4       0.0                                0.00  
     0:01:31    9338.1    205.38  136779.4       0.0                                0.00  
-    0:01:38    7078.2    211.95  135201.2       0.0                                0.00  
+    0:01:39    7078.2    211.95  135201.2       0.0                                0.00  
     0:01:41    7185.6    215.54  133215.0       0.0                                0.00  
-    0:01:42    7241.9    203.64  131762.6       0.0                                0.00  
-    0:01:43    7268.0    203.62  131545.5       0.0                                0.00  
-    0:01:44    7277.3    203.44  131496.6       0.0                                0.00  
-    0:01:44    7279.1    203.47  131471.7       0.0                                0.00  
-    0:01:45    7276.6    203.44  131489.8       0.0                                0.00  
-    0:01:45    7280.2    203.47  131469.0       0.0                                0.00  
-    0:01:46    7276.5    203.44  131489.8       0.0                                0.00  
+    0:01:43    7241.9    203.64  131762.6       0.0                                0.00  
+    0:01:44    7268.0    203.62  131545.5       0.0                                0.00  
+    0:01:45    7277.3    203.44  131496.6       0.0                                0.00  
+    0:01:45    7279.1    203.47  131471.7       0.0                                0.00  
+    0:01:46    7276.6    203.44  131489.8       0.0                                0.00  
+    0:01:46    7280.2    203.47  131469.0       0.0                                0.00  
+    0:01:47    7276.5    203.44  131489.8       0.0                                0.00  
     0:01:47    7280.2    203.47  131469.0       0.0                                0.00  
     0:01:47    7280.2    203.47  131469.0       0.0                                0.00  
     0:01:47    7280.2    203.47  131469.0       0.0                                0.00  
@@ -1811,9 +1792,9 @@ Information: Updating design information... (UID-85)
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
     0:01:47    7280.2    203.47  131469.0       0.0                                0.00  
-    0:01:47    7282.9    200.99  131040.5       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
-    0:01:48    7290.5    195.20  129016.4       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
-    0:01:48    7292.4    194.86  128944.8       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:01:48    7282.9    200.99  131040.5       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
+    0:01:49    7290.5    195.20  129016.4       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:01:49    7292.4    194.86  128944.8       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
     0:01:49    7295.1    194.42  128864.0       0.0 output_buffer_inst/output_vals_reg[1][1][1][4]/D      0.00  
     0:01:49    7318.7    194.42  128861.0       0.0 output_vals[3][1][2][0]        0.00  
     0:01:49    7341.5    194.42  128858.6       0.0 output_vals[3][0][1][0]        0.00  
@@ -1823,38 +1804,38 @@ Information: Updating design information... (UID-85)
     0:01:49    7435.2    194.42  128848.6       0.0 output_vals[1][1][0][0]        0.00  
     0:01:49    7458.0    194.42  128846.2       0.0 output_vals[0][2][2][1]        0.00  
     0:01:49    7482.4    194.42  128843.6       0.0 output_vals[0][1][0][7]        0.00  
-    0:01:49    7505.2    194.42  128841.2       0.0 output_vals[1][2][1][7]        0.00  
-    0:01:49    7506.8    193.98  128643.9       0.0 output_buffer_inst/output_vals_reg[1][1][1][4]/D      0.00  
-    0:01:49    7508.1    193.92  128635.0       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
+    0:01:50    7505.2    194.42  128841.2       0.0 output_vals[1][2][1][7]        0.00  
+    0:01:50    7506.8    193.98  128643.9       0.0 output_buffer_inst/output_vals_reg[1][1][1][4]/D      0.00  
+    0:01:50    7508.1    193.92  128635.0       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
     0:01:50    7512.9    193.63  128506.3       0.0 output_buffer_inst/output_vals_reg[2][1][1][4]/D      0.00  
     0:01:50    7519.3    193.28  128412.7       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
-    0:01:50    7523.0    192.57  127968.8       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
+    0:01:51    7523.0    192.57  127968.8       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
     0:01:51    7524.2    191.86  127760.0       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
     0:01:51    7525.2    191.68  127665.7       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
-    0:01:51    7531.6    191.16  127297.7       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
+    0:01:52    7531.6    191.16  127297.7       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
     0:01:52    7537.2    190.79  127097.4       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
     0:01:52    7538.4    190.59  126892.5       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
-    0:01:52    7542.0    190.22  126818.9       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
-    0:01:52    7544.2    189.89  126850.6       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
+    0:01:53    7542.0    190.22  126818.9       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
+    0:01:53    7544.2    189.89  126850.6       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
     0:01:53    7546.1    189.82  126825.2       0.0 output_buffer_inst/output_vals_reg[3][1][1][7]/D      0.00  
     0:01:53    7548.1    189.77  126783.7       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
     0:01:53    7549.6    189.73  126770.6       0.0 output_buffer_inst/output_vals_reg[1][2][1][4]/D      0.00  
-    0:01:53    7550.8    189.51  126640.5       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
-    0:01:53    7553.0    189.36  126623.4       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
+    0:01:54    7550.8    189.51  126640.5       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
+    0:01:54    7553.0    189.36  126623.4       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
     0:01:54    7553.6    189.24  126627.3       0.0 output_buffer_inst/output_vals_reg[2][0][2][6]/D      0.00  
     0:01:54    7556.3    189.12  126523.3       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
     0:01:54    7558.9    189.01  126517.1       0.0 output_buffer_inst/output_vals_reg[1][0][2][5]/D      0.00  
-    0:01:54    7562.7    188.90  126501.8       0.0 output_buffer_inst/output_vals_reg[3][2][1][5]/D      0.00  
-    0:01:54    7562.4    188.90  126501.7       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
+    0:01:55    7562.7    188.90  126501.8       0.0 output_buffer_inst/output_vals_reg[3][2][1][5]/D      0.00  
+    0:01:55    7562.4    188.90  126501.7       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
     0:01:55    7562.9    188.89  126492.1       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:01:55    7562.6    188.89  126486.3       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
-    0:01:55    7564.9    188.87  126376.0       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
-    0:01:55    7567.9    188.85  126377.7       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
+    0:01:56    7562.6    188.89  126486.3       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
+    0:01:56    7564.9    188.87  126376.0       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
+    0:01:56    7567.9    188.85  126377.7       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
     0:01:56    7568.2    188.74  126366.6       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:01:56    7568.7    188.70  126319.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
     0:01:56    7570.9    188.63  126264.5       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:01:56    7571.3    188.56  126260.1       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:01:56    7576.5    188.47  126257.3       0.0 output_buffer_inst/output_vals_reg[1][2][1][6]/D      0.00  
+    0:01:57    7576.5    188.47  126257.3       0.0 output_buffer_inst/output_vals_reg[1][2][1][6]/D      0.00  
     0:01:57    7579.9    188.30  126169.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][6]/D      0.00  
     0:01:57    7581.6    188.26  126157.7       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:01:57    7582.5    188.25  126150.7       0.0 output_buffer_inst/output_vals_reg[1][0][0][7]/D      0.00  
@@ -1862,26 +1843,26 @@ Information: Updating design information... (UID-85)
     0:01:57    7583.2    188.20  126067.6       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:01:58    7584.4    187.92  125440.2       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:01:58    7586.8    187.63  125407.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
-    0:01:58    7587.3    187.49  125381.8       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:01:59    7587.3    187.49  125381.8       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:01:59    7587.9    187.24  125050.1       0.0 output_buffer_inst/output_vals_reg[0][2][2][6]/D      0.00  
     0:01:59    7589.8    187.08  125011.4       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:01:59    7592.2    186.93  124982.6       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:01:59    7593.9    186.78  124954.0       0.0 output_buffer_inst/output_vals_reg[0][0][0][4]/D      0.00  
-    0:01:59    7600.5    186.63  124866.8       0.0 output_buffer_inst/output_vals_reg[3][1][2][6]/D      0.00  
+    0:02:00    7600.5    186.63  124866.8       0.0 output_buffer_inst/output_vals_reg[3][1][2][6]/D      0.00  
     0:02:00    7602.0    186.47  124825.6       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
     0:02:00    7604.7    186.23  124767.1       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
     0:02:00    7607.1    186.16  124745.4       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
-    0:02:00    7609.3    186.02  124710.0       0.0 output_buffer_inst/output_vals_reg[0][1][0][5]/D      0.00  
+    0:02:01    7609.3    186.02  124710.0       0.0 output_buffer_inst/output_vals_reg[0][1][0][5]/D      0.00  
     0:02:01    7609.1    185.91  124678.0       0.0 output_buffer_inst/output_vals_reg[0][2][2][6]/D      0.00  
     0:02:01    7611.7    185.79  124673.3       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
     0:02:01    7613.2    185.71  124641.9       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:01    7615.0    185.57  124600.7       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
     0:02:01    7617.1    185.53  124596.3       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
-    0:02:01    7618.3    185.48  124453.6       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:02:02    7618.3    185.48  124453.6       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:02    7619.8    185.38  124285.5       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
     0:02:02    7625.6    185.10  124199.0       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
     0:02:02    7626.1    184.93  124172.5       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
-    0:02:02    7629.7    184.76  124080.0       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:02:03    7629.7    184.76  124080.0       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:03    7632.4    184.64  123969.9       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:03    7632.9    184.43  123886.1       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
     0:02:04    7633.6    184.35  123761.7       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
@@ -1889,11 +1870,11 @@ Information: Updating design information... (UID-85)
     0:02:04    7637.5    184.11  123748.8       0.0 output_buffer_inst/output_vals_reg[0][2][1][7]/D      0.00  
     0:02:04    7640.0    184.04  123739.0       0.0 output_buffer_inst/output_vals_reg[0][2][1][7]/D      0.00  
     0:02:04    7642.7    183.95  123713.1       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
-    0:02:04    7643.6    183.90  123704.6       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
+    0:02:05    7643.6    183.90  123704.6       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
     0:02:05    7644.5    183.88  123647.8       0.0 output_buffer_inst/output_vals_reg[1][2][1][6]/D      0.00  
     0:02:05    7646.2    183.74  123579.2       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
     0:02:05    7647.8    183.57  123524.2       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
-    0:02:05    7650.8    183.47  123502.1       0.0 output_buffer_inst/output_vals_reg[3][1][1][5]/D      0.00  
+    0:02:06    7650.8    183.47  123502.1       0.0 output_buffer_inst/output_vals_reg[3][1][1][5]/D      0.00  
     0:02:06    7651.3    183.39  123497.1       0.0 output_buffer_inst/output_vals_reg[2][1][1][4]/D      0.00  
     0:02:06    7653.7    183.21  123456.3       0.0 output_buffer_inst/output_vals_reg[0][0][0][4]/D      0.00  
     0:02:06    7655.0    183.15  123447.4       0.0 output_buffer_inst/output_vals_reg[3][0][0][6]/D      0.00  
@@ -1915,7 +1896,7 @@ Information: Updating design information... (UID-85)
     0:02:09    7679.5    182.15  122856.8       0.0 output_buffer_inst/output_vals_reg[0][0][2][5]/D      0.00  
     0:02:09    7681.9    182.09  122762.7       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:09    7683.9    181.85  122711.4       0.0 output_buffer_inst/output_vals_reg[1][1][1][6]/D      0.00  
-    0:02:10    7684.1    181.77  122700.9       0.0 output_buffer_inst/output_vals_reg[3][1][1][4]/D      0.00  
+    0:02:09    7684.1    181.77  122700.9       0.0 output_buffer_inst/output_vals_reg[3][1][1][4]/D      0.00  
     0:02:10    7684.6    181.67  122667.6       0.0 output_buffer_inst/output_vals_reg[3][1][2][4]/D      0.00  
     0:02:10    7688.9    181.64  122650.7       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
     0:02:10    7689.2    181.63  122647.2       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
@@ -1926,22 +1907,22 @@ Information: Updating design information... (UID-85)
     0:02:11    7699.6    181.37  122428.4       0.0 output_buffer_inst/output_vals_reg[1][0][0][7]/D      0.00  
     0:02:11    7699.1    181.32  122407.7       0.0 output_buffer_inst/output_vals_reg[2][1][0][5]/D      0.00  
     0:02:11    7699.7    181.29  122403.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][3]/D      0.00  
-    0:02:12    7701.0    181.24  122384.5       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
+    0:02:11    7701.0    181.24  122384.5       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
     0:02:12    7701.3    181.20  122378.3       0.0 output_buffer_inst/output_vals_reg[2][1][0][4]/D      0.00  
     0:02:12    7702.9    181.19  122367.3       0.0 output_buffer_inst/output_vals_reg[1][2][0][7]/D      0.00  
     0:02:12    7704.8    181.16  122358.9       0.0 output_buffer_inst/output_vals_reg[0][1][0][6]/D      0.00  
     0:02:12    7706.1    181.13  122247.8       0.0 output_buffer_inst/output_vals_reg[2][1][1][6]/D      0.00  
     0:02:12    7709.4    181.03  122227.0       0.0 output_buffer_inst/output_vals_reg[0][0][0][4]/D      0.00  
-    0:02:13    7712.2    180.92  122208.6       0.0 output_buffer_inst/output_vals_reg[3][1][2][7]/D      0.00  
+    0:02:12    7712.2    180.92  122208.6       0.0 output_buffer_inst/output_vals_reg[3][1][2][7]/D      0.00  
     0:02:13    7715.1    180.85  122163.6       0.0 output_buffer_inst/output_vals_reg[1][2][1][6]/D      0.00  
     0:02:13    7716.7    180.82  122161.6       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:13    7720.7    180.73  122140.2       0.0 output_buffer_inst/output_vals_reg[1][2][2][7]/D      0.00  
     0:02:13    7724.8    180.69  122125.9       0.0 output_buffer_inst/output_vals_reg[1][0][0][6]/D      0.00  
-    0:02:14    7724.2    180.61  121976.4       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:02:13    7724.2    180.61  121976.4       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:14    7724.3    180.59  121975.8       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:14    7725.2    180.55  121966.0       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
     0:02:14    7726.0    180.50  121966.0       0.0 output_buffer_inst/output_vals_reg[0][2][0][4]/D      0.00  
-    0:02:15    7725.9    180.48  121952.2       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
+    0:02:14    7725.9    180.48  121952.2       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:15    7725.9    180.47  121949.8       0.0 output_buffer_inst/output_vals_reg[3][0][0][2]/D      0.00  
     0:02:15    7725.6    180.45  121940.2       0.0 output_buffer_inst/output_vals_reg[1][0][2][5]/D      0.00  
     0:02:15    7728.4    180.44  121962.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][5]/D      0.00  
@@ -1952,7 +1933,7 @@ Information: Updating design information... (UID-85)
     0:02:16    7735.8    180.22  121850.1       0.0 output_buffer_inst/output_vals_reg[1][0][2][5]/D      0.00  
     0:02:16    7736.6    180.20  121775.1       0.0 output_buffer_inst/output_vals_reg[2][1][1][6]/D      0.00  
     0:02:16    7735.5    180.18  121844.0       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:02:17    7735.8    180.09  121828.1       0.0 output_buffer_inst/output_vals_reg[1][2][2][6]/D      0.00  
+    0:02:16    7735.8    180.09  121828.1       0.0 output_buffer_inst/output_vals_reg[1][2][2][6]/D      0.00  
     0:02:17    7737.2    180.03  121806.9       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
     0:02:17    7739.6    179.96  121793.4       0.0 output_buffer_inst/output_vals_reg[3][2][2][5]/D      0.00  
     0:02:17    7740.8    179.95  121784.8       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
@@ -1963,198 +1944,198 @@ Information: Updating design information... (UID-85)
     0:02:18    7743.4    179.70  121680.0       0.0 output_buffer_inst/output_vals_reg[3][1][1][4]/D      0.00  
     0:02:18    7744.5    179.64  121637.8       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
     0:02:18    7746.3    179.60  121622.8       0.0 output_buffer_inst/output_vals_reg[0][1][0][6]/D      0.00  
-    0:02:19    7746.5    179.56  121612.2       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
+    0:02:18    7746.5    179.56  121612.2       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:02:19    7747.7    179.53  121589.6       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:19    7748.5    179.53  121581.5       0.0 output_buffer_inst/output_vals_reg[0][0][2][5]/D      0.00  
     0:02:19    7750.3    179.48  121563.5       0.0 output_buffer_inst/output_vals_reg[3][0][2][6]/D      0.00  
     0:02:19    7751.3    179.45  121556.4       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:30    7753.0    179.42  121551.2       0.0 output_buffer_inst/output_vals_reg[2][0][0][7]/D      0.00  
-    0:02:31    7754.4    179.28  121444.2       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
+    0:02:30    7754.4    179.28  121444.2       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
     0:02:31    7754.8    179.25  121396.5       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:02:32    7756.6    179.05  121370.4       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:02:31    7756.6    179.05  121370.4       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
     0:02:32    7757.0    179.05  121368.8       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
-    0:02:33    7756.6    179.01  121325.2       0.0 output_buffer_inst/output_vals_reg[0][0][0][1]/D      0.00  
+    0:02:32    7756.6    179.01  121325.2       0.0 output_buffer_inst/output_vals_reg[0][0][0][1]/D      0.00  
     0:02:33    7756.5    178.97  121129.2       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
     0:02:33    7756.1    178.91  121122.2       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:02:34    7756.4    178.85  121108.5       0.0 output_buffer_inst/output_vals_reg[3][1][0][5]/D      0.00  
+    0:02:33    7756.4    178.85  121108.5       0.0 output_buffer_inst/output_vals_reg[3][1][0][5]/D      0.00  
     0:02:34    7758.5    178.80  121083.2       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
     0:02:34    7758.8    178.79  121083.2       0.0 output_buffer_inst/output_vals_reg[1][2][0][5]/D      0.00  
     0:02:34    7760.4    178.76  121056.8       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
     0:02:34    7759.5    178.73  121050.8       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:02:35    7760.3    178.69  121036.9       0.0 output_buffer_inst/output_vals_reg[0][0][0][1]/D      0.00  
+    0:02:34    7760.3    178.69  121036.9       0.0 output_buffer_inst/output_vals_reg[0][0][0][1]/D      0.00  
     0:02:35    7761.4    178.66  121053.0       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:35    7762.2    178.54  121024.2       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
-    0:02:36    7762.5    178.53  121027.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
+    0:02:35    7762.5    178.53  121027.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
     0:02:36    7762.1    178.51  121036.6       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
-    0:02:37    7762.3    178.50  121038.2       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
+    0:02:36    7762.3    178.50  121038.2       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
     0:02:37    7762.1    178.48  121027.3       0.0 output_buffer_inst/output_vals_reg[1][0][1][4]/D      0.00  
     0:02:37    7762.6    178.46  121003.9       0.0 output_buffer_inst/output_vals_reg[3][2][2][6]/D      0.00  
-    0:02:38    7764.1    178.45  120999.6       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
+    0:02:37    7764.1    178.45  120999.6       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
     0:02:38    7766.1    178.44  120993.2       0.0 output_buffer_inst/output_vals_reg[3][1][0][3]/D      0.00  
     0:02:38    7766.1    178.41  120990.2       0.0 output_buffer_inst/output_vals_reg[2][0][0][4]/D      0.00  
-    0:02:39    7767.2    178.34  120978.6       0.0 output_buffer_inst/output_vals_reg[2][0][0][4]/D      0.00  
-    0:02:39    7767.3    178.31  120974.5       0.0 output_buffer_inst/output_vals_reg[3][0][0][2]/D      0.00  
+    0:02:38    7767.2    178.34  120978.6       0.0 output_buffer_inst/output_vals_reg[2][0][0][4]/D      0.00  
+    0:02:38    7767.3    178.31  120974.5       0.0 output_buffer_inst/output_vals_reg[3][0][0][2]/D      0.00  
     0:02:39    7767.4    178.28  120966.8       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
     0:02:39    7767.0    178.26  120960.0       0.0 output_buffer_inst/output_vals_reg[3][2][2][6]/D      0.00  
     0:02:39    7767.4    178.23  120954.1       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
-    0:02:40    7768.1    178.21  120951.8       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
-    0:02:40    7768.2    178.20  120945.9       0.0 output_buffer_inst/output_vals_reg[2][0][2][7]/D      0.00  
+    0:02:39    7768.1    178.21  120951.8       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
+    0:02:39    7768.2    178.20  120945.9       0.0 output_buffer_inst/output_vals_reg[2][0][2][7]/D      0.00  
     0:02:40    7767.3    178.15  120877.1       0.0 output_buffer_inst/output_vals_reg[3][2][2][6]/D      0.00  
     0:02:40    7766.6    178.09  120875.8       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
-    0:02:41    7768.3    178.07  120876.0       0.0 output_buffer_inst/output_vals_reg[3][2][2][6]/D      0.00  
+    0:02:40    7768.3    178.07  120876.0       0.0 output_buffer_inst/output_vals_reg[3][2][2][6]/D      0.00  
     0:02:41    7768.4    178.06  120868.9       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
     0:02:41    7767.9    178.02  120864.2       0.0 output_buffer_inst/output_vals_reg[3][1][1][7]/D      0.00  
     0:02:41    7767.5    178.02  120863.4       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
     0:02:42    7767.8    178.02  120862.8       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:42    7768.2    178.02  120862.7       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
-    0:02:43    7768.1    178.02  120862.4       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
-    0:02:43    7768.8    177.98  120858.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:02:42    7768.1    178.02  120862.4       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
+    0:02:42    7768.8    177.98  120858.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:43    7769.0    177.95  120854.6       0.0 output_buffer_inst/output_vals_reg[3][1][1][7]/D      0.00  
     0:02:43    7769.1    177.93  120855.0       0.0 output_buffer_inst/output_vals_reg[3][1][1][5]/D      0.00  
     0:02:43    7769.3    177.92  120853.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][5]/D      0.00  
     0:02:43    7770.8    177.90  120851.2       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
-    0:02:44    7770.9    177.90  120851.2       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:02:44    7771.1    177.90  120851.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
+    0:02:43    7770.9    177.90  120851.2       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:02:43    7771.1    177.90  120851.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][7]/D      0.00  
     0:02:44    7771.1    177.89  120850.2       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:02:45    7771.2    177.89  120847.0       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
-    0:02:45    7771.6    177.88  120847.2       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
+    0:02:44    7771.2    177.89  120847.0       0.0 output_buffer_inst/output_vals_reg[2][2][0][7]/D      0.00  
+    0:02:44    7771.6    177.88  120847.2       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
     0:02:45    7773.3    177.86  120786.9       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
-    0:02:46    7773.2    177.85  120788.3       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:02:47    7773.3    177.84  120788.4       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:02:47    7773.4    177.83  120770.0       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
-    0:02:47    7772.8    177.83  120777.3       0.0 output_buffer_inst/output_vals_reg[0][0][2][3]/D      0.00  
+    0:02:45    7773.2    177.85  120788.3       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:02:46    7773.3    177.84  120788.4       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:02:46    7773.4    177.83  120770.0       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
+    0:02:46    7772.8    177.83  120777.3       0.0 output_buffer_inst/output_vals_reg[0][0][2][3]/D      0.00  
     0:02:47    7772.9    177.82  120776.8       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:47    7772.4    177.81  120775.2       0.0 output_buffer_inst/output_vals_reg[3][0][1][3]/D      0.00  
-    0:02:48    7771.5    177.79  120761.0       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:02:47    7771.5    177.79  120761.0       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:48    7771.9    177.78  120757.2       0.0 output_buffer_inst/output_vals_reg[1][1][1][6]/D      0.00  
-    0:02:49    7772.4    177.74  120741.9       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:02:49    7772.3    177.73  120733.8       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
+    0:02:48    7772.4    177.74  120741.9       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:02:48    7772.3    177.73  120733.8       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
     0:02:49    7772.6    177.69  120515.7       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
     0:02:49    7773.2    177.66  120513.3       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
-    0:02:50    7773.4    177.63  120511.4       0.0 output_buffer_inst/output_vals_reg[3][0][2][6]/D      0.00  
-    0:02:50    7773.6    177.60  120498.7       0.0 output_buffer_inst/output_vals_reg[1][2][1][3]/D      0.00  
+    0:02:49    7773.4    177.63  120511.4       0.0 output_buffer_inst/output_vals_reg[3][0][2][6]/D      0.00  
+    0:02:49    7773.6    177.60  120498.7       0.0 output_buffer_inst/output_vals_reg[1][2][1][3]/D      0.00  
     0:02:50    7774.0    177.60  120465.1       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:50    7774.0    177.60  120465.1       0.0                                0.00  
     0:02:51    7774.0    177.60  120454.7       0.0                                0.00  
     0:02:52    7773.8    177.59  120441.2       0.0 output_buffer_inst/output_vals_reg[0][2][1][3]/D      0.00  
     0:02:52    7774.9    177.52  120444.8       0.0 output_buffer_inst/output_vals_reg[1][0][0][4]/D      0.00  
-    0:02:53    7776.4    177.47  120396.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:02:53    7777.7    177.39  120379.1       0.0 output_buffer_inst/output_vals_reg[3][0][2][6]/D      0.00  
-    0:02:53    7778.8    177.37  120382.5       0.0 output_buffer_inst/output_vals_reg[3][0][1][4]/D      0.00  
-    0:02:53    7779.2    177.35  120372.6       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:02:52    7776.4    177.47  120396.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:02:52    7777.7    177.39  120379.1       0.0 output_buffer_inst/output_vals_reg[3][0][2][6]/D      0.00  
+    0:02:52    7778.8    177.37  120382.5       0.0 output_buffer_inst/output_vals_reg[3][0][1][4]/D      0.00  
+    0:02:52    7779.2    177.35  120372.6       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:53    7781.2    177.31  120343.7       0.0 output_buffer_inst/output_vals_reg[3][2][2][5]/D      0.00  
     0:02:53    7782.4    177.26  120336.2       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
-    0:02:54    7782.3    177.22  120332.2       0.0 output_buffer_inst/output_vals_reg[2][0][0][7]/D      0.00  
-    0:02:54    7782.2    177.20  120326.9       0.0 output_buffer_inst/output_vals_reg[2][0][0][4]/D      0.00  
-    0:02:54    7782.9    177.16  120308.5       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
-    0:02:54    7784.6    177.13  120292.2       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
+    0:02:53    7782.3    177.22  120332.2       0.0 output_buffer_inst/output_vals_reg[2][0][0][7]/D      0.00  
+    0:02:53    7782.2    177.20  120326.9       0.0 output_buffer_inst/output_vals_reg[2][0][0][4]/D      0.00  
+    0:02:53    7782.9    177.16  120308.5       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
+    0:02:53    7784.6    177.13  120292.2       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
     0:02:54    7784.6    177.09  120278.2       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
     0:02:54    7787.6    177.04  120275.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][4]/D      0.00  
-    0:02:55    7786.1    177.02  120261.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:02:55    7786.5    176.98  120252.0       0.0 output_buffer_inst/output_vals_reg[1][0][0][6]/D      0.00  
+    0:02:54    7786.1    177.02  120261.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
+    0:02:54    7786.5    176.98  120252.0       0.0 output_buffer_inst/output_vals_reg[1][0][0][6]/D      0.00  
     0:02:55    7785.8    176.95  120224.9       0.0 output_buffer_inst/output_vals_reg[3][2][1][6]/D      0.00  
     0:02:55    7786.1    176.89  120216.4       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
-    0:02:56    7786.7    176.87  120208.3       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
-    0:02:56    7787.2    176.82  120149.4       0.0 output_buffer_inst/output_vals_reg[3][0][1][4]/D      0.00  
+    0:02:55    7786.7    176.87  120208.3       0.0 output_buffer_inst/output_vals_reg[2][1][1][7]/D      0.00  
+    0:02:55    7787.2    176.82  120149.4       0.0 output_buffer_inst/output_vals_reg[3][0][1][4]/D      0.00  
     0:02:56    7788.6    176.79  120142.9       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
     0:02:56    7788.6    176.73  120122.0       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:02:56    7788.7    176.70  120123.5       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
-    0:02:57    7788.2    176.67  119861.7       0.0 output_buffer_inst/output_vals_reg[2][1][0][7]/D      0.00  
-    0:02:57    7789.5    176.62  119841.3       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
-    0:02:57    7790.4    176.55  119833.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
+    0:02:56    7788.2    176.67  119861.7       0.0 output_buffer_inst/output_vals_reg[2][1][0][7]/D      0.00  
+    0:02:56    7789.5    176.62  119841.3       0.0 output_buffer_inst/output_vals_reg[3][1][2][5]/D      0.00  
+    0:02:56    7790.4    176.55  119833.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][7]/D      0.00  
     0:02:57    7789.5    176.53  119810.3       0.0 output_buffer_inst/output_vals_reg[3][0][1][7]/D      0.00  
     0:02:57    7790.1    176.48  119971.7       0.0 output_buffer_inst/output_vals_reg[3][1][1][5]/D      0.00  
-    0:02:58    7792.1    176.40  119918.3       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
-    0:02:58    7793.6    176.34  119901.1       0.0 output_buffer_inst/output_vals_reg[3][2][2][5]/D      0.00  
+    0:02:57    7792.1    176.40  119918.3       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
+    0:02:57    7793.6    176.34  119901.1       0.0 output_buffer_inst/output_vals_reg[3][2][2][5]/D      0.00  
     0:02:58    7794.9    176.32  119898.9       0.0 output_buffer_inst/output_vals_reg[1][2][2][4]/D      0.00  
     0:02:58    7796.3    176.29  119879.9       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
-    0:02:59    7797.0    176.20  119844.8       0.0 output_buffer_inst/output_vals_reg[2][1][1][3]/D      0.00  
-    0:02:59    7796.5    176.19  119842.2       0.0 output_buffer_inst/output_vals_reg[1][2][1][3]/D      0.00  
-    0:02:59    7799.4    176.16  119795.9       0.0 output_buffer_inst/output_vals_reg[2][1][1][4]/D      0.00  
+    0:02:58    7797.0    176.20  119844.8       0.0 output_buffer_inst/output_vals_reg[2][1][1][3]/D      0.00  
+    0:02:58    7796.5    176.19  119842.2       0.0 output_buffer_inst/output_vals_reg[1][2][1][3]/D      0.00  
+    0:02:58    7799.4    176.16  119795.9       0.0 output_buffer_inst/output_vals_reg[2][1][1][4]/D      0.00  
     0:02:59    7800.9    176.10  119744.9       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
     0:02:59    7800.9    176.08  119743.4       0.0 output_buffer_inst/output_vals_reg[2][2][1][7]/D      0.00  
-    0:03:00    7801.1    176.06  119738.2       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:00    7800.8    176.03  119732.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:00    7801.3    175.99  119707.7       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
+    0:02:59    7801.1    176.06  119738.2       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
+    0:02:59    7800.8    176.03  119732.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
+    0:02:59    7801.3    175.99  119707.7       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
     0:03:00    7801.9    175.98  119702.4       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
-    0:03:01    7803.4    175.93  119643.3       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
-    0:03:01    7803.6    175.88  119606.1       0.0 output_buffer_inst/output_vals_reg[0][1][1][3]/D      0.00  
+    0:03:00    7803.4    175.93  119643.3       0.0 output_buffer_inst/output_vals_reg[1][1][0][5]/D      0.00  
+    0:03:00    7803.6    175.88  119606.1       0.0 output_buffer_inst/output_vals_reg[0][1][1][3]/D      0.00  
     0:03:01    7803.0    175.83  119585.1       0.0 output_buffer_inst/output_vals_reg[3][0][1][7]/D      0.00  
-    0:03:02    7803.9    175.75  119513.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][3]/D      0.00  
-    0:03:02    7805.3    175.74  119513.6       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
+    0:03:01    7803.9    175.75  119513.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][3]/D      0.00  
+    0:03:01    7805.3    175.74  119513.6       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
     0:03:02    7804.5    175.70  119474.1       0.0 output_buffer_inst/output_vals_reg[2][2][2][7]/D      0.00  
-    0:03:03    7803.9    175.67  119473.1       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
-    0:03:03    7803.9    175.63  119468.4       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
-    0:03:03    7804.1    175.62  119466.1       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
-    0:03:03    7806.6    175.60  119446.6       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:03:02    7803.9    175.67  119473.1       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
+    0:03:02    7803.9    175.63  119468.4       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
+    0:03:02    7804.1    175.62  119466.1       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
+    0:03:02    7806.6    175.60  119446.6       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
     0:03:03    7806.0    175.59  119443.1       0.0 output_buffer_inst/output_vals_reg[3][0][1][7]/D      0.00  
     0:03:03    7807.3    175.56  119441.0       0.0 output_buffer_inst/output_vals_reg[1][0][2][7]/D      0.00  
-    0:03:04    7808.4    175.52  119436.4       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
-    0:03:04    7807.3    175.52  119436.1       0.0 output_buffer_inst/output_vals_reg[3][2][1][6]/D      0.00  
-    0:03:04    7807.8    175.52  119430.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][7]/D      0.00  
-    0:03:04    7807.7    175.48  119387.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][6]/D      0.00  
-    0:03:04    7807.5    175.47  119387.7       0.0 output_buffer_inst/output_vals_reg[1][1][2][4]/D      0.00  
+    0:03:03    7808.4    175.52  119436.4       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
+    0:03:03    7807.3    175.52  119436.1       0.0 output_buffer_inst/output_vals_reg[3][2][1][6]/D      0.00  
+    0:03:03    7807.8    175.52  119430.0       0.0 output_buffer_inst/output_vals_reg[2][1][0][7]/D      0.00  
+    0:03:03    7807.7    175.48  119387.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][6]/D      0.00  
+    0:03:03    7807.5    175.47  119387.7       0.0 output_buffer_inst/output_vals_reg[1][1][2][4]/D      0.00  
     0:03:04    7808.8    175.46  119390.6       0.0 output_buffer_inst/output_vals_reg[2][2][1][2]/D      0.00  
     0:03:04    7810.4    175.46  119389.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][6]/D      0.00  
     0:03:04    7810.7    175.45  119385.9       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:05    7814.7    175.44  119387.5       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:05    7815.1    175.42  119365.7       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
+    0:03:04    7814.7    175.44  119387.5       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
+    0:03:04    7815.1    175.42  119365.7       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
     0:03:05    7815.5    175.39  119343.9       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
     0:03:05    7814.7    175.38  119333.3       0.0 output_buffer_inst/output_vals_reg[3][0][2][7]/D      0.00  
-    0:03:06    7814.0    175.37  119332.9       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
-    0:03:06    7814.0    175.37  119331.6       0.0 output_buffer_inst/output_vals_reg[2][2][2][3]/D      0.00  
-    0:03:06    7814.3    175.37  119143.2       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
+    0:03:05    7814.0    175.37  119332.9       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
+    0:03:05    7814.0    175.37  119331.6       0.0 output_buffer_inst/output_vals_reg[2][2][2][3]/D      0.00  
+    0:03:05    7814.3    175.37  119143.2       0.0 output_buffer_inst/output_vals_reg[2][1][2][7]/D      0.00  
     0:03:06    7816.7    175.34  119139.5       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:07    7816.0    175.34  119138.8       0.0 output_buffer_inst/output_vals_reg[3][0][1][7]/D      0.00  
-    0:03:07    7816.0    175.33  119138.0       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
-    0:03:07    7815.9    175.29  119088.2       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:07    7816.4    175.26  119084.4       0.0 output_buffer_inst/output_vals_reg[0][0][1][4]/D      0.00  
+    0:03:06    7816.0    175.34  119138.8       0.0 output_buffer_inst/output_vals_reg[3][0][1][7]/D      0.00  
+    0:03:06    7816.0    175.33  119138.0       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
+    0:03:06    7815.9    175.29  119088.2       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
+    0:03:06    7816.4    175.26  119084.4       0.0 output_buffer_inst/output_vals_reg[0][0][1][4]/D      0.00  
     0:03:07    7816.0    175.22  119073.9       0.0 output_buffer_inst/output_vals_reg[2][0][2][5]/D      0.00  
-    0:03:08    7816.7    175.20  119054.5       0.0 output_buffer_inst/output_vals_reg[1][0][2][7]/D      0.00  
+    0:03:07    7816.7    175.20  119054.5       0.0 output_buffer_inst/output_vals_reg[1][0][2][7]/D      0.00  
     0:03:08    7816.7    175.19  119051.1       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:09    7819.0    175.17  119057.5       0.0 output_buffer_inst/output_vals_reg[1][0][0][7]/D      0.00  
-    0:03:09    7820.6    175.12  119029.6       0.0 output_buffer_inst/output_vals_reg[3][0][2][7]/D      0.00  
+    0:03:08    7819.0    175.17  119057.5       0.0 output_buffer_inst/output_vals_reg[1][0][0][7]/D      0.00  
+    0:03:08    7820.6    175.12  119029.6       0.0 output_buffer_inst/output_vals_reg[3][0][2][7]/D      0.00  
     0:03:09    7821.0    175.05  119015.0       0.0 output_buffer_inst/output_vals_reg[3][2][0][2]/D      0.00  
     0:03:09    7823.2    174.99  118953.7       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
-    0:03:10    7824.9    174.91  118947.0       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
+    0:03:09    7824.9    174.91  118947.0       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
     0:03:10    7828.9    174.90  118871.8       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
-    0:03:11    7832.5    174.84  118866.6       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
-    0:03:12    7833.5    174.84  118864.6       0.0 output_buffer_inst/output_vals_reg[0][0][2][7]/D      0.00  
-    0:03:12    7834.2    174.79  118853.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:03:12    7832.0    174.79  118848.7       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:03:10    7832.5    174.84  118866.6       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
+    0:03:11    7833.5    174.84  118864.6       0.0 output_buffer_inst/output_vals_reg[0][0][2][7]/D      0.00  
+    0:03:11    7834.2    174.79  118853.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:03:11    7832.0    174.79  118848.7       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
     0:03:12    7832.5    174.75  118817.5       0.0 output_buffer_inst/output_vals_reg[0][2][2][4]/D      0.00  
-    0:03:13    7835.6    174.69  118808.1       0.0 output_buffer_inst/output_vals_reg[0][2][2][4]/D      0.00  
-    0:03:13    7837.0    174.62  118803.5       0.0 output_buffer_inst/output_vals_reg[1][0][1][4]/D      0.00  
+    0:03:12    7835.6    174.69  118808.1       0.0 output_buffer_inst/output_vals_reg[0][2][2][4]/D      0.00  
+    0:03:12    7837.0    174.62  118803.5       0.0 output_buffer_inst/output_vals_reg[1][0][1][4]/D      0.00  
     0:03:13    7838.5    174.59  118795.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:14    7839.4    174.59  118799.0       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
-    0:03:14    7840.4    174.58  118785.1       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:14    7844.3    174.55  118771.9       0.0 output_buffer_inst/output_vals_reg[3][2][0][2]/D      0.00  
+    0:03:13    7839.4    174.59  118799.0       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
+    0:03:13    7840.4    174.58  118785.1       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
+    0:03:13    7844.3    174.55  118771.9       0.0 output_buffer_inst/output_vals_reg[3][2][0][2]/D      0.00  
     0:03:14    7844.4    174.53  118764.5       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
     0:03:14    7845.2    174.52  118757.4       0.0 output_buffer_inst/output_vals_reg[2][1][0][4]/D      0.00  
-    0:03:15    7846.0    174.49  118733.6       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:15    7846.0    174.49  118727.1       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
-    0:03:15    7847.4    174.45  118725.2       0.0 output_buffer_inst/output_vals_reg[1][0][0][2]/D      0.00  
-    0:03:16    7847.5    174.43  118727.5       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
+    0:03:14    7846.0    174.49  118733.6       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
+    0:03:14    7846.0    174.49  118727.1       0.0 output_buffer_inst/output_vals_reg[2][2][0][4]/D      0.00  
+    0:03:14    7847.4    174.45  118725.2       0.0 output_buffer_inst/output_vals_reg[1][0][0][2]/D      0.00  
+    0:03:15    7847.5    174.43  118727.5       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
     0:03:16    7851.2    174.41  118715.8       0.0 output_buffer_inst/output_vals_reg[3][1][0][3]/D      0.00  
     0:03:16    7853.6    174.39  118707.1       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:17    7851.5    174.36  118697.9       0.0 output_buffer_inst/output_vals_reg[3][0][0][2]/D      0.00  
-    0:03:17    7851.1    174.32  118689.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:03:16    7851.5    174.36  118697.9       0.0 output_buffer_inst/output_vals_reg[3][0][0][2]/D      0.00  
+    0:03:16    7851.1    174.32  118689.4       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
     0:03:17    7852.7    174.30  118686.2       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:18    7851.7    174.29  118677.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:18    7851.7    174.28  118676.7       0.0 output_buffer_inst/output_vals_reg[0][0][2][2]/D      0.00  
-    0:03:18    7853.8    174.27  118654.4       0.0 output_buffer_inst/output_vals_reg[2][0][2][7]/D      0.00  
+    0:03:17    7851.7    174.29  118677.3       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
+    0:03:17    7851.7    174.28  118676.7       0.0 output_buffer_inst/output_vals_reg[0][0][2][2]/D      0.00  
+    0:03:17    7853.8    174.27  118654.4       0.0 output_buffer_inst/output_vals_reg[2][0][2][7]/D      0.00  
     0:03:18    7855.0    174.25  118656.7       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
-    0:03:19    7855.2    174.24  118633.2       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
-    0:03:19    7859.7    174.19  118634.5       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:19    7860.1    174.19  118634.4       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
-    0:03:19    7859.4    174.16  118636.9       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
-    0:03:20    7860.3    174.16  118636.3       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
-    0:03:20    7862.2    174.15  118631.7       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:03:18    7855.2    174.24  118633.2       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
+    0:03:18    7859.7    174.19  118634.5       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
+    0:03:18    7860.1    174.19  118634.4       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
+    0:03:18    7859.4    174.16  118636.9       0.0 output_buffer_inst/output_vals_reg[1][0][1][7]/D      0.00  
+    0:03:19    7860.3    174.16  118636.3       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:03:19    7862.2    174.15  118631.7       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
     0:03:20    7863.1    174.14  118627.0       0.0 output_buffer_inst/output_vals_reg[3][0][0][1]/D      0.00  
     0:03:20    7863.3    174.13  118624.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:21    7864.2    174.11  118624.9       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
-    0:03:21    7864.6    174.11  118618.6       0.0 output_buffer_inst/output_vals_reg[2][1][1][6]/D      0.00  
-    0:03:22    7865.2    174.11  118608.5       0.0                                0.00  
+    0:03:20    7864.2    174.11  118624.9       0.0 output_buffer_inst/output_vals_reg[1][1][0][6]/D      0.00  
+    0:03:20    7864.6    174.11  118618.6       0.0 output_buffer_inst/output_vals_reg[2][1][1][6]/D      0.00  
+    0:03:21    7865.2    174.11  118608.5       0.0                                0.00  
 
 
   Beginning Critical Range Optimization
@@ -2164,7 +2145,7 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:03:22    7865.2    174.11  118608.5       0.0                                0.00  
+    0:03:21    7865.2    174.11  118608.5       0.0                                0.00  
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -2174,96 +2155,96 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:03:23    7865.2    174.11  118608.5       0.0                                0.00  
-    0:03:23    7865.2    174.11  118608.5       0.0                                0.00  
-    0:03:25    7725.1    174.20  118513.7       0.0                                0.00  
+    0:03:22    7865.2    174.11  118608.5       0.0                                0.00  
+    0:03:22    7865.2    174.11  118608.5       0.0                                0.00  
+    0:03:24    7725.1    174.20  118513.7       0.0                                0.00  
     0:03:25    7710.2    174.48  118534.5       0.0                                0.00  
-    0:03:26    7707.4    174.32  118503.7       0.0                                0.00  
-    0:03:26    7705.6    174.32  118501.3       0.0                                0.00  
-    0:03:26    7702.3    174.32  118499.2       0.0                                0.00  
-    0:03:26    7700.6    174.32  118495.8       0.0                                0.00  
-    0:03:26    7695.8    174.32  118483.5       0.0                                0.00  
-    0:03:26    7694.6    174.32  118483.9       0.0                                0.00  
-    0:03:26    7694.6    174.32  118483.9       0.0                                0.00  
-    0:03:26    7694.6    174.32  118483.9       0.0                                0.00  
-    0:03:28    7548.1    176.34  118539.6       0.0                                0.00  
-    0:03:28    7498.3    176.41  118935.0       0.0                                0.00  
-    0:03:29    7489.7    176.59  118928.2       0.0                                0.00  
-    0:03:29    7489.4    176.59  118928.6       0.0                                0.00  
-    0:03:29    7489.4    176.59  118928.6       0.0                                0.00  
-    0:03:29    7489.4    176.59  118928.6       0.0                                0.00  
-    0:03:29    7489.4    176.59  118928.6       0.0                                0.00  
-    0:03:29    7489.4    176.59  118928.6       0.0                                0.00  
-    0:03:29    7491.1    174.94  118500.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:29    7492.1    174.76  118421.1       0.0 output_buffer_inst/output_vals_reg[0][2][2][7]/D      0.00  
-    0:03:30    7494.6    174.31  118336.9       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
-    0:03:30    7495.8    174.24  118331.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:30    7498.5    174.18  118325.9       0.0 output_buffer_inst/output_vals_reg[0][0][2][6]/D      0.00  
-    0:03:30    7501.1    174.14  118318.3       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
-    0:03:30    7501.2    174.13  118307.0       0.0 output_buffer_inst/output_vals_reg[3][0][2][7]/D      0.00  
-    0:03:30    7502.1    174.07  118291.1       0.0 output_buffer_inst/output_vals_reg[1][1][0][4]/D      0.00  
-    0:03:31    7503.8    173.99  118280.3       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
-    0:03:31    7505.3    173.98  118267.0       0.0 output_buffer_inst/output_vals_reg[3][0][0][6]/D      0.00  
-    0:03:31    7504.7    173.97  118259.4       0.0 output_buffer_inst/output_vals_reg[0][0][0][3]/D      0.00  
-    0:03:31    7506.4    173.94  118252.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][4]/D      0.00  
-    0:03:31    7508.6    173.91  118187.7       0.0 output_buffer_inst/output_vals_reg[2][0][0][1]/D      0.00  
-    0:03:31    7512.7    173.87  118180.8       0.0 output_buffer_inst/output_vals_reg[0][0][0][3]/D      0.00  
+    0:03:25    7707.4    174.32  118503.7       0.0                                0.00  
+    0:03:25    7705.6    174.32  118501.3       0.0                                0.00  
+    0:03:25    7702.3    174.32  118499.2       0.0                                0.00  
+    0:03:25    7700.6    174.32  118495.8       0.0                                0.00  
+    0:03:25    7695.8    174.32  118483.5       0.0                                0.00  
+    0:03:25    7694.6    174.32  118483.9       0.0                                0.00  
+    0:03:25    7694.6    174.32  118483.9       0.0                                0.00  
+    0:03:25    7694.6    174.32  118483.9       0.0                                0.00  
+    0:03:27    7548.1    176.34  118539.6       0.0                                0.00  
+    0:03:27    7498.3    176.41  118935.0       0.0                                0.00  
+    0:03:28    7489.7    176.59  118928.2       0.0                                0.00  
+    0:03:28    7489.4    176.59  118928.6       0.0                                0.00  
+    0:03:28    7489.4    176.59  118928.6       0.0                                0.00  
+    0:03:28    7489.4    176.59  118928.6       0.0                                0.00  
+    0:03:28    7489.4    176.59  118928.6       0.0                                0.00  
+    0:03:28    7489.4    176.59  118928.6       0.0                                0.00  
+    0:03:28    7491.1    174.94  118500.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:28    7492.1    174.76  118421.1       0.0 output_buffer_inst/output_vals_reg[0][2][2][7]/D      0.00  
+    0:03:29    7494.6    174.31  118336.9       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
+    0:03:29    7495.8    174.24  118331.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:29    7498.5    174.18  118325.9       0.0 output_buffer_inst/output_vals_reg[0][0][2][6]/D      0.00  
+    0:03:29    7501.1    174.14  118318.3       0.0 output_buffer_inst/output_vals_reg[3][2][0][3]/D      0.00  
+    0:03:29    7501.2    174.13  118307.0       0.0 output_buffer_inst/output_vals_reg[3][0][2][7]/D      0.00  
+    0:03:29    7502.1    174.07  118291.1       0.0 output_buffer_inst/output_vals_reg[1][1][0][4]/D      0.00  
+    0:03:30    7503.8    173.99  118280.3       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
+    0:03:30    7505.3    173.98  118267.0       0.0 output_buffer_inst/output_vals_reg[3][0][0][6]/D      0.00  
+    0:03:30    7504.7    173.97  118259.4       0.0 output_buffer_inst/output_vals_reg[0][0][0][3]/D      0.00  
+    0:03:30    7506.4    173.94  118252.3       0.0 output_buffer_inst/output_vals_reg[2][0][1][4]/D      0.00  
+    0:03:30    7508.6    173.91  118187.7       0.0 output_buffer_inst/output_vals_reg[2][0][0][1]/D      0.00  
+    0:03:30    7512.7    173.87  118180.8       0.0 output_buffer_inst/output_vals_reg[0][0][0][3]/D      0.00  
     0:03:31    7513.5    173.86  118173.1       0.0 output_buffer_inst/output_vals_reg[2][2][0][6]/D      0.00  
-    0:03:32    7514.3    173.81  118172.4       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
-    0:03:32    7516.0    173.74  118156.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
-    0:03:32    7517.7    173.68  118136.9       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
-    0:03:33    7520.0    173.62  118058.7       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
-    0:03:33    7523.3    173.55  118049.7       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:33    7525.1    173.54  118045.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
-    0:03:33    7525.2    173.52  118039.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:03:33    7527.5    173.50  118036.9       0.0 output_vals[3][2][0][3]        0.00  
-    0:03:33    7558.0    173.50  118034.0       0.0 output_vals[3][1][1][3]        0.00  
-    0:03:33    7579.9    173.50  118031.6       0.0 output_vals[2][0][1][1]        0.00  
-    0:03:33    7604.2    173.50  118029.0       0.0 output_vals[1][0][1][2]        0.00  
-    0:03:33    7627.6    173.50  118026.5       0.0 output_vals[0][0][2][3]        0.00  
-    0:03:33    7636.2    173.50  118024.5       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:34    7636.8    173.45  118004.5       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
-    0:03:34    7637.2    173.44  118003.2       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
-    0:03:34    7637.8    173.44  118002.7       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
-    0:03:34    7662.4    173.44  118000.9       0.0 output_vals[2][0][0][3]        0.00  
-    0:03:34    7673.1    173.44  118000.3       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
-    0:03:35    7673.4    173.41  117993.4       0.0 output_buffer_inst/output_vals_reg[1][0][0][3]/D      0.00  
-    0:03:35    7674.8    173.37  117988.3       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
-    0:03:35    7673.9    173.36  117985.8       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
-    0:03:35    7674.3    173.34  117934.0       0.0 output_buffer_inst/output_vals_reg[1][1][2][6]/D      0.00  
-    0:03:35    7675.5    173.31  117933.8       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
-    0:03:35    7676.1    173.28  117934.0       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:36    7676.3    173.27  117932.4       0.0 output_buffer_inst/output_vals_reg[2][2][2][3]/D      0.00  
-    0:03:36    7677.1    173.26  117929.9       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
-    0:03:36    7679.9    173.25  117906.2       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
-    0:03:36    7680.0    173.24  117905.6       0.0 output_buffer_inst/output_vals_reg[1][0][0][6]/D      0.00  
-    0:03:36    7692.2    173.24  117901.5       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
-    0:03:36    7693.5    173.24  117904.1       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:03:36    7693.5    173.23  117903.4       0.0 output_buffer_inst/output_vals_reg[2][1][0][4]/D      0.00  
-    0:03:36    7694.5    173.21  117906.2       0.0 output_buffer_inst/output_vals_reg[2][2][0][6]/D      0.00  
-    0:03:37    7696.2    173.20  117908.7       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
-    0:03:37    7695.5    173.18  117889.1       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
-    0:03:37    7695.5    173.17  117888.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:37    7695.1    173.17  117889.6       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:03:37    7696.0    173.15  117885.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
-    0:03:37    7695.9    173.13  117879.7       0.0 output_buffer_inst/output_vals_reg[1][2][0][6]/D      0.00  
-    0:03:37    7695.9    173.13  117879.3       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
-    0:03:38    7695.6    173.13  117878.3       0.0                                0.00  
-    0:03:38    7693.7    173.13  117878.2       0.0                                0.00  
-    0:03:38    7693.4    173.13  117870.0       0.0                                0.00  
-    0:03:38    7690.7    173.13  117870.2       0.0                                0.00  
-    0:03:38    7689.9    173.13  117870.2       0.0                                0.00  
-    0:03:39    7688.2    173.13  117866.0       0.0                                0.00  
-    0:03:39    7686.1    173.13  117865.8       0.0                                0.00  
-    0:03:39    7679.7    173.13  117863.6       0.0                                0.00  
-    0:03:39    7676.8    173.13  117851.7       0.0                                0.00  
-    0:03:39    7674.0    173.13  117840.2       0.0                                0.00  
-    0:03:39    7670.5    173.13  117827.7       0.0                                0.00  
-    0:03:39    7666.3    173.13  117813.9       0.0                                0.00  
-    0:03:40    7662.6    173.13  117805.6       0.0                                0.00  
-    0:03:40    7662.1    173.13  117802.5       0.0                                0.00  
-    0:03:40    7660.9    173.13  117802.6       0.0                                0.00  
-    0:03:40    7655.5    173.12  117789.6       0.0                                0.00  
+    0:03:31    7514.3    173.81  118172.4       0.0 output_buffer_inst/output_vals_reg[2][1][0][6]/D      0.00  
+    0:03:31    7516.0    173.74  118156.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][7]/D      0.00  
+    0:03:31    7517.7    173.68  118136.9       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
+    0:03:32    7520.0    173.62  118058.7       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
+    0:03:32    7523.3    173.55  118049.7       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:32    7525.1    173.54  118045.4       0.0 output_buffer_inst/output_vals_reg[0][1][1][4]/D      0.00  
+    0:03:32    7525.2    173.52  118039.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
+    0:03:32    7527.5    173.50  118036.9       0.0 output_vals[3][2][0][3]        0.00  
+    0:03:32    7558.0    173.50  118034.0       0.0 output_vals[3][1][1][3]        0.00  
+    0:03:32    7579.9    173.50  118031.6       0.0 output_vals[2][0][1][1]        0.00  
+    0:03:32    7604.2    173.50  118029.0       0.0 output_vals[1][0][1][2]        0.00  
+    0:03:32    7627.6    173.50  118026.5       0.0 output_vals[0][0][2][3]        0.00  
+    0:03:32    7636.2    173.50  118024.5       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:33    7636.8    173.45  118004.5       0.0 output_buffer_inst/output_vals_reg[2][0][1][5]/D      0.00  
+    0:03:33    7637.2    173.44  118003.2       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
+    0:03:33    7637.8    173.44  118002.7       0.0 output_buffer_inst/output_vals_reg[2][0][0][3]/D      0.00  
+    0:03:33    7662.4    173.44  118000.9       0.0 output_vals[2][0][0][3]        0.00  
+    0:03:33    7673.1    173.44  118000.3       0.0 output_buffer_inst/output_vals_reg[3][0][0][7]/D      0.00  
+    0:03:33    7673.4    173.41  117993.4       0.0 output_buffer_inst/output_vals_reg[1][0][0][3]/D      0.00  
+    0:03:34    7674.8    173.37  117988.3       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
+    0:03:34    7673.9    173.36  117985.8       0.0 output_buffer_inst/output_vals_reg[2][2][1][4]/D      0.00  
+    0:03:34    7674.3    173.34  117934.0       0.0 output_buffer_inst/output_vals_reg[1][1][2][6]/D      0.00  
+    0:03:34    7675.5    173.31  117933.8       0.0 output_buffer_inst/output_vals_reg[1][1][2][7]/D      0.00  
+    0:03:34    7676.1    173.28  117934.0       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
+    0:03:35    7676.3    173.27  117932.4       0.0 output_buffer_inst/output_vals_reg[2][2][2][3]/D      0.00  
+    0:03:35    7677.1    173.26  117929.9       0.0 output_buffer_inst/output_vals_reg[3][1][0][7]/D      0.00  
+    0:03:35    7679.9    173.25  117906.2       0.0 output_buffer_inst/output_vals_reg[3][2][2][4]/D      0.00  
+    0:03:35    7680.0    173.24  117905.6       0.0 output_buffer_inst/output_vals_reg[1][0][0][6]/D      0.00  
+    0:03:35    7692.2    173.24  117901.5       0.0 output_buffer_inst/output_vals_reg[0][2][1][4]/D      0.00  
+    0:03:35    7693.5    173.24  117904.1       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:03:35    7693.5    173.23  117903.4       0.0 output_buffer_inst/output_vals_reg[2][1][0][4]/D      0.00  
+    0:03:35    7694.5    173.21  117906.2       0.0 output_buffer_inst/output_vals_reg[2][2][0][6]/D      0.00  
+    0:03:36    7696.2    173.20  117908.7       0.0 output_buffer_inst/output_vals_reg[0][2][1][6]/D      0.00  
+    0:03:36    7695.5    173.18  117889.1       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
+    0:03:36    7695.5    173.17  117888.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:36    7695.1    173.17  117889.6       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
+    0:03:36    7696.0    173.15  117885.8       0.0 output_buffer_inst/output_vals_reg[0][1][2][4]/D      0.00  
+    0:03:36    7695.9    173.13  117879.7       0.0 output_buffer_inst/output_vals_reg[1][2][0][6]/D      0.00  
+    0:03:36    7695.9    173.13  117879.3       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
+    0:03:37    7695.6    173.13  117878.3       0.0                                0.00  
+    0:03:37    7693.7    173.13  117878.2       0.0                                0.00  
+    0:03:37    7693.4    173.13  117870.0       0.0                                0.00  
+    0:03:37    7690.7    173.13  117870.2       0.0                                0.00  
+    0:03:37    7689.9    173.13  117870.2       0.0                                0.00  
+    0:03:38    7688.2    173.13  117866.0       0.0                                0.00  
+    0:03:38    7686.1    173.13  117865.8       0.0                                0.00  
+    0:03:38    7679.7    173.13  117863.6       0.0                                0.00  
+    0:03:38    7676.8    173.13  117851.7       0.0                                0.00  
+    0:03:38    7674.0    173.13  117840.2       0.0                                0.00  
+    0:03:38    7670.5    173.13  117827.7       0.0                                0.00  
+    0:03:38    7666.3    173.13  117813.9       0.0                                0.00  
+    0:03:39    7662.6    173.13  117805.6       0.0                                0.00  
+    0:03:39    7662.1    173.13  117802.5       0.0                                0.00  
+    0:03:39    7660.9    173.13  117802.6       0.0                                0.00  
+    0:03:39    7655.5    173.12  117789.6       0.0                                0.00  
 
 
   Beginning Critical Range Optimization
@@ -2273,18 +2254,18 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:03:40    7655.5    173.12  117789.6       0.0                                0.00  
-    0:03:40    7656.5    173.11  117787.7       0.0                                0.00  
-    0:03:41    7656.4    173.10  117782.9       0.0                                0.00  
-    0:03:41    7656.5    173.09  117770.3       0.0                                0.00  
-    0:03:41    7656.6    173.08  117769.6       0.0                                0.00  
-    0:03:41    7657.5    173.07  117768.8       0.0 output_buffer_inst/output_vals_reg[0][1][0][6]/D      0.00  
-    0:03:41    7659.3    173.06  117768.2       0.0 output_buffer_inst/output_vals_reg[3][0][2][5]/D      0.00  
-    0:03:42    7659.3    173.05  117767.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
-    0:03:42    7660.4    173.05  117768.5       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
-    0:03:42    7661.4    173.02  117760.1       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
-    0:03:42    7662.4    173.02  117760.1       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
-    0:03:43    7662.0    173.02  117754.1       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
+    0:03:39    7655.5    173.12  117789.6       0.0                                0.00  
+    0:03:39    7656.5    173.11  117787.7       0.0                                0.00  
+    0:03:40    7656.4    173.10  117782.9       0.0                                0.00  
+    0:03:40    7656.5    173.09  117770.3       0.0                                0.00  
+    0:03:40    7656.6    173.08  117769.6       0.0                                0.00  
+    0:03:40    7657.5    173.07  117768.8       0.0 output_buffer_inst/output_vals_reg[0][1][0][6]/D      0.00  
+    0:03:40    7659.3    173.06  117768.2       0.0 output_buffer_inst/output_vals_reg[3][0][2][5]/D      0.00  
+    0:03:40    7659.3    173.05  117767.4       0.0 output_buffer_inst/output_vals_reg[3][1][1][6]/D      0.00  
+    0:03:41    7660.4    173.05  117768.5       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
+    0:03:41    7661.4    173.02  117760.1       0.0 output_buffer_inst/output_vals_reg[0][1][0][4]/D      0.00  
+    0:03:41    7662.4    173.02  117760.1       0.0 output_buffer_inst/output_vals_reg[0][0][1][7]/D      0.00  
+    0:03:42    7662.0    173.02  117754.1       0.0 output_buffer_inst/output_vals_reg[1][1][1][7]/D      0.00  
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -2296,7 +2277,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 ****************************************
 check_design summary:
 Version:     O-2018.06
-Date:        Thu Dec  5 22:33:42 2019
+Date:        Thu Dec  5 23:14:47 2019
 ****************************************
 
                    Name                                            Total

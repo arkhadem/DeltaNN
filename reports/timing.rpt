@@ -10,7 +10,7 @@ Report : timing
         -transition_time
 Design : processing_unit
 Version: O-2018.06
-Date   : Thu Dec  5 22:33:44 2019
+Date   : Thu Dec  5 23:14:49 2019
 ****************************************
 
  * Some/all delay information is back-annotated.
@@ -570,19 +570,19 @@ Attributes:
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/ab[1][2] (net)     2     0.00    84.87 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U33/I (INV_X1)     5.16     0.00    84.87 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U33/ZN (INV_X1)     3.58     3.02    87.89 f
-  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n21 (net)     1     0.00    87.89 f
+  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n22 (net)     1     0.00    87.89 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U49/A2 (NOR2_X2)     3.58     0.00    87.89 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U49/ZN (NOR2_X2)     5.79     4.24    92.13 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/CARRYB[1][2] (net)     3     0.00    92.13 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U13/A2 (XOR2_X1)     5.79     0.00    92.13 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U13/Z (XOR2_X1)     5.94     6.30    98.43 r
-  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n6 (net)     1     0.00    98.43 r
+  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n7 (net)     1     0.00    98.43 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U14/A1 (XOR2_X1)     5.94     0.00    98.43 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U14/Z (XOR2_X1)    10.38     8.23   106.66 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/SUMB[2][2] (net)     3     0.00   106.66 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U8/A1 (NAND2_X1)    10.38     0.00   106.66 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U8/ZN (NAND2_X1)     6.76     5.04   111.71 f
-  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n4 (net)     1     0.00   111.71 f
+  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n5 (net)     1     0.00   111.71 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U10/A2 (NAND3_X2)     6.76     0.00   111.71 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U10/ZN (NAND3_X2)     4.29     3.63   115.33 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/CARRYB[3][1] (net)     2     0.00   115.33 r
@@ -591,10 +591,10 @@ Attributes:
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/A1[3] (net)     3     0.00   123.79 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U2/A1 (NAND2_X1)    11.53     0.00   123.79 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U2/ZN (NAND2_X1)     8.11     5.94   129.73 f
-  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n26 (net)     2     0.00   129.73 f
+  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n27 (net)     2     0.00   129.73 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U27/I (INV_X1)     8.11     0.00   129.73 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U27/ZN (INV_X1)     3.29     2.80   132.53 r
-  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n22 (net)     1     0.00   132.53 r
+  PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/n23 (net)     1     0.00   132.53 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U38/B (AOI21_X1)     3.29     0.00   132.53 r
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/U38/ZN (AOI21_X1)     3.47     2.65   135.18 f
   PE_channel[2].PE_row[2].PE_column[1].PEs/mult_inst/mult_16/PRODUCT[5] (net)     1     0.00   135.18 f
@@ -1171,7 +1171,7 @@ Attributes:
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/ab[1][0] (net)     2     0.00    92.41 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U37/I (INV_X1)     5.08     0.00    92.41 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U37/ZN (INV_X1)     2.49     2.18    94.58 f
-  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n16 (net)     1     0.00    94.58 f
+  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n17 (net)     1     0.00    94.58 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U42/A2 (NOR2_X1)     2.49     0.00    94.58 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U42/ZN (NOR2_X1)     5.28     3.81    98.39 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/CARRYB[1][0] (net)     1     0.00    98.39 r
@@ -1186,13 +1186,13 @@ Attributes:
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/A2[3] (net)     2     0.00   125.97 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U29/I (INV_X1)     4.01     0.00   125.97 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U29/ZN (INV_X1)     3.16     2.73   128.70 f
-  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n22 (net)     2     0.00   128.70 f
+  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n23 (net)     2     0.00   128.70 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U57/A2 (OR3_X1)     3.16     0.00   128.70 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U57/Z (OR3_X1)     2.72     6.12   134.83 f
-  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n24 (net)     1     0.00   134.83 f
+  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n25 (net)     1     0.00   134.83 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U26/A1 (NAND2_X1)     2.72     0.00   134.83 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U26/ZN (NAND2_X1)     3.30     2.51   137.34 r
-  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n25 (net)     1     0.00   137.34 r
+  PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/n26 (net)     1     0.00   137.34 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U58/A1 (XOR2_X1)     3.30     0.00   137.34 r
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/U58/Z (XOR2_X1)     3.45     2.84   140.18 f
   PE_channel[1].PE_row[0].PE_column[2].PEs/mult_inst/mult_16/PRODUCT[7] (net)     1     0.00   140.18 f
@@ -1456,10 +1456,10 @@ Attributes:
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/A[1] (net)     0.00    78.49 r
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U17/I (INV_X2)     3.32     0.00    78.49 r
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U17/ZN (INV_X2)     2.59     2.29    80.78 f
-  PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/n19 (net)     2     0.00    80.78 f
+  PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/n20 (net)     2     0.00    80.78 f
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U18/I (INV_X2)     2.59     0.00    80.78 f
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U18/ZN (INV_X2)     2.75     2.33    83.11 r
-  PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/n21 (net)     3     0.00    83.11 r
+  PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/n22 (net)     3     0.00    83.11 r
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U3/A1 (AND2_X2)     2.75     0.00    83.11 r
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/U3/Z (AND2_X2)     3.58     5.97    89.07 r
   PE_channel[0].PE_row[2].PE_column[2].PEs/mult_inst/mult_16/ab[1][1] (net)     2     0.00    89.07 r
