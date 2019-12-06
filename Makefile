@@ -19,7 +19,7 @@ all:    simv
 #####
 
 TESTBENCH = PU_test.sv
-SIMFILES = sys_defs.svh accumulator.sv delta_down_counter.sv index_down_counter.sv shifter.sv multiplier.sv output_buffer.sv processing_element.sv processing_unit.sv
+SIMFILES = HDL/sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv
 SYNFILES = outputs/processing_unit.vg
 SCRIPT = scripts/script.tcl
 SYN_OUTPUT = outputs/synth.out

@@ -21,7 +21,7 @@ set link_library [concat  "*" $target_library]
 #/* new design                                              */
 #/***********************************************************/
 set search_path [ list "./" "/afs/umich.edu/class/eecs470/lib/synopsys/"]
-set src_files [list "sys_defs.svh accumulator.sv delta_down_counter.sv index_down_counter.sv shifter.sv multiplier.sv output_buffer.sv processing_element.sv processing_unit.sv"]
+set src_files [list "HDL/sys_defs.svh HDL/accumulator.sv HDL/delta_down_counter.sv HDL/index_down_counter.sv HDL/shifter.sv HDL/multiplier.sv HDL/output_buffer.sv HDL/processing_element.sv HDL/processing_unit.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
