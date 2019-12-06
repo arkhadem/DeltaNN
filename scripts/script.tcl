@@ -26,7 +26,7 @@ set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
 set reset_name reset
-set CLK_PERIOD 2.39
+set CLK_PERIOD 250
 
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */
