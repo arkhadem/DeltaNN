@@ -25,10 +25,16 @@ Initializing...
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set output_path ./outputs
-./outputs
-set report_path ./reports
-./reports
+set design_path "/home/arkhadem/Downloads/Delta/DeltaNN"
+/home/arkhadem/Downloads/Delta/DeltaNN
+set output_path $design_path/outputs
+/home/arkhadem/Downloads/Delta/DeltaNN/outputs
+set report_path $design_path/reports
+/home/arkhadem/Downloads/Delta/DeltaNN/reports
+set library_path $design_path/library
+/home/arkhadem/Downloads/Delta/DeltaNN/library
+set source_path $design_path/HDL
+/home/arkhadem/Downloads/Delta/DeltaNN/HDL
 #/***********************************************************/
 #/* The rest of this file may be left alone for most small  */
 #/* to moderate sized designs.  You may need to alter it    */
@@ -36,52 +42,51 @@ set report_path ./reports
 #/***********************************************************/
 set SYN_DIR ./
 ./
-set target_library "NanGate_15nm_OCL_typical_conditional_ccs.db"
-NanGate_15nm_OCL_typical_conditional_ccs.db
+set target_library "$library_path/NanGate_15nm_OCL_typical_conditional_ccs.db"
+/home/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db
 set link_library [concat  "*" $target_library]
-* NanGate_15nm_OCL_typical_conditional_ccs.db
+* /home/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db
 #/***********************************************************/
 #/* The following lines must be updated for every           */
 #/* new design                                              */
 #/***********************************************************/
 set search_path [ list "./" "./library/"]
 ./ ./library/
-set src_files [list "./HDL/sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv"]
-{./HDL/sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv}
+set src_files [list "$source_path/accumulator.sv $source_path/delta_down_counter.sv $source_path/index_down_counter.sv $source_path/shifter.sv $source_path/multiplier.sv $source_path/output_buffer.sv $source_path/processing_element.sv $source_path/processing_unit.sv"]
+{/home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv}
 set design_name processing_unit
 processing_unit
 read_file -f sverilog $src_files
-Loading db file '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db'
+Loading db file '/home/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db'
 Information: Using CCS timing libraries. (TIM-024)
 Loading db file '/usr/caen/synopsys-synth-2018.06/libraries/syn/gtech.db'
 Loading db file '/usr/caen/synopsys-synth-2018.06/libraries/syn/standard.sldb'
   Loading link library 'NanGate_15nm_OCL'
   Loading link library 'gtech'
-Loading sverilog files: '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv' '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv' 
+Loading sverilog files: '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv' '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv' 
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv
-Opening include file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv
+Opening include file sys_defs.svh
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv
+Opening include file sys_defs.svh
 
 Inferred memory devices in process
 	in routine accumulator line 26 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -90,7 +95,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine delta_down_counter line 15 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -99,7 +104,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine index_down_counter line 15 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -108,7 +113,7 @@ Inferred memory devices in process
 
 Inferred tri-state devices in process
 	in routine shifter line 13 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv'.
 ============================================
 | Register Name |       Type       | Width |
 ============================================
@@ -117,7 +122,7 @@ Inferred tri-state devices in process
 
 Inferred tri-state devices in process
 	in routine shifter line 14 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv'.
 ============================================
 | Register Name |       Type       | Width |
 ============================================
@@ -126,7 +131,7 @@ Inferred tri-state devices in process
 
 Inferred tri-state devices in process
 	in routine multiplier line 13 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv'.
 ============================================
 | Register Name |       Type       | Width |
 ============================================
@@ -135,17 +140,17 @@ Inferred tri-state devices in process
 
 Inferred tri-state devices in process
 	in routine multiplier line 14 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv'.
 ============================================
 | Register Name |       Type       | Width |
 ============================================
 |   val2_tri    | Tri-State Buffer |   4   |
 ============================================
-Warning:  /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv:30: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv:30: signed to unsigned conversion occurs. (VER-318)
 
 Inferred memory devices in process
 	in routine output_buffer line 15 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -162,11 +167,11 @@ Statistics for MUX_OPs
 | output_buffer/29 |   64   |    2    |      6       |
 | output_buffer/30 |   64   |    2    |      6       |
 ======================================================
-Warning:  /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv:143: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv:143: signed to unsigned conversion occurs. (VER-318)
 
 Inferred memory devices in process
 	in routine processing_unit line 70 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -175,7 +180,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine processing_unit line 108 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -184,7 +189,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine processing_unit line 130 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -193,7 +198,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine processing_unit line 147 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -202,7 +207,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine processing_unit line 179 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -211,7 +216,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine processing_unit line 211 in file
-		'/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
+		'/home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -238,7 +243,7 @@ Statistics for MUX_OPs
 | processing_unit/142 |   64   |    1    |      6       |
 =========================================================
 Presto compilation completed successfully.
-Current design is now '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.db:accumulator'
+Current design is now '/home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.db:accumulator'
 Loaded 8 designs.
 Current design is 'accumulator'.
 accumulator delta_down_counter index_down_counter shifter multiplier output_buffer processing_element processing_unit
@@ -246,8 +251,8 @@ set clock_name clock
 clock
 set reset_name reset
 reset
-set CLK_PERIOD 250
-250
+set CLK_PERIOD 200
+200
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */
 set CLK_TRANSITION 0.1
@@ -289,8 +294,8 @@ set AVG_FANOUT_LOAD 10
 ###############################################################
 analyze -library WORK -format sverilog $src_files
 Running PRESTO HDLC
-Compiling source file ./HDL/sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv
-Error:  Unable to open file `./HDL/sys_defs.svh ./HDL/accumulator.sv ./HDL/delta_down_counter.sv ./HDL/index_down_counter.sv ./HDL/shifter.sv ./HDL/multiplier.sv ./HDL/output_buffer.sv ./HDL/processing_element.sv ./HDL/processing_unit.sv': No such file or directory. (VER-41)
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv
+Error:  Unable to open file `/home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_element.sv /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv': No such file or directory. (VER-41)
 *** Presto compilation terminated with 1 errors. ***
 0
 elaborate $design_name
@@ -304,8 +309,8 @@ link
   Linking design 'processing_unit'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (8 designs)               /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.db, etc
-  NanGate_15nm_OCL (library)  /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db
+  * (8 designs)               /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.db, etc
+  NanGate_15nm_OCL (library)  /home/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db
 
 1
 uniquify
@@ -321,7 +326,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     O-2018.06
-Date:        Thu Dec  5 23:56:51 2019
+Date:        Fri Dec  6 00:20:20 2019
 ****************************************
 
                    Name                                            Total
@@ -1742,37 +1747,36 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:29    7407.3    243.29  115400.5     672.4                                0.00  
-    0:00:29    7407.3    243.29  115400.5     672.4                                0.00  
-    0:00:30    7619.0    148.69   31872.7     265.8                                0.00  
-    0:00:40    8088.9      4.91     131.5       0.0                                0.00  
-    0:00:41    8088.9      4.38     129.5       0.0                                0.00  
-    0:00:41    8088.9      4.38     129.5       0.0                                0.00  
-    0:00:41    8088.6      4.38     129.4       0.0                                0.00  
-    0:00:41    8088.6      4.38     129.4       0.0                                0.00  
-    0:00:46    6287.9     15.64     293.6       0.0                                0.00  
-    0:00:46    6326.0      9.65      83.9       0.0                                0.00  
-    0:00:48    6300.5      8.60     105.3       0.0                                0.00  
-    0:00:48    6303.7      7.47      80.4       0.0                                0.00  
-    0:00:49    6302.4      7.00      81.9       0.0                                0.00  
-    0:00:49    6308.9      6.50      49.2       0.0                                0.00  
-    0:00:49    6307.4      5.35      38.0       0.0                                0.00  
-    0:00:50    6306.1      5.48      39.3       0.0                                0.00  
-    0:00:50    6304.0      4.60      32.9       0.0                                0.00  
-    0:00:50    6303.4      4.47      30.5       0.0                                0.00  
-    0:00:50    6303.4      4.47      30.5       0.0                                0.00  
-    0:00:50    6306.3      4.15      20.1       0.0                                0.00  
-    0:00:51    6309.4      2.12      13.2       0.0                                0.00  
-    0:00:51    6309.7      1.57       4.0       0.0                                0.00  
-    0:00:51    6311.0      0.55       1.7       0.0                                0.00  
-    0:00:51    6311.5      0.57       1.5       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
+    0:00:43    8236.3    202.80   97212.4     217.9                                0.00  
+    0:00:43    8236.3    202.80   97212.4     217.9                                0.00  
+    0:00:44    8449.8    115.19   40213.8       0.0                                0.00  
+    0:01:02    8521.5     11.37    1872.1       0.0                                0.00  
+    0:01:02    8521.5     10.38    1820.0       0.0                                0.00  
+    0:01:02    8521.5     10.38    1820.0       0.0                                0.00  
+    0:01:02    8521.5     10.38    1820.0       0.0                                0.00  
+    0:01:02    8521.5     10.38    1820.0       0.0                                0.00  
+    0:01:09    6656.8     21.37    2347.9       0.0                                0.00  
+    0:01:11    6681.1     10.46     927.9       0.0                                0.00  
+    0:01:12    6635.0      8.58     687.4       0.0                                0.00  
+    0:01:13    6634.2      7.57     286.2       0.0                                0.00  
+    0:01:13    6632.3      5.67     289.1       0.0                                0.00  
+    0:01:14    6632.8      4.95     179.7       0.0                                0.00  
+    0:01:14    6630.6      5.57     208.5       0.0                                0.00  
+    0:01:15    6632.8      4.11     128.8       0.0                                0.00  
+    0:01:15    6631.4      3.19      92.8       0.0                                0.00  
+    0:01:16    6633.0      2.69      66.4       0.0                                0.00  
+    0:01:16    6633.2      2.40      59.7       0.0                                0.00  
+    0:01:16    6634.2      2.25      52.4       0.0                                0.00  
+    0:01:17    6635.3      1.98      48.6       0.0                                0.00  
+    0:01:17    6637.1      1.86      21.8       0.0                                0.00  
+    0:01:17    6637.1      1.66      19.2       0.0                                0.00  
+    0:01:17    6638.3      1.36      17.0       0.0                                0.00  
+    0:01:17    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
 
 
 
@@ -1783,9 +1787,10 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
+    0:01:18    6637.9      1.22      13.3       0.0                                0.00  
+    0:01:18    6642.3      0.06       0.1       0.0 output_buffer_inst/output_vals_reg[1][0][0][5]/D      0.00  
+    0:01:18    6642.8      0.00       0.0       0.0                                0.00  
+    0:01:18    6642.8      0.00       0.0       0.0                                0.00  
 
 
   Beginning Critical Range Optimization
@@ -1795,7 +1800,7 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:52    6311.5      0.00       0.0       0.0                                0.00  
+    0:01:19    6642.8      0.00       0.0       0.0                                0.00  
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -1805,33 +1810,31 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:00:53    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:53    6311.5      0.00       0.0       0.0                                0.00  
-    0:00:54    6267.7      2.55      16.5       0.0                                0.00  
-    0:00:55    6248.5      2.29      16.4       0.0                                0.00  
-    0:00:55    6243.8      2.18      16.0       0.0                                0.00  
-    0:00:55    6238.9      2.17      10.6       0.0                                0.00  
-    0:00:55    6235.8      2.21      14.8       0.0                                0.00  
-    0:00:55    6233.8      2.70      16.1       0.0                                0.00  
-    0:00:56    6232.1      2.70      17.7       0.0                                0.00  
-    0:00:56    6232.1      2.70      17.7       0.0                                0.00  
-    0:00:56    6235.2      1.22       9.9       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:00:57    6235.8      1.10       3.0       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:00:57    6230.3      0.09       0.1       0.0 output_buffer_inst/output_vals_reg[0][2][0][7]/D      0.00  
-    0:00:58    6229.4      0.09       0.1       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:00:58    6228.9      0.00       0.0       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:00:58    6228.9      0.00       0.0       0.0                                0.00  
-    0:00:59    6184.5     13.95     360.0       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:00:59    6180.4     13.78     345.6       0.0                                0.00  
-    0:01:00    6185.3      2.30      38.5       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:01:00    6188.3      0.32       0.9       0.0 output_buffer_inst/output_vals_reg[3][2][0][7]/D      0.00  
-    0:01:00    6189.6      0.00       0.0       0.0                                0.00  
+    0:01:19    6642.8      0.00       0.0       0.0                                0.00  
+    0:01:19    6642.8      0.00       0.0       0.0                                0.00  
+    0:01:21    6584.9      2.88      20.3       0.0                                0.00  
+    0:01:21    6575.9      2.97      26.7       0.0                                0.00  
+    0:01:21    6574.7      2.97      26.8       0.0                                0.00  
+    0:01:21    6573.9      2.97      25.7       0.0                                0.00  
+    0:01:21    6572.8      2.97      26.3       0.0                                0.00  
+    0:01:21    6572.8      2.97      26.3       0.0                                0.00  
+    0:01:22    6576.9      0.24       1.3       0.0 output_buffer_inst/output_vals_reg[2][0][0][6]/D      0.00  
+    0:01:23    6578.0      0.00       0.0       0.0                                0.00  
+    0:01:24    6451.8      8.53     599.4       0.0                                0.00  
+    0:01:24    6420.6      8.76     580.9       0.0                                0.00  
+    0:01:24    6416.2      8.76     580.0       0.0                                0.00  
+    0:01:24    6416.1      8.76     580.0       0.0                                0.00  
+    0:01:24    6416.1      8.76     580.0       0.0                                0.00  
+    0:01:24    6416.1      8.76     580.0       0.0                                0.00  
+    0:01:24    6416.1      8.76     580.0       0.0                                0.00  
+    0:01:24    6416.1      8.76     580.0       0.0                                0.00  
+    0:01:25    6423.0      3.86     272.3       0.0 output_buffer_inst/output_vals_reg[3][2][1][7]/D      0.00  
+    0:01:26    6429.9      2.27     103.2       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
+    0:01:27    6433.0      0.89      31.2       0.0 output_buffer_inst/output_vals_reg[1][0][0][5]/D      0.00  
+    0:01:27    6436.3      0.29       4.9       0.0 output_buffer_inst/output_vals_reg[1][1][1][6]/D      0.00  
+    0:01:28    6437.0      0.10       0.6       0.0 output_buffer_inst/output_vals_reg[0][0][0][7]/D      0.00  
+    0:01:28    6439.2      0.02       0.1       0.0 output_buffer_inst/output_vals_reg[1][2][2][6]/D      0.00  
+    0:01:28    6439.5      0.00       0.0       0.0                                0.00  
 
 
   Beginning Critical Range Optimization
@@ -1841,8 +1844,8 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
   --------- --------- --------- --------- --------- ------------------------- -----------
-    0:01:00    6189.6      0.00       0.0       0.0                                0.00  
-    0:01:01    6189.6      0.00       0.0       0.0                                0.00  
+    0:01:28    6439.5      0.00       0.0       0.0                                0.00  
+    0:01:29    6439.5      0.00       0.0       0.0                                0.00  
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -1854,7 +1857,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 ****************************************
 check_design summary:
 Version:     O-2018.06
-Date:        Thu Dec  5 23:57:52 2019
+Date:        Fri Dec  6 00:21:49 2019
 ****************************************
 
                    Name                                            Total
@@ -1862,9 +1865,9 @@ Date:        Thu Dec  5 23:57:52 2019
 Inputs/Outputs                                                    336
     Unconnected ports (LINT-28)                                   336
 
-Cells                                                             107
+Cells                                                             102
     Connected to power or ground (LINT-32)                         96
-    Nets connected to multiple pins on same cell (LINT-33)         11
+    Nets connected to multiple pins on same cell (LINT-33)          6
 
 Tristate                                                          768
     Single tristate driver drives an input pin (LINT-63)          768
@@ -2062,98 +2065,6 @@ Warning: In design 'output_buffer', port 'index_vals[0][3][4]' is not connected 
 Warning: In design 'output_buffer', port 'index_vals[0][2][4]' is not connected to any nets. (LINT-28)
 Warning: In design 'output_buffer', port 'index_vals[0][1][4]' is not connected to any nets. (LINT-28)
 Warning: In design 'output_buffer', port 'index_vals[0][0][4]' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_0_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_0_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_1_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_1_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_2_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_2_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_3_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_3_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_4_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_4_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_5_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_5_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_6_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_6_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_7_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_7_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_8_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_8_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_9_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_9_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_10_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_10_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_11_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_11_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_12_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_12_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_13_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_13_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_14_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_14_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_15_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_15_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_16_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_16_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_17_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_17_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_18_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_18_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_19_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_19_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_20_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_20_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_21_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_21_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_22_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_22_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_23_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_23_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_24_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_24_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_25_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_25_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_26_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_26_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_27_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_27_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_28_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_28_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_29_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_29_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_30_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_30_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_31_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_31_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_32_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_32_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_33_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_33_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_34_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_34_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_35_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_35_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_36_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_36_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_37_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_37_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_38_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_38_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_39_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_39_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_40_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_40_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_41_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_41_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_42_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_42_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_43_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_43_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_44_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_44_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_45_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
-Warning: In design 'accumulator_45_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_45_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_44_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_43_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
@@ -2202,10 +2113,102 @@ Warning: In design 'multiplier_3_DW02_mult_0', port 'TC' is not connected to any
 Warning: In design 'multiplier_2_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_1_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_0_DW02_mult_0', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_42_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_42_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
 Warning: In design 'accumulator_46_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
 Warning: In design 'accumulator_46_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_43_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_43_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
 Warning: In design 'accumulator_47_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
 Warning: In design 'accumulator_47_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_30_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_30_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_31_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_31_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_38_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_38_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_41_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_41_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_39_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_39_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_34_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_34_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_45_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_45_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_40_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_40_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_26_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_26_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_35_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_35_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_44_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_44_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_27_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_27_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_37_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_37_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_25_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_25_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_22_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_22_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_21_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_21_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_36_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_36_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_33_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_33_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_24_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_24_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_20_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_20_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_18_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_18_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_17_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_17_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_32_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_32_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_16_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_16_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_29_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_29_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_23_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_23_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_28_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_28_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_15_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_15_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_10_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_10_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_11_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_11_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_2_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_2_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_3_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_3_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_14_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_14_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_13_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_13_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_8_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_8_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_4_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_4_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_1_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_1_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_0_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_0_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_12_DW01_add_2', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_12_DW01_add_2', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_6_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_6_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_9_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_9_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_5_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_5_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_7_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_7_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_19_DW01_add_3', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'accumulator_19_DW01_add_3', port 'CO' is not connected to any nets. (LINT-28)
 Warning: In design 'multiplier_47', a pin on submodule 'mult_16' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'TC' is connected to logic 0. 
 Warning: In design 'accumulator_47', a pin on submodule 'add_22' is connected to logic 1 or logic 0. (LINT-32)
@@ -2398,28 +2401,18 @@ Warning: In design 'multiplier_45', a pin on submodule 'mult_16' is connected to
    Pin 'TC' is connected to logic 0. 
 Warning: In design 'multiplier_46', a pin on submodule 'mult_16' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'TC' is connected to logic 0. 
+Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[0].PE_row[0].PE_column[0].PEs'. (LINT-33)
+   Net 'n2916' is connected to pins 'shift_enable', 'delta_count_down_restart''.
+Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[0].PE_row[0].PE_column[1].PEs'. (LINT-33)
+   Net 'n2916' is connected to pins 'shift_enable', 'delta_count_down_restart''.
 Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[0].PE_row[3].PE_column[3].PEs'. (LINT-33)
-   Net 'n2906' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[1].PE_column[0].PEs'. (LINT-33)
-   Net 'n2908' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[1].PE_column[1].PEs'. (LINT-33)
-   Net 'n2908' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[1].PE_column[2].PEs'. (LINT-33)
-   Net 'n2908' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[1].PE_column[3].PEs'. (LINT-33)
-   Net 'n2908' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[0].PE_column[1].PEs'. (LINT-33)
-   Net 'n1196' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[0].PE_column[3].PEs'. (LINT-33)
-   Net 'n2911' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[1].PE_column[1].PEs'. (LINT-33)
-   Net 'n1197' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[1].PE_column[3].PEs'. (LINT-33)
-   Net 'n2911' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[3].PE_column[0].PEs'. (LINT-33)
-   Net 'n1197' is connected to pins 'shift_enable', 'delta_count_down_restart''.
-Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[2].PE_row[3].PE_column[3].PEs'. (LINT-33)
-   Net 'n1196' is connected to pins 'shift_enable', 'delta_count_down_restart''.
+   Net 'n2916' is connected to pins 'shift_enable', 'delta_count_down_restart''.
+Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[3].PE_column[1].PEs'. (LINT-33)
+   Net 'n2918' is connected to pins 'shift_enable', 'delta_count_down_restart''.
+Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[3].PE_column[2].PEs'. (LINT-33)
+   Net 'n2918' is connected to pins 'shift_enable', 'delta_count_down_restart''.
+Warning: In design 'processing_unit', the same net is connected to more than one pin on submodule 'PE_channel[1].PE_row[3].PE_column[3].PEs'. (LINT-33)
+   Net 'n2918' is connected to pins 'shift_enable', 'delta_count_down_restart''.
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[0].PEs/mult_inst/val2[0]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[0].PEs/mult_inst/val2[1]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[0].PEs/mult_inst/val2[2]' has a single tri-state driver.  (LINT-63)
@@ -3188,9 +3181,9 @@ Warning: Net 'PE_channel[0].PE_row[0].PE_column[1].PEs/mult_inst/val1[0]' has a 
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[1].PEs/mult_inst/val1[1]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[1].PEs/mult_inst/val1[2]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'PE_channel[0].PE_row[0].PE_column[1].PEs/mult_inst/val1[3]' has a single tri-state driver.  (LINT-63)
-Writing verilog file '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg'.
+Writing verilog file '/home/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
-Writing ddc file './outputs/processing_unit.ddc'.
+Writing ddc file '/home/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.ddc'.
 Removing design 'output_buffer'
 Removing design 'processing_unit'
 Removing design 'processing_element_0'
@@ -3391,52 +3384,6 @@ Removing design 'multiplier_44'
 Removing design 'multiplier_45'
 Removing design 'multiplier_46'
 Removing design 'multiplier_47'
-Removing design 'accumulator_0_DW01_add_0'
-Removing design 'accumulator_1_DW01_add_0'
-Removing design 'accumulator_2_DW01_add_0'
-Removing design 'accumulator_3_DW01_add_0'
-Removing design 'accumulator_4_DW01_add_0'
-Removing design 'accumulator_5_DW01_add_0'
-Removing design 'accumulator_6_DW01_add_0'
-Removing design 'accumulator_7_DW01_add_0'
-Removing design 'accumulator_8_DW01_add_0'
-Removing design 'accumulator_9_DW01_add_0'
-Removing design 'accumulator_10_DW01_add_0'
-Removing design 'accumulator_11_DW01_add_0'
-Removing design 'accumulator_12_DW01_add_0'
-Removing design 'accumulator_13_DW01_add_0'
-Removing design 'accumulator_14_DW01_add_0'
-Removing design 'accumulator_15_DW01_add_0'
-Removing design 'accumulator_16_DW01_add_0'
-Removing design 'accumulator_17_DW01_add_0'
-Removing design 'accumulator_18_DW01_add_0'
-Removing design 'accumulator_19_DW01_add_0'
-Removing design 'accumulator_20_DW01_add_0'
-Removing design 'accumulator_21_DW01_add_0'
-Removing design 'accumulator_22_DW01_add_0'
-Removing design 'accumulator_23_DW01_add_0'
-Removing design 'accumulator_24_DW01_add_0'
-Removing design 'accumulator_25_DW01_add_0'
-Removing design 'accumulator_26_DW01_add_0'
-Removing design 'accumulator_27_DW01_add_0'
-Removing design 'accumulator_28_DW01_add_0'
-Removing design 'accumulator_29_DW01_add_0'
-Removing design 'accumulator_30_DW01_add_0'
-Removing design 'accumulator_31_DW01_add_0'
-Removing design 'accumulator_32_DW01_add_0'
-Removing design 'accumulator_33_DW01_add_0'
-Removing design 'accumulator_34_DW01_add_0'
-Removing design 'accumulator_35_DW01_add_0'
-Removing design 'accumulator_36_DW01_add_0'
-Removing design 'accumulator_37_DW01_add_0'
-Removing design 'accumulator_38_DW01_add_0'
-Removing design 'accumulator_39_DW01_add_0'
-Removing design 'accumulator_40_DW01_add_0'
-Removing design 'accumulator_41_DW01_add_0'
-Removing design 'accumulator_42_DW01_add_0'
-Removing design 'accumulator_43_DW01_add_0'
-Removing design 'accumulator_44_DW01_add_0'
-Removing design 'accumulator_45_DW01_add_0'
 Removing design 'multiplier_45_DW02_mult_0'
 Removing design 'multiplier_44_DW02_mult_0'
 Removing design 'multiplier_43_DW02_mult_0'
@@ -3485,24 +3432,70 @@ Removing design 'multiplier_3_DW02_mult_0'
 Removing design 'multiplier_2_DW02_mult_0'
 Removing design 'multiplier_1_DW02_mult_0'
 Removing design 'multiplier_0_DW02_mult_0'
+Removing design 'accumulator_42_DW01_add_2'
 Removing design 'accumulator_46_DW01_add_2'
+Removing design 'accumulator_43_DW01_add_2'
 Removing design 'accumulator_47_DW01_add_2'
+Removing design 'accumulator_30_DW01_add_2'
+Removing design 'accumulator_31_DW01_add_2'
+Removing design 'accumulator_38_DW01_add_2'
+Removing design 'accumulator_41_DW01_add_2'
+Removing design 'accumulator_39_DW01_add_2'
+Removing design 'accumulator_34_DW01_add_2'
+Removing design 'accumulator_45_DW01_add_2'
+Removing design 'accumulator_40_DW01_add_2'
+Removing design 'accumulator_26_DW01_add_2'
+Removing design 'accumulator_35_DW01_add_2'
+Removing design 'accumulator_44_DW01_add_2'
+Removing design 'accumulator_27_DW01_add_2'
+Removing design 'accumulator_37_DW01_add_2'
+Removing design 'accumulator_25_DW01_add_2'
+Removing design 'accumulator_22_DW01_add_2'
+Removing design 'accumulator_21_DW01_add_2'
+Removing design 'accumulator_36_DW01_add_2'
+Removing design 'accumulator_33_DW01_add_2'
+Removing design 'accumulator_24_DW01_add_2'
+Removing design 'accumulator_20_DW01_add_2'
+Removing design 'accumulator_18_DW01_add_2'
+Removing design 'accumulator_17_DW01_add_2'
+Removing design 'accumulator_32_DW01_add_2'
+Removing design 'accumulator_16_DW01_add_2'
+Removing design 'accumulator_29_DW01_add_2'
+Removing design 'accumulator_23_DW01_add_2'
+Removing design 'accumulator_28_DW01_add_2'
+Removing design 'accumulator_15_DW01_add_2'
+Removing design 'accumulator_10_DW01_add_2'
+Removing design 'accumulator_11_DW01_add_2'
+Removing design 'accumulator_2_DW01_add_2'
+Removing design 'accumulator_3_DW01_add_2'
+Removing design 'accumulator_14_DW01_add_2'
+Removing design 'accumulator_13_DW01_add_2'
+Removing design 'accumulator_8_DW01_add_2'
+Removing design 'accumulator_4_DW01_add_2'
+Removing design 'accumulator_1_DW01_add_2'
+Removing design 'accumulator_0_DW01_add_2'
+Removing design 'accumulator_12_DW01_add_2'
+Removing design 'accumulator_6_DW01_add_3'
+Removing design 'accumulator_9_DW01_add_3'
+Removing design 'accumulator_5_DW01_add_3'
+Removing design 'accumulator_7_DW01_add_3'
+Removing design 'accumulator_19_DW01_add_3'
 Removing library 'NanGate_15nm_OCL'
 Removing library 'gtech'
 Removing library 'standard.sldb'
-Loading db file '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db'
+Loading db file '/home/arkhadem/Downloads/Delta/DeltaNN/library/NanGate_15nm_OCL_typical_conditional_ccs.db'
 Loading db file '/usr/caen/synopsys-synth-2018.06/libraries/syn/gtech.db'
 Loading db file '/usr/caen/synopsys-synth-2018.06/libraries/syn/standard.sldb'
   Loading link library 'NanGate_15nm_OCL'
   Loading link library 'gtech'
-Loading verilog file '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg'
+Loading verilog file '/home/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg'
 Detecting input file type automatically (-rtl or -netlist).
 Running DC verilog reader
 Performing 'read' command.
-Compiling source file /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg
+Compiling source file /home/arkhadem/Downloads/Delta/DeltaNN/outputs/processing_unit.vg
 Reading with netlist reader (equivalent to -netlist option).
 Verilog netlist reader completed successfully.
-Current design is now '/afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/outputs/multiplier_47_DW02_mult_0.db:multiplier_47_DW02_mult_0'
+Current design is now '/home/arkhadem/Downloads/Delta/DeltaNN/outputs/multiplier_47_DW02_mult_0.db:multiplier_47_DW02_mult_0'
 Loaded 296 designs.
 Current design is 'multiplier_47_DW02_mult_0'.
 
