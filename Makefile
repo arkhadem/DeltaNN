@@ -19,7 +19,7 @@ all:    simv
 #####
 
 TESTBENCH = PU_test.sv
-SIMFILES = sys_defs.svh controller.sv sc_counter.sv one_counter.sv ESL_adder.sv P2B.sv LFSR.sv SNG.sv ESL_bipolar_divider.sv ESL_divider.sv ESL_multiplier.sv index_counter.sv partial_result_buffer.sv processing_element.sv processing_unit.sv
+SIMFILES = sys_defs.svh accumulator.sv delta_down_counter.sv index_down_counter.sv shifter.sv multiplier.sv output_buffer.sv processing_element.sv processing_unit.sv
 SYNFILES = outputs/processing_unit.vg
 SCRIPT = scripts/script.tcl
 SYN_OUTPUT = outputs/synth.out
