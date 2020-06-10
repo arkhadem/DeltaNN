@@ -10,7 +10,7 @@
 # updated library path name -- jbbeau fall 2013
 
 VCS = SW_VCS=2017.12-SP2-1 vcs +v2k -sverilog +vc -Mupdate -line -full64
-LIB = /afs/umich.edu/class/eecs470/lib/verilog/lec25dscc25.v
+LIB = ./library/NanGate_15nm_OCL_conditional.v
 
 all:    simv
 	./simv | tee program.out

@@ -3,22 +3,20 @@
 Report : resources
 Design : processing_unit
 Version: O-2018.06
-Date   : Thu Dec  5 23:57:57 2019
+Date   : Fri Dec 13 18:38:44 2019
 ****************************************
 
 Resource Sharing Report for design processing_unit in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/processing_unit.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r95      | DW01_inc     | width=6    |               | add_113              |
-| r97      | DW01_inc     | width=6    |               | add_113_I2           |
-| r99      | DW01_inc     | width=6    |               | add_113_I3           |
-| r101     | DW01_inc     | width=6    |               | add_135              |
-| r103     | DW01_inc     | width=6    |               | add_135_I2           |
-| r105     | DW01_inc     | width=6    |               | add_135_I3           |
+| r80      | DW01_inc     | width=4    |               | add_113              |
+| r82      | DW01_inc     | width=4    |               | add_113_I2           |
+| r84      | DW01_inc     | width=4    |               | add_135              |
+| r86      | DW01_inc     | width=4    |               | add_135_I2           |
 ===============================================================================
 
 
@@ -31,27 +29,19 @@ Design : index_down_counter_0
 ****************************************
 
 No implementations to report
-
-No resource sharing information to report.
  
 ****************************************
 Design : index_down_counter_1
 ****************************************
-
-No implementations to report
- 
-****************************************
-Design : index_down_counter_2
-****************************************
 Resource Sharing Report for design index_down_counter_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/index_down_counter.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r58      | DW01_dec     | width=4    |               | sub_20               |
-| r60      | DW01_dec     | width=4    |               | sub_22               |
+| r58      | DW01_dec     | width=3    |               | sub_20               |
+| r60      | DW01_dec     | width=3    |               | sub_22               |
 ===============================================================================
 
 
@@ -64,20 +54,12 @@ Design : delta_down_counter_0
 ****************************************
 
 No implementations to report
-
-No resource sharing information to report.
  
 ****************************************
 Design : delta_down_counter_1
 ****************************************
-
-No implementations to report
- 
-****************************************
-Design : delta_down_counter_2
-****************************************
 Resource Sharing Report for design delta_down_counter_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/delta_down_counter.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -94,108 +76,171 @@ No implementations to report
 Design : output_buffer
 ****************************************
 Resource Sharing Report for design output_buffer in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/output_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r3703    | DW01_sub     | width=2    |               | sub_30_2             |
-|          |              |            |               | sub_30_2_I2_I1       |
-|          |              |            |               | sub_30_2_I3_I1       |
-|          |              |            |               | sub_30_2_I4_I1       |
-| r3704    | DW01_sub     | width=2    |               | sub_30               |
+| r3201    | DW01_sub     | width=2    |               | sub_30 sub_30_3_01   |
+|          |              |            |               | sub_30_3_I2_I1_I1_01 |
+|          |              |            |               | sub_30_3_I3_I1_I1_01 |
+|          |              |            |               | sub_30_3_I4_I1_I1_01 |
 |          |              |            |               | sub_30_I2_I1_I1      |
 |          |              |            |               | sub_30_I3_I1_I1      |
 |          |              |            |               | sub_30_I4_I1_I1      |
-| r3705    | DW01_sub     | width=2    |               | sub_30_2_I2_I1_I1    |
+| r3202    | DW01_sub     | width=2    |               | sub_30_2             |
+|          |              |            |               | sub_30_2_I2_I1       |
+|          |              |            |               | sub_30_2_I3_I1       |
+|          |              |            |               | sub_30_2_I4_I1       |
+|          |              |            |               | sub_30_4             |
+|          |              |            |               | sub_30_4_I2_I1       |
+|          |              |            |               | sub_30_4_I3_I1       |
+|          |              |            |               | sub_30_4_I4_I1       |
+| r3204    | DW01_sub     | width=2    |               | sub_30_2_I2_I1_I1    |
 |          |              |            |               | sub_30_2_I2_I2_I1    |
 |          |              |            |               | sub_30_2_I2_I3_I1    |
 |          |              |            |               | sub_30_2_I2_I4_I1    |
-| r3706    | DW01_sub     | width=3    |               | sub_30_2_I3_I1_I1    |
+|          |              |            |               | sub_30_4_I2_I1_I1    |
+|          |              |            |               | sub_30_4_I2_I2_I1    |
+|          |              |            |               | sub_30_4_I2_I3_I1    |
+|          |              |            |               | sub_30_4_I2_I4_I1    |
+| r3206    | DW01_sub     | width=3    |               | sub_30_2_I3_I1_I1    |
 |          |              |            |               | sub_30_2_I3_I2_I1    |
 |          |              |            |               | sub_30_2_I3_I3_I1    |
 |          |              |            |               | sub_30_2_I3_I4_I1    |
-| r3707    | DW01_sub     | width=3    |               | sub_30_2_I4_I1_I1    |
+|          |              |            |               | sub_30_4_I3_I1_I1    |
+|          |              |            |               | sub_30_4_I3_I2_I1    |
+|          |              |            |               | sub_30_4_I3_I3_I1    |
+|          |              |            |               | sub_30_4_I3_I4_I1    |
+| r3208    | DW01_sub     | width=3    |               | sub_30_2_I4_I1_I1    |
 |          |              |            |               | sub_30_2_I4_I2_I1    |
 |          |              |            |               | sub_30_2_I4_I3_I1    |
 |          |              |            |               | sub_30_2_I4_I4_I1    |
-| r3708    | DW01_sub     | width=2    |               | sub_30_I2_I1         |
+|          |              |            |               | sub_30_4_I4_I1_I1    |
+|          |              |            |               | sub_30_4_I4_I2_I1    |
+|          |              |            |               | sub_30_4_I4_I3_I1    |
+|          |              |            |               | sub_30_4_I4_I4_I1    |
+| r3210    | DW01_sub     | width=2    |               | sub_30_3_I2_I1_01    |
+|          |              |            |               | sub_30_3_I2_I2_I1_01 |
+|          |              |            |               | sub_30_3_I3_I2_I1_01 |
+|          |              |            |               | sub_30_3_I4_I2_I1_01 |
+|          |              |            |               | sub_30_I2_I1         |
 |          |              |            |               | sub_30_I2_I2_I1      |
 |          |              |            |               | sub_30_I3_I2_I1      |
 |          |              |            |               | sub_30_I4_I2_I1      |
-| r3709    | DW01_sub     | width=3    |               | sub_30_I2_I3_I1      |
+| r3215    | DW01_sub     | width=3    |               | sub_30_3_I2_I3_I1_01 |
+|          |              |            |               | sub_30_3_I3_I1_01    |
+|          |              |            |               | sub_30_3_I3_I3_I1_01 |
+|          |              |            |               | sub_30_3_I4_I3_I1_01 |
+|          |              |            |               | sub_30_I2_I3_I1      |
 |          |              |            |               | sub_30_I3_I1         |
 |          |              |            |               | sub_30_I3_I3_I1      |
 |          |              |            |               | sub_30_I4_I3_I1      |
-| r3710    | DW01_sub     | width=3    |               | sub_30_I2_I4_I1      |
+| r3220    | DW01_sub     | width=3    |               | sub_30_3_I2_I4_I1_01 |
+|          |              |            |               | sub_30_3_I3_I4_I1_01 |
+|          |              |            |               | sub_30_3_I4_I1_01    |
+|          |              |            |               | sub_30_3_I4_I4_I1_01 |
+|          |              |            |               | sub_30_I2_I4_I1      |
 |          |              |            |               | sub_30_I3_I4_I1      |
 |          |              |            |               | sub_30_I4_I1         |
 |          |              |            |               | sub_30_I4_I4_I1      |
-| r3711    | DW01_sub     | width=2    |               | sub_30_2_I2          |
-|          |              |            |               | sub_30_2_I2_I2       |
-|          |              |            |               | sub_30_2_I3_I2       |
-|          |              |            |               | sub_30_2_I4_I2       |
-| r3712    | DW01_sub     | width=2    |               | sub_30_I2            |
+| r3225    | DW01_sub     | width=2    |               | sub_30_3_I2_01       |
+|          |              |            |               | sub_30_3_I2_I1_I2_01 |
+|          |              |            |               | sub_30_3_I3_I1_I2_01 |
+|          |              |            |               | sub_30_3_I4_I1_I2_01 |
+|          |              |            |               | sub_30_I2            |
 |          |              |            |               | sub_30_I2_I1_I2      |
 |          |              |            |               | sub_30_I3_I1_I2      |
 |          |              |            |               | sub_30_I4_I1_I2      |
-| r3713    | DW01_sub     | width=2    |               | sub_30_2_I2_I1_I2    |
+| r3226    | DW01_sub     | width=2    |               | sub_30_2_I2          |
+|          |              |            |               | sub_30_2_I2_I2       |
+|          |              |            |               | sub_30_2_I3_I2       |
+|          |              |            |               | sub_30_2_I4_I2       |
+|          |              |            |               | sub_30_4_I2          |
+|          |              |            |               | sub_30_4_I2_I2       |
+|          |              |            |               | sub_30_4_I3_I2       |
+|          |              |            |               | sub_30_4_I4_I2       |
+| r3228    | DW01_sub     | width=2    |               | sub_30_2_I2_I1_I2    |
 |          |              |            |               | sub_30_2_I2_I2_I2    |
 |          |              |            |               | sub_30_2_I2_I3_I2    |
 |          |              |            |               | sub_30_2_I2_I4_I2    |
-| r3714    | DW01_sub     | width=3    |               | sub_30_2_I3_I1_I2    |
+|          |              |            |               | sub_30_4_I2_I1_I2    |
+|          |              |            |               | sub_30_4_I2_I2_I2    |
+|          |              |            |               | sub_30_4_I2_I3_I2    |
+|          |              |            |               | sub_30_4_I2_I4_I2    |
+| r3230    | DW01_sub     | width=3    |               | sub_30_2_I3_I1_I2    |
 |          |              |            |               | sub_30_2_I3_I2_I2    |
 |          |              |            |               | sub_30_2_I3_I3_I2    |
 |          |              |            |               | sub_30_2_I3_I4_I2    |
-| r3715    | DW01_sub     | width=3    |               | sub_30_2_I4_I1_I2    |
+|          |              |            |               | sub_30_4_I3_I1_I2    |
+|          |              |            |               | sub_30_4_I3_I2_I2    |
+|          |              |            |               | sub_30_4_I3_I3_I2    |
+|          |              |            |               | sub_30_4_I3_I4_I2    |
+| r3232    | DW01_sub     | width=3    |               | sub_30_2_I4_I1_I2    |
 |          |              |            |               | sub_30_2_I4_I2_I2    |
 |          |              |            |               | sub_30_2_I4_I3_I2    |
 |          |              |            |               | sub_30_2_I4_I4_I2    |
-| r3716    | DW01_sub     | width=2    |               | sub_30_I2_I2         |
+|          |              |            |               | sub_30_4_I4_I1_I2    |
+|          |              |            |               | sub_30_4_I4_I2_I2    |
+|          |              |            |               | sub_30_4_I4_I3_I2    |
+|          |              |            |               | sub_30_4_I4_I4_I2    |
+| r3234    | DW01_sub     | width=2    |               | sub_30_3_I2_I2_01    |
+|          |              |            |               | sub_30_3_I2_I2_I2_01 |
+|          |              |            |               | sub_30_3_I3_I2_I2_01 |
+|          |              |            |               | sub_30_3_I4_I2_I2_01 |
+|          |              |            |               | sub_30_I2_I2         |
 |          |              |            |               | sub_30_I2_I2_I2      |
 |          |              |            |               | sub_30_I3_I2_I2      |
 |          |              |            |               | sub_30_I4_I2_I2      |
-| r3717    | DW01_sub     | width=3    |               | sub_30_I2_I3_I2      |
+| r3239    | DW01_sub     | width=3    |               | sub_30_3_I2_I3_I2_01 |
+|          |              |            |               | sub_30_3_I3_I2_01    |
+|          |              |            |               | sub_30_3_I3_I3_I2_01 |
+|          |              |            |               | sub_30_3_I4_I3_I2_01 |
+|          |              |            |               | sub_30_I2_I3_I2      |
 |          |              |            |               | sub_30_I3_I2         |
 |          |              |            |               | sub_30_I3_I3_I2      |
 |          |              |            |               | sub_30_I4_I3_I2      |
-| r3718    | DW01_sub     | width=3    |               | sub_30_I2_I4_I2      |
+| r3244    | DW01_sub     | width=3    |               | sub_30_3_I2_I4_I2_01 |
+|          |              |            |               | sub_30_3_I3_I4_I2_01 |
+|          |              |            |               | sub_30_3_I4_I2_01    |
+|          |              |            |               | sub_30_3_I4_I4_I2_01 |
+|          |              |            |               | sub_30_I2_I4_I2      |
 |          |              |            |               | sub_30_I3_I4_I2      |
 |          |              |            |               | sub_30_I4_I2         |
 |          |              |            |               | sub_30_I4_I4_I2      |
-| r3719    | DW01_sub     | width=2    |               | sub_30_2_I2_I3       |
-|          |              |            |               | sub_30_2_I3          |
-|          |              |            |               | sub_30_2_I3_I3       |
-|          |              |            |               | sub_30_2_I4_I3       |
-| r3720    | DW01_sub     | width=2    |               | sub_30_I2_I1_I3      |
-|          |              |            |               | sub_30_I3            |
-|          |              |            |               | sub_30_I3_I1_I3      |
-|          |              |            |               | sub_30_I4_I1_I3      |
-| r3721    | DW01_sub     | width=2    |               | sub_30_2_I2_I1_I3    |
-|          |              |            |               | sub_30_2_I2_I2_I3    |
-|          |              |            |               | sub_30_2_I2_I3_I3    |
-|          |              |            |               | sub_30_2_I2_I4_I3    |
-| r3722    | DW01_sub     | width=3    |               | sub_30_2_I3_I1_I3    |
-|          |              |            |               | sub_30_2_I3_I2_I3    |
-|          |              |            |               | sub_30_2_I3_I3_I3    |
-|          |              |            |               | sub_30_2_I3_I4_I3    |
-| r3723    | DW01_sub     | width=3    |               | sub_30_2_I4_I1_I3    |
-|          |              |            |               | sub_30_2_I4_I2_I3    |
-|          |              |            |               | sub_30_2_I4_I3_I3    |
-|          |              |            |               | sub_30_2_I4_I4_I3    |
-| r3724    | DW01_sub     | width=2    |               | sub_30_I2_I2_I3      |
-|          |              |            |               | sub_30_I2_I3         |
-|          |              |            |               | sub_30_I3_I2_I3      |
-|          |              |            |               | sub_30_I4_I2_I3      |
-| r3725    | DW01_sub     | width=3    |               | sub_30_I2_I3_I3      |
-|          |              |            |               | sub_30_I3_I3         |
-|          |              |            |               | sub_30_I3_I3_I3      |
-|          |              |            |               | sub_30_I4_I3_I3      |
-| r3726    | DW01_sub     | width=3    |               | sub_30_I2_I4_I3      |
-|          |              |            |               | sub_30_I3_I4_I3      |
-|          |              |            |               | sub_30_I4_I3         |
-|          |              |            |               | sub_30_I4_I4_I3      |
+| r3282    | DW01_add     | width=4    |               | add_30               |
+| r3284    | DW01_add     | width=4    |               | add_30_I2_I1_I1      |
+| r3286    | DW01_add     | width=4    |               | add_30_I3_I1_I1      |
+| r3288    | DW01_add     | width=4    |               | add_30_I4_I1_I1      |
+| r3290    | DW01_add     | width=4    |               | add_30_I2_I1         |
+| r3292    | DW01_add     | width=4    |               | add_30_I2_I2_I1      |
+| r3294    | DW01_add     | width=4    |               | add_30_I3_I2_I1      |
+| r3296    | DW01_add     | width=4    |               | add_30_I4_I2_I1      |
+| r3298    | DW01_add     | width=4    |               | add_30_I3_I1         |
+| r3300    | DW01_add     | width=4    |               | add_30_I2_I3_I1      |
+| r3302    | DW01_add     | width=4    |               | add_30_I3_I3_I1      |
+| r3304    | DW01_add     | width=4    |               | add_30_I4_I3_I1      |
+| r3306    | DW01_add     | width=4    |               | add_30_I4_I1         |
+| r3308    | DW01_add     | width=4    |               | add_30_I2_I4_I1      |
+| r3310    | DW01_add     | width=4    |               | add_30_I3_I4_I1      |
+| r3312    | DW01_add     | width=4    |               | add_30_I4_I4_I1      |
+| r3314    | DW01_add     | width=4    |               | add_30_I2            |
+| r3316    | DW01_add     | width=4    |               | add_30_I2_I1_I2      |
+| r3318    | DW01_add     | width=4    |               | add_30_I3_I1_I2      |
+| r3320    | DW01_add     | width=4    |               | add_30_I4_I1_I2      |
+| r3322    | DW01_add     | width=4    |               | add_30_I2_I2         |
+| r3324    | DW01_add     | width=4    |               | add_30_I2_I2_I2      |
+| r3326    | DW01_add     | width=4    |               | add_30_I3_I2_I2      |
+| r3328    | DW01_add     | width=4    |               | add_30_I4_I2_I2      |
+| r3330    | DW01_add     | width=4    |               | add_30_I3_I2         |
+| r3332    | DW01_add     | width=4    |               | add_30_I2_I3_I2      |
+| r3334    | DW01_add     | width=4    |               | add_30_I3_I3_I2      |
+| r3336    | DW01_add     | width=4    |               | add_30_I4_I3_I2      |
+| r3338    | DW01_add     | width=4    |               | add_30_I4_I2         |
+| r3340    | DW01_add     | width=4    |               | add_30_I2_I4_I2      |
+| r3342    | DW01_add     | width=4    |               | add_30_I3_I4_I2      |
+| r3344    | DW01_add     | width=4    |               | add_30_I4_I4_I2      |
 ===============================================================================
 
 
@@ -215,14 +260,7 @@ No resource sharing information to report.
 Design : accumulator_0
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -236,39 +274,18 @@ No implementations to report
 Design : multiplier_0
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_0_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -284,14 +301,7 @@ No resource sharing information to report.
 Design : accumulator_1
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -305,39 +315,18 @@ No implementations to report
 Design : multiplier_1
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_1_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -353,14 +342,7 @@ No resource sharing information to report.
 Design : accumulator_2
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -374,39 +356,18 @@ No implementations to report
 Design : multiplier_2
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_2_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -422,14 +383,7 @@ No resource sharing information to report.
 Design : accumulator_3
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -443,39 +397,18 @@ No implementations to report
 Design : multiplier_3
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_3_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -491,14 +424,7 @@ No resource sharing information to report.
 Design : accumulator_4
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -512,39 +438,18 @@ No implementations to report
 Design : multiplier_4
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_4_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -560,14 +465,7 @@ No resource sharing information to report.
 Design : accumulator_5
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -581,39 +479,18 @@ No implementations to report
 Design : multiplier_5
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_5_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -629,14 +506,7 @@ No resource sharing information to report.
 Design : accumulator_6
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -650,39 +520,18 @@ No implementations to report
 Design : multiplier_6
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_6_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -698,14 +547,7 @@ No resource sharing information to report.
 Design : accumulator_7
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -719,39 +561,18 @@ No implementations to report
 Design : multiplier_7
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_7_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -767,14 +588,7 @@ No resource sharing information to report.
 Design : accumulator_8
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -788,39 +602,18 @@ No implementations to report
 Design : multiplier_8
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_8_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -836,14 +629,7 @@ No resource sharing information to report.
 Design : accumulator_9
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -857,39 +643,18 @@ No implementations to report
 Design : multiplier_9
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_9_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -905,14 +670,7 @@ No resource sharing information to report.
 Design : accumulator_10
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -926,39 +684,18 @@ No implementations to report
 Design : multiplier_10
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_10_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -974,14 +711,7 @@ No resource sharing information to report.
 Design : accumulator_11
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -995,39 +725,18 @@ No implementations to report
 Design : multiplier_11
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_11_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1043,14 +752,7 @@ No resource sharing information to report.
 Design : accumulator_12
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1064,39 +766,18 @@ No implementations to report
 Design : multiplier_12
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_12_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1112,14 +793,7 @@ No resource sharing information to report.
 Design : accumulator_13
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1133,39 +807,18 @@ No implementations to report
 Design : multiplier_13
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_13_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1181,14 +834,7 @@ No resource sharing information to report.
 Design : accumulator_14
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1202,39 +848,18 @@ No implementations to report
 Design : multiplier_14
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_14_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1250,14 +875,7 @@ No resource sharing information to report.
 Design : accumulator_15
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1271,39 +889,18 @@ No implementations to report
 Design : multiplier_15
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_15_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1319,14 +916,7 @@ No resource sharing information to report.
 Design : accumulator_16
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1340,39 +930,18 @@ No implementations to report
 Design : multiplier_16
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_16_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1388,14 +957,7 @@ No resource sharing information to report.
 Design : accumulator_17
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1409,39 +971,18 @@ No implementations to report
 Design : multiplier_17
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_17_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1457,14 +998,7 @@ No resource sharing information to report.
 Design : accumulator_18
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1478,39 +1012,18 @@ No implementations to report
 Design : multiplier_18
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_18_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1526,14 +1039,7 @@ No resource sharing information to report.
 Design : accumulator_19
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1547,39 +1053,18 @@ No implementations to report
 Design : multiplier_19
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_19_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1595,14 +1080,7 @@ No resource sharing information to report.
 Design : accumulator_20
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1616,39 +1094,18 @@ No implementations to report
 Design : multiplier_20
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_20_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1664,14 +1121,7 @@ No resource sharing information to report.
 Design : accumulator_21
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1685,39 +1135,18 @@ No implementations to report
 Design : multiplier_21
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_21_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1733,14 +1162,7 @@ No resource sharing information to report.
 Design : accumulator_22
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1754,39 +1176,18 @@ No implementations to report
 Design : multiplier_22
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_22_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1802,14 +1203,7 @@ No resource sharing information to report.
 Design : accumulator_23
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1823,39 +1217,18 @@ No implementations to report
 Design : multiplier_23
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_23_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1871,14 +1244,7 @@ No resource sharing information to report.
 Design : accumulator_24
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1892,39 +1258,18 @@ No implementations to report
 Design : multiplier_24
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_24_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1940,14 +1285,7 @@ No resource sharing information to report.
 Design : accumulator_25
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -1961,39 +1299,18 @@ No implementations to report
 Design : multiplier_25
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_25_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2009,14 +1326,7 @@ No resource sharing information to report.
 Design : accumulator_26
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2030,39 +1340,18 @@ No implementations to report
 Design : multiplier_26
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_26_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2078,14 +1367,7 @@ No resource sharing information to report.
 Design : accumulator_27
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2099,39 +1381,18 @@ No implementations to report
 Design : multiplier_27
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_27_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2147,14 +1408,7 @@ No resource sharing information to report.
 Design : accumulator_28
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2168,39 +1422,18 @@ No implementations to report
 Design : multiplier_28
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_28_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2216,14 +1449,7 @@ No resource sharing information to report.
 Design : accumulator_29
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2237,39 +1463,18 @@ No implementations to report
 Design : multiplier_29
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_29_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2285,14 +1490,7 @@ No resource sharing information to report.
 Design : accumulator_30
 ****************************************
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2306,39 +1504,18 @@ No implementations to report
 Design : multiplier_30
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
+| r102     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_30_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
+No implementations to report
 
 No resource sharing information to report.
  
@@ -2347,27 +1524,37 @@ Design : processing_element_31
 ****************************************
 
 No implementations to report
-
-No resource sharing information to report.
  
 ****************************************
 Design : accumulator_31
 ****************************************
+Resource Sharing Report for design accumulator_0 in file
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv
 
-Implementation Report
 ===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| add_22             | DW01_add         | rpl                |                |
+| r56      | DW01_add     | width=4    |               | add_22               |
 ===============================================================================
 
 
-No resource sharing information to report.
+No implementations to report
  
 ****************************************
 Design : shifter_31
 ****************************************
+Resource Sharing Report for design shifter_0 in file
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r53      | DW01_ash     | A_width=4  |               | sll_16               |
+|          |              | SH_width=2 |               |                      |
+===============================================================================
+
 
 No implementations to report
  
@@ -2375,1158 +1562,16 @@ No implementations to report
 Design : multiplier_31
 ****************************************
 Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
+        /home/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_31_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_32
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_32
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_32
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_32
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_32_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_33
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_33
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_33
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_33
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_33_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_34
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_34
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_34
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_34
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_34_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_35
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_35
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_35
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_35
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_35_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_36
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_36
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_36
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_36
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_36_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_37
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_37
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_37
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_37
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_37_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_38
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_38
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_38
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_38
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_38_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_39
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_39
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_39
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_39
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_39_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_40
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_40
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_40
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_40
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_40_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_41
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_41
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_41
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_41
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_41_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_42
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_42
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_42
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_42
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_42_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_43
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_43
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_43
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_43
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_43_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_44
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_44
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_44
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_44
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_44_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_45
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_45
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | rpl                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_45
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_45
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_45_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_46
-****************************************
-
-No implementations to report
-
-No resource sharing information to report.
- 
-****************************************
-Design : accumulator_46
-****************************************
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | cla                |                |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : shifter_46
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : multiplier_46
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r102     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_46_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
-
-No resource sharing information to report.
- 
-****************************************
-Design : processing_element_47
-****************************************
-
-No implementations to report
- 
-****************************************
-Design : accumulator_47
-****************************************
-Resource Sharing Report for design accumulator_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/accumulator.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r56      | DW01_add     | width=8    |               | add_22               |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| add_22             | DW01_add         | cla                |                |
-===============================================================================
-
- 
-****************************************
-Design : shifter_47
-****************************************
-Resource Sharing Report for design shifter_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/shifter.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r53      | DW01_ash     | A_width=8  |               | sll_16               |
-|          |              | SH_width=4 |               |                      |
+| r155     | DW02_mult    | A_width=2  |               | mult_16              |
+|          |              | B_width=2  |               |                      |
 ===============================================================================
 
 
 No implementations to report
- 
-****************************************
-Design : multiplier_47
-****************************************
-Resource Sharing Report for design multiplier_0 in file
-        /afs/umich.edu/user/a/r/arkhadem/Downloads/Delta/DeltaNN/HDL/multiplier.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r155     | DW02_mult    | A_width=4  |               | mult_16              |
-|          |              | B_width=4  |               |                      |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| mult_16            | DW02_mult        | csa                |                |
-===============================================================================
-
- 
-****************************************
-Design : multiplier_47_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width4_B_width4
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=6    |               | FS_1                 |
-===============================================================================
-
 1

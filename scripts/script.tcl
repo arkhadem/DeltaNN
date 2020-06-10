@@ -23,13 +23,12 @@ set link_library [concat  "*" $target_library]
 #/* The following lines must be updated for every           */
 #/* new design                                              */
 #/***********************************************************/
-set search_path [ list "./" "./library/"]
 set src_files [list "$source_path/accumulator.sv $source_path/delta_down_counter.sv $source_path/index_down_counter.sv $source_path/shifter.sv $source_path/multiplier.sv $source_path/output_buffer.sv $source_path/processing_element.sv $source_path/processing_unit.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
 set reset_name reset
-set CLK_PERIOD 200
+set CLK_PERIOD 208
 
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */

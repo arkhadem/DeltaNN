@@ -4,9 +4,57 @@ Report : constraint
         -all_violators
 Design : processing_unit
 Version: O-2018.06
-Date   : Thu Dec  5 23:57:58 2019
+Date   : Fri Dec 13 18:38:44 2019
 ****************************************
 
-This design has no violated constraints.
+
+   max_delay/setup ('clock' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   output_buffer_inst/output_vals_reg[1][2][2][3]/D
+                              196.97         198.10 r        -1.13  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][2][2][3]/D
+                              197.00         198.13 r        -1.13  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][0][1][3]/D
+                              197.15         198.21 r        -1.06  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][0][2][3]/D
+                              197.20         198.24 f        -1.04  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][2][1][3]/D
+                              197.16         198.19 r        -1.03  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][0][2][3]/D
+                              196.92         197.84 r        -0.91  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][1][1][3]/D
+                              197.13         198.04 f        -0.91  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][2][0][3]/D
+                              197.50         198.30 f        -0.80  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][0][0][3]/D
+                              197.37         198.06 f        -0.69  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][1][0][3]/D
+                              197.50         198.18 f        -0.68  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][1][2][2]/D
+                              197.00         197.65 r        -0.65  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][0][1][3]/D
+                              197.34         197.92 f        -0.58  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][0][0][3]/D
+                              196.66         197.22 r        -0.56  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][2][0][3]/D
+                              197.07         197.49 f        -0.41  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][1][1][3]/D
+                              197.38         197.70 f        -0.32  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][2][0][1]/D
+                              196.55         196.83 f        -0.28  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][2][1][3]/D
+                              197.13         197.32 r        -0.20  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][2][0][1]/D
+                              196.54         196.66 f        -0.12  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][2][2][2]/D
+                              197.22         197.31 f        -0.09  (VIOLATED)
+   output_buffer_inst/output_vals_reg[1][2][2][2]/D
+                              197.00         197.07 r        -0.07  (VIOLATED)
+   output_buffer_inst/output_vals_reg[0][1][0][3]/D
+                              196.40         196.46 f        -0.06  (VIOLATED)
+
 
 1
