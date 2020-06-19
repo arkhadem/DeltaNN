@@ -11,11 +11,12 @@
 #include <algorithm>
 #include <string>
 #include <sstream>
+#include <math.h>
 
 using namespace std;
 
 unordered_map< int, unordered_set<int> > detectConflicts(vector< vector< vector<int> > > &indexArray, vector< vector< int > > &currentIndex, int block);
-void addBubbles(vector< vector< vector<int> > > &indexArray);
+void addBubbles(vector< vector< vector<int> > > &indexArray, int blockSize);
 void reorder(vector< vector< vector<int> > > &indexArray);
 
 int main(){
@@ -64,7 +65,7 @@ int main(){
 
     cout << "Blocks: " << indexArray.size() << ", Rows: " << indexArray[0].size() << ", Row length: " << indexArray[0][0].size() << endl << endl;
 
-    addBubbles(indexArray);
+    addBubbles(indexArray, blockSize);
 }
 
 
@@ -93,7 +94,7 @@ unordered_map< int, unordered_set<int> > detectConflicts(vector< vector< vector<
 
 
 
-void addBubbles(vector< vector< vector<int> > > &indexArray) {
+void addBubbles(vector< vector< vector<int> > > &indexArray, int blockSize) {
     vector< vector<int> > currentIndex;
     vector< vector< vector<int> > > indexArrayWithBubbles;
     for (int i = 0; i < indexArray.size(); ++i) {
@@ -172,6 +173,8 @@ void addBubbles(vector< vector< vector<int> > > &indexArray) {
     int number3BitNonDeltas = 0;
     int number4BitDeltas = 0;
     int number4BitNonDeltas = 0;
+    int number5BitDeltas = 0;
+    int number5BitNonDeltas = 0;
     int lastValue = 0;
 
     for (int i = 0; i < indexArrayWithBubbles.size(); ++i) {
@@ -189,6 +192,12 @@ void addBubbles(vector< vector< vector<int> > > &indexArray) {
                 else if ((indexArrayWithBubbles[i][j][k] != -1) && !((indexArrayWithBubbles[i][j][k] - lastValue < 16) && (indexArrayWithBubbles[i][j][k] - lastValue >= 0))) {
                     ++number4BitNonDeltas;
                 }
+                if ((indexArrayWithBubbles[i][j][k] != -1) && (indexArrayWithBubbles[i][j][k] - lastValue < 32) && (indexArrayWithBubbles[i][j][k] - lastValue >= 0)) {
+                    ++number5BitDeltas;
+                }
+                else if ((indexArrayWithBubbles[i][j][k] != -1) && !((indexArrayWithBubbles[i][j][k] - lastValue < 32) && (indexArrayWithBubbles[i][j][k] - lastValue >= 0))) {
+                    ++number5BitNonDeltas;
+                }
                 if (indexArrayWithBubbles[i][j][k] == -1) {
                     ++numberBubbles;
                 }
@@ -205,6 +214,17 @@ void addBubbles(vector< vector< vector<int> > > &indexArray) {
     cout << "% of cycles that can't be represented as 3 bit deltas: " << (double)number3BitNonDeltas / (double)totalValues << endl;
     cout << "% of cycles that can be represented as 4 bit deltas: " << (double)number4BitDeltas / (double)totalValues << endl;
     cout << "% of cycles that can't be represented as 4 bit deltas: " << (double)number4BitNonDeltas / (double)totalValues << endl;
+    cout << "% of cycles that can be represented as 5 bit deltas: " << (double)number5BitDeltas / (double)totalValues << endl;
+    cout << "% of cycles that can't be represented as 5 bit deltas: " << (double)number5BitNonDeltas / (double)totalValues << endl;
+
+    int totalBits3Bit = numberBubbles + number3BitDeltas * 5 + number3BitNonDeltas * (log2(blockSize)+2);
+    cout << endl << "Total bits if using 3 bit deltas: " << totalBits3Bit << endl;
+
+    int totalBits4Bit = numberBubbles + number4BitDeltas * 6 + number4BitNonDeltas * (log2(blockSize)+2);
+    cout << endl << "Total bits if using 4 bit deltas: " << totalBits4Bit << endl;
+
+    int totalBits5Bit = numberBubbles + number5BitDeltas * 7 + number5BitNonDeltas * (log2(blockSize)+2);
+    cout << endl << "Total bits if using 5 bit deltas: " << totalBits5Bit << endl;
 }
 
 
