@@ -4,7 +4,7 @@
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set design_path "/home/arkhadem/Downloads/Delta/DeltaNN"
+set design_path "/n/calumet/v/arkhadem/DeltaNN"
 set output_path $design_path/outputs
 set report_path $design_path/reports
 set library_path $design_path/library
@@ -16,19 +16,24 @@ set source_path $design_path/HDL
 #/* when synthesizing your final project.                   */
 #/***********************************************************/
 set SYN_DIR ./
-set target_library "$library_path/NanGate_15nm_OCL_typical_conditional_ccs.db"
+# set target_library "/afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mns.db_ccs"
+set target_library "/afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mxs.db_ccs"
+set target_library "/n/calumet/v/arkhadem/DeltaNN/memory/sram_32_2048_scn4m_subm_TT_5p0V_25C.db"
+
 set link_library [concat  "*" $target_library]
 
 #/***********************************************************/
 #/* The following lines must be updated for every           */
 #/* new design                                              */
 #/***********************************************************/
-set src_files [list "$source_path/accumulator.sv $source_path/delta_down_counter.sv $source_path/index_down_counter.sv $source_path/shifter.sv $source_path/multiplier.sv $source_path/output_buffer.sv $source_path/processing_element.sv $source_path/processing_unit.sv"]
+set src_files [list "$source_path/sys_defs.svh $source_path/AF_array.sv $source_path/APE_adder.sv $source_path/APE_buffer.sv $source_path/Pool_array.sv $source_path/DRAM_master.sv $source_path/DRAM_slave.sv $source_path/Input_buffer.sv $source_path/Input_SRAM_controller.sv $source_path/Output_SRAM_controller.sv $source_path/PU_controller.sv $source_path/PU_idx_buffer.sv $source_path/PU_in_line_controller.sv $source_path/PU_repetition_weight_buffer.sv $source_path/PU_test.sv $source_path/PU_unique_weight_buffer.sv $source_path/PU_WB_SRAM_controller.sv $source_path/Weight_SRAM_controller.sv $source_path/crossbar.sv $source_path/APE.sv $source_path/MPE_in2out.sv $source_path/MPE_multiplier.sv $source_path/MPE.sv $source_path/PU.sv $source_path/Delta_controller_bias_loader.sv $source_path/Delta_controller_input_loader.sv $source_path/Delta_controller_output_extractor.sv $source_path/Delta_controller_weight_manager.sv $source_path/Delta_controller.sv $source_path/DeltaAcc.sv"]
 set design_name processing_unit
 read_file -f sverilog $src_files
 set clock_name clock
+set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 208
+set CLK_PERIOD 10
+set CLK_PERIOD_MEM 55
 
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */
@@ -70,30 +75,41 @@ check_design
 # set timing and area constraints to synthesis the design
 ###############################################################
 #set CLK_PERIOD [expr 1000 / $clk_freq_MHz]
-set find_clock [find port [list $clock_name]]
-if { $find_clock != [list] } {
-	create_clock -period $CLK_PERIOD $clock_name
-	set_dont_touch_network $clock_name
-	set_fix_hold $clock_name
+# set find_clock [find port [list $clock_name]]
+# if { $find_clock != [list] } {
+# 	create_clock -period $CLK_PERIOD $clock_name
+# 	set_dont_touch_network $clock_name
+# 	set_fix_hold $clock_name
 
-    #set_clock_uncertainty $CLK_UNCERTAINTY $clock_name
-    #remove_driving_cell [find port $clock_name]
-    #set_input_delay $AVG_INPUT_DELAY -clock $clock_name [all_inputs]
-    #remove_input_delay -clock $clock_name [find port $clock_name]
-    #set_output_delay $AVG_OUTPUT_DELAY -clock $clock_name [all_outputs]
-} else {
-	create_clock -period $CLK_PERIOD -name vclk
-	set_dont_touch_network vclk
-	#do not put buffer in clk path.
-	set_fix_hold vclk
-	#want to meet hold time.
+#     #set_clock_uncertainty $CLK_UNCERTAINTY $clock_name
+#     #remove_driving_cell [find port $clock_name]
+#     #set_input_delay $AVG_INPUT_DELAY -clock $clock_name [all_inputs]
+#     #remove_input_delay -clock $clock_name [find port $clock_name]
+#     #set_output_delay $AVG_OUTPUT_DELAY -clock $clock_name [all_outputs]
+# } else {
+# 	create_clock -period $CLK_PERIOD -name vclk
+# 	set_dont_touch_network vclk
+# 	#do not put buffer in clk path.
+# 	set_fix_hold vclk
+# 	#want to meet hold time.
 
-    #set_clock_uncertainty $CLK_UNCERTAINTY vclk
-    #remove_driving_cell [find port vclk]
-    #set_input_delay $AVG_INPUT_DELAY -clock vclk [all_inputs]
-    #remove_input_delay -clock vclk [find port vclk]
-    #set_output_delay $AVG_OUTPUT_DELAY -clock vclk [all_outputs]
-}
+#     #set_clock_uncertainty $CLK_UNCERTAINTY vclk
+#     #remove_driving_cell [find port vclk]
+#     #set_input_delay $AVG_INPUT_DELAY -clock vclk [all_inputs]
+#     #remove_input_delay -clock vclk [find port vclk]
+#     #set_output_delay $AVG_OUTPUT_DELAY -clock vclk [all_outputs]
+# }
+
+create_clock -period $CLK_PERIOD $clock_name
+set_dont_touch_network $clock_name
+set_fix_hold $clock_name
+
+create_clock -period $CLK_PERIODـMEM $clock_name_mem
+set_dont_touch_network $clock_name_mem
+set_fix_hold $clock_name_mem
+
+set_false_path -from $clock_name -to $clock_name_mem
+set_false_path -from $clock_name_mem -to $clock_name
 
 set my_input_delay_ns 0
 set my_output_delay_ns 0
