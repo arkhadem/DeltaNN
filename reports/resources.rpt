@@ -1,10 +1,9 @@
-Warning: Design 'DeltaAcc' has '16' unresolved references. For more detailed information, use the "link" command. (UID-341)
  
 ****************************************
 Report : resources
 Design : DeltaAcc
 Version: O-2018.06
-Date   : Sun Jul  5 04:50:08 2020
+Date   : Sun Jul  5 16:32:02 2020
 ****************************************
 
 
@@ -97,31 +96,25 @@ Resource Sharing Report for design Delta_controller_output_extractor in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r199     | DW01_cmp6    | width=256  |               | eq_229_2 gte_171     |
-| r228     | DW01_cmp6    | width=256  |               | eq_88                |
-| r230     | DW01_cmp6    | width=256  |               | eq_90                |
-| r240     | DW01_add     | width=256  |               | add_95               |
-| r246     | DW01_add     | width=256  |               | add_99               |
-| r248     | DW01_add     | width=32   |               | add_100              |
-| r250     | DW01_add     | width=32   |               | add_124              |
-| r252     | DW01_add     | width=32   |               | add_149              |
-| r254     | DW01_add     | width=256  |               | add_168              |
-| r256     | DW01_cmp2    | width=256  |               | gte_169              |
-| r258     | DW01_inc     | width=1024 |               | add_173              |
-| r260     | DW01_inc     | width=256  |               | add_175              |
-| r262     | DW01_add     | width=32   |               | add_186              |
-| r264     | DW01_add     | width=32   |               | add_194              |
-| r266     | DW01_cmp6    | width=1024 |               | eq_229               |
-| r268     | DW01_cmp6    | width=256  |               | eq_229_3             |
-| r385     | DW02_mult    | A_width=8  |               | mult_93              |
-|          |              | B_width=8  |               |                      |
-| r387     | DW02_mult    | A_width=8  |               | mult_93_2            |
-|          |              | B_width=8  |               |                      |
-| r389     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_93 |
-| r391     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_93 |
-| r497     | DW02_mult    | A_width=3  |               | mult_96              |
-|          |              | B_width=8  |               |                      |
-| r499     | DW01_add     | width=32   |               | add_96               |
+| r184     | DW01_cmp6    | width=256  |               | eq_229_2 gte_171     |
+| r210     | DW01_cmp6    | width=256  |               | eq_88                |
+| r212     | DW01_cmp6    | width=256  |               | eq_90                |
+| r218     | DW01_add     | width=256  |               | add_95               |
+| r220     | DW01_add     | width=32   |               | add_96               |
+| r222     | DW01_add     | width=256  |               | add_99               |
+| r224     | DW01_add     | width=32   |               | add_100              |
+| r226     | DW01_add     | width=32   |               | add_124              |
+| r228     | DW01_add     | width=32   |               | add_149              |
+| r230     | DW01_add     | width=256  |               | add_168              |
+| r232     | DW01_cmp2    | width=256  |               | gte_169              |
+| r234     | DW01_inc     | width=1024 |               | add_173              |
+| r236     | DW01_inc     | width=256  |               | add_175              |
+| r238     | DW01_add     | width=32   |               | add_186              |
+| r240     | DW01_add     | width=32   |               | add_194              |
+| r242     | DW01_cmp6    | width=1024 |               | eq_229               |
+| r244     | DW01_cmp6    | width=256  |               | eq_229_3             |
+| r352     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_93 |
+| r354     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_93 |
 ===============================================================================
 
 
@@ -130,19 +123,16 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| gte_169            | DW01_cmp2        | rpl                |                |
+| add_168            | DW01_add         | cla                |                |
 | add_173            | DW01_inc         | cla                |                |
 | add_0_root_sub_0_root_sub_93          |                    |                |
 |                    | DW01_add         | rpl                |                |
-| mult_93_2          | DW02_mult        | csa                |                |
-| mult_93            | DW02_mult        | csa                |                |
-| add_96             | DW01_add         | rpl                |                |
-| mult_96            | DW02_mult        | csa                |                |
-| add_168            | DW01_add         | rpl                |                |
-| gte_169            | DW01_cmp2        | rpl                |                |
-| r199               | DW01_cmp6        | rpl                |                |
+| r184               | DW01_cmp6        | rpl                |                |
 | eq_88              | DW01_cmp6        | rpl                |                |
 | eq_90              | DW01_cmp6        | rpl                |                |
 | add_95             | DW01_add         | rpl                |                |
+| add_96             | DW01_add         | rpl                |                |
 | add_99             | DW01_add         | rpl                |                |
 | add_100            | DW01_add         | rpl                |                |
 | add_124            | DW01_add         | rpl                |                |
@@ -156,60 +146,6 @@ Implementation Report
 
  
 ****************************************
-Design : Delta_controller_output_extractor_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_output_extractor_DW02_mult_1
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_output_extractor_DW02_mult_2
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width3_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r67      | DW01_add     | width=10   |               | FS_4                 |
-| r69      | DW01_absval  | width=3    |               | A2_1                 |
-| r71      | DW01_absval  | width=8    |               | A2_2                 |
-| r73      | DW01_inc     | width=11   |               | A3                   |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| FS_4               | DW01_add         | cla                | cla            |
-===============================================================================
-
- 
-****************************************
 Design : Delta_controller_input_loader
 ****************************************
 Resource Sharing Report for design Delta_controller_input_loader in file
@@ -219,47 +155,37 @@ Resource Sharing Report for design Delta_controller_input_loader in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r274     | DW01_cmp6    | width=256  |               | eq_222_2 gte_165     |
-| r317     | DW01_cmp6    | width=256  |               | eq_77                |
-| r319     | DW01_cmp6    | width=256  |               | eq_79                |
-| r329     | DW01_add     | width=256  |               | add_84               |
-| r331     | DW01_dec     | width=4    |               | sub_85               |
-| r337     | DW01_add     | width=256  |               | add_88               |
-| r339     | DW01_add     | width=32   |               | add_89               |
-| r341     | DW01_cmp6    | width=8    |               | eq_101               |
-| r343     | DW01_cmp6    | width=8    |               | eq_103               |
-| r345     | DW01_inc     | width=2    |               | add_105              |
-| r355     | DW01_inc     | width=6    |               | add_108              |
-| r361     | DW01_add     | width=6    |               | add_112              |
-| r363     | DW01_add     | width=32   |               | add_113              |
-| r369     | DW01_add     | width=32   |               | add_131              |
-| r371     | DW01_add     | width=256  |               | add_162              |
-| r373     | DW01_cmp2    | width=256  |               | gte_163              |
-| r375     | DW01_inc     | width=1024 |               | add_167              |
-| r377     | DW01_inc     | width=256  |               | add_169              |
-| r379     | DW01_add     | width=32   |               | add_180              |
-| r381     | DW01_add     | width=32   |               | add_188              |
-| r383     | DW01_cmp6    | width=1024 |               | eq_222               |
-| r385     | DW01_cmp6    | width=256  |               | eq_222_3             |
-| r502     | DW02_mult    | A_width=8  |               | mult_82              |
-|          |              | B_width=8  |               |                      |
-| r504     | DW02_mult    | A_width=8  |               | mult_82_2            |
-|          |              | B_width=8  |               |                      |
-| r506     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_82 |
-| r508     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_82 |
-| r614     | DW01_sub     | width=7    |               | sub_125              |
-| r616     | DW01_add     | width=8    |               | add_125              |
-| r733     | DW02_mult    | A_width=8  |               | mult_106             |
-|          |              | B_width=8  |               |                      |
-| r735     | DW02_mult    | A_width=8  |               | mult_106_2           |
-|          |              | B_width=8  |               |                      |
-| r737     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_106 |
-| r739     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_106 |
-| r847     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_109 |
-| r849     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_109 |
-| r955     | DW02_mult    | A_width=32 |               | mult_85              |
-|          |              | B_width=8  |               |                      |
-| r957     | DW01_add     | width=32   |               | add_85               |
+| r247     | DW01_cmp6    | width=256  |               | eq_222_2 gte_165     |
+| r281     | DW01_cmp6    | width=256  |               | eq_77                |
+| r283     | DW01_cmp6    | width=256  |               | eq_79                |
+| r289     | DW01_add     | width=256  |               | add_84               |
+| r295     | DW01_add     | width=256  |               | add_88               |
+| r297     | DW01_add     | width=32   |               | add_89               |
+| r299     | DW01_cmp6    | width=8    |               | eq_101               |
+| r301     | DW01_cmp6    | width=8    |               | eq_103               |
+| r303     | DW01_inc     | width=2    |               | add_105              |
+| r305     | DW01_inc     | width=6    |               | add_108              |
+| r307     | DW01_add     | width=6    |               | add_112              |
+| r309     | DW01_add     | width=32   |               | add_113              |
+| r315     | DW01_add     | width=32   |               | add_131              |
+| r317     | DW01_add     | width=256  |               | add_162              |
+| r319     | DW01_cmp2    | width=256  |               | gte_163              |
+| r321     | DW01_inc     | width=1024 |               | add_167              |
+| r323     | DW01_inc     | width=256  |               | add_169              |
+| r325     | DW01_add     | width=32   |               | add_180              |
+| r327     | DW01_add     | width=32   |               | add_188              |
+| r329     | DW01_cmp6    | width=1024 |               | eq_222               |
+| r331     | DW01_cmp6    | width=256  |               | eq_222_3             |
+| r439     | DW01_sub     | width=32   |               | sub_1_root_sub_0_root_sub_82 |
+| r441     | DW01_add     | width=32   |               | add_0_root_sub_0_root_sub_82 |
+| r547     | DW01_sub     | width=7    |               | sub_125              |
+| r549     | DW01_add     | width=8    |               | add_125              |
+| r655     | DW01_dec     | width=4    |               | sub_85               |
+| r657     | DW01_add     | width=32   |               | add_85               |
+| r765     | DW01_sub     | width=32   |               | add_1_root_sub_106   |
+|          |              |            |               | add_1_root_sub_109   |
+| r767     | DW01_add     | width=32   |               | sub_0_root_sub_106   |
+|          |              |            |               | sub_0_root_sub_109   |
 ===============================================================================
 
 
@@ -268,22 +194,14 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| gte_163            | DW01_cmp2        | rpl                |                |
+| add_162            | DW01_add         | cla                |                |
 | add_167            | DW01_inc         | cla                |                |
 | add_0_root_sub_0_root_sub_82          |                    |                |
 |                    | DW01_add         | rpl                |                |
-| mult_82_2          | DW02_mult        | csa                |                |
-| mult_82            | DW02_mult        | csa                |                |
 | add_85             | DW01_add         | rpl                |                |
-| mult_85            | DW02_mult        | csa                |                |
-| add_0_root_sub_0_root_sub_106         |                    |                |
-|                    | DW01_add         | rpl                |                |
-| mult_106_2         | DW02_mult        | csa                |                |
-| mult_106           | DW02_mult        | csa                |                |
-| add_0_root_sub_0_root_sub_109         |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_162            | DW01_add         | rpl                |                |
-| gte_163            | DW01_cmp2        | rpl                |                |
-| r274               | DW01_cmp6        | rpl                |                |
+| add_0_root_r238    | DW01_add         | rpl                |                |
+| r247               | DW01_cmp6        | rpl                |                |
 | eq_77              | DW01_cmp6        | rpl                |                |
 | eq_79              | DW01_cmp6        | rpl                |                |
 | add_84             | DW01_add         | rpl                |                |
@@ -296,85 +214,6 @@ Implementation Report
 | add_188            | DW01_add         | rpl                |                |
 | eq_222             | DW01_cmp6        | rpl                |                |
 | eq_222_3           | DW01_cmp6        | rpl                |                |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_input_loader_DW02_mult_0
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_input_loader_DW02_mult_1
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_input_loader_DW02_mult_4
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width32_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=38   |               | FS_1                 |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_input_loader_DW02_mult_2
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
-===============================================================================
-
-
-Implementation Report
-===============================================================================
-|                    |                  | Current            | Set            |
-| Cell               | Module           | Implementation     | Implementation |
-===============================================================================
-| FS_1               | DW01_add         | cla                | cla            |
-===============================================================================
-
- 
-****************************************
-Design : Delta_controller_input_loader_DW02_mult_3
-****************************************
-
-Resource Sharing Report for design DW02_mult_A_width8_B_width8
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r58      | DW01_add     | width=14   |               | FS_1                 |
 ===============================================================================
 
  
@@ -427,26 +266,12 @@ Design : Input_buffer_2
 ****************************************
 
 No implementations to report
+
+No resource sharing information to report.
  
 ****************************************
 Design : Input_buffer_3
 ****************************************
-Resource Sharing Report for design Input_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Input_buffer.sv
-
-===============================================================================
-|          |              |            | Contained     |                      |
-| Resource | Module       | Parameters | Resources     | Contained Operations |
-===============================================================================
-| r22472   | DW01_inc     | width=7    |               | add_22_I2            |
-| r22474   | DW01_add     | width=7    |               | add_22_I3            |
-| r22476   | DW01_add     | width=7    |               | add_22_I4            |
-| r22478   | DW01_add     | width=7    |               | add_22_I5            |
-| r22480   | DW01_add     | width=7    |               | add_22_I6            |
-| r22482   | DW01_add     | width=7    |               | add_22_I7            |
-| r22484   | DW01_add     | width=7    |               | add_22_I8            |
-===============================================================================
-
 
 No implementations to report
 
@@ -511,6 +336,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_0
 ****************************************
 
 No implementations to report
@@ -620,6 +453,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_1
 ****************************************
 
@@ -722,6 +563,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_2
 ****************************************
 
@@ -817,6 +666,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_3
 ****************************************
 
 No implementations to report
@@ -1603,6 +1460,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_4
 ****************************************
 
@@ -1698,6 +1563,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_5
 ****************************************
 
 No implementations to report
@@ -1807,6 +1680,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_6
 ****************************************
 
@@ -1902,6 +1783,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_7
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_7
 ****************************************
 
 No implementations to report
@@ -2688,6 +2577,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_8
 ****************************************
 
@@ -2783,6 +2680,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_9
 ****************************************
 
 No implementations to report
@@ -2892,6 +2797,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_10
 ****************************************
 
@@ -2987,6 +2900,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_11
 ****************************************
 
 No implementations to report
@@ -3790,6 +3711,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_12
 ****************************************
 
@@ -3885,6 +3814,14 @@ No resource sharing information to report.
  
 ****************************************
 Design : APE_13
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : Pool_array_13
 ****************************************
 
 No implementations to report
@@ -3994,6 +3931,14 @@ No implementations to report
 No resource sharing information to report.
  
 ****************************************
+Design : Pool_array_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
 Design : AF_array_14
 ****************************************
 
@@ -4090,6 +4035,28 @@ No resource sharing information to report.
 ****************************************
 Design : APE_15
 ****************************************
+
+No implementations to report
+ 
+****************************************
+Design : Pool_array_15
+****************************************
+Resource Sharing Report for design Pool_array_0 in file
+        /n/calumet/v/arkhadem/DeltaNN/HDL/Pool_array.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r192     | DW01_inc     | width=3    |               | add_58_I2            |
+| r194     | DW01_add     | width=3    |               | add_58_I3            |
+| r196     | DW01_add     | width=3    |               | add_58_I4            |
+| r198     | DW01_add     | width=3    |               | add_58_I5            |
+| r200     | DW01_add     | width=3    |               | add_58_I6            |
+| r202     | DW01_add     | width=3    |               | add_58_I7            |
+| r204     | DW01_add     | width=3    |               | add_58_I8            |
+===============================================================================
+
 
 No implementations to report
 
@@ -4743,42 +4710,42 @@ Resource Sharing Report for design PU_idx_buffer_0 in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r229     | DW01_add     | width=4    |               | add_108 add_43       |
+| r291     | DW01_add     | width=4    |               | add_108 add_43       |
 |          |              |            |               | add_88               |
-| r297     | DW01_cmp2    | width=4    |               | lt_43                |
-| r299     | DW01_add     | width=4    |               | add_43_I2            |
-| r301     | DW01_cmp2    | width=4    |               | lt_43_I2             |
-| r303     | DW01_add     | width=4    |               | add_43_I3            |
-| r305     | DW01_cmp2    | width=4    |               | lt_43_I3             |
-| r307     | DW01_add     | width=4    |               | add_43_I4            |
-| r309     | DW01_cmp2    | width=4    |               | lt_43_I4             |
-| r311     | DW01_add     | width=4    |               | add_43_I5            |
-| r313     | DW01_cmp2    | width=4    |               | lt_43_I5             |
-| r315     | DW01_add     | width=4    |               | add_43_I6            |
-| r317     | DW01_cmp2    | width=4    |               | lt_43_I6             |
-| r319     | DW01_add     | width=4    |               | add_43_I7            |
-| r321     | DW01_cmp2    | width=4    |               | lt_43_I7             |
-| r323     | DW01_add     | width=4    |               | add_43_I8            |
-| r325     | DW01_cmp2    | width=4    |               | lt_43_I8             |
-| r327     | DW01_add     | width=4    |               | add_43_I9            |
-| r329     | DW01_cmp2    | width=4    |               | lt_43_I9             |
-| r331     | DW01_add     | width=4    |               | add_43_I10           |
-| r333     | DW01_cmp2    | width=4    |               | lt_43_I10            |
-| r335     | DW01_add     | width=4    |               | add_43_I11           |
-| r337     | DW01_cmp2    | width=4    |               | lt_43_I11            |
-| r339     | DW01_add     | width=4    |               | add_43_I12           |
-| r341     | DW01_cmp2    | width=4    |               | lt_43_I12            |
-| r351     | DW_rash      | A_width=64 |               | srl_88               |
+| r359     | DW01_cmp2    | width=4    |               | lt_43                |
+| r361     | DW01_add     | width=4    |               | add_43_I2            |
+| r363     | DW01_cmp2    | width=4    |               | lt_43_I2             |
+| r365     | DW01_add     | width=4    |               | add_43_I3            |
+| r367     | DW01_cmp2    | width=4    |               | lt_43_I3             |
+| r369     | DW01_add     | width=4    |               | add_43_I4            |
+| r371     | DW01_cmp2    | width=4    |               | lt_43_I4             |
+| r373     | DW01_add     | width=4    |               | add_43_I5            |
+| r375     | DW01_cmp2    | width=4    |               | lt_43_I5             |
+| r377     | DW01_add     | width=4    |               | add_43_I6            |
+| r379     | DW01_cmp2    | width=4    |               | lt_43_I6             |
+| r381     | DW01_add     | width=4    |               | add_43_I7            |
+| r383     | DW01_cmp2    | width=4    |               | lt_43_I7             |
+| r385     | DW01_add     | width=4    |               | add_43_I8            |
+| r387     | DW01_cmp2    | width=4    |               | lt_43_I8             |
+| r389     | DW01_add     | width=4    |               | add_43_I9            |
+| r391     | DW01_cmp2    | width=4    |               | lt_43_I9             |
+| r393     | DW01_add     | width=4    |               | add_43_I10           |
+| r395     | DW01_cmp2    | width=4    |               | lt_43_I10            |
+| r397     | DW01_add     | width=4    |               | add_43_I11           |
+| r399     | DW01_cmp2    | width=4    |               | lt_43_I11            |
+| r401     | DW01_add     | width=4    |               | add_43_I12           |
+| r403     | DW01_cmp2    | width=4    |               | lt_43_I12            |
+| r413     | DW_rash      | A_width=64 |               | srl_88               |
 |          |              | SH_width=4 |               |                      |
-| r353     | DW01_add     | width=6    |               | add_102              |
-| r355     | DW01_sub     | width=6    |               | sub_106              |
-| r357     | DW01_sub     | width=6    |               | sub_108              |
-| r359     | DW01_dec     | width=6    |               | sub_110              |
-| r361     | DW01_inc     | width=32   |               | add_239              |
-| r477     | DW01_inc     | width=12   |               | add_48               |
-| r479     | DW01_add     | width=2    |               | add_85               |
-| r481     | DW01_add     | width=4    |               | add_86               |
-| r483     | DW01_add     | width=4    |               | add_87               |
+| r415     | DW01_add     | width=6    |               | add_102              |
+| r417     | DW01_sub     | width=6    |               | sub_106              |
+| r419     | DW01_sub     | width=6    |               | sub_108              |
+| r421     | DW01_dec     | width=6    |               | sub_110              |
+| r423     | DW01_inc     | width=32   |               | add_239              |
+| r539     | DW01_inc     | width=12   |               | add_48               |
+| r541     | DW01_add     | width=2    |               | add_85               |
+| r543     | DW01_add     | width=4    |               | add_86               |
+| r545     | DW01_add     | width=4    |               | add_87               |
 ===============================================================================
 
 
@@ -4802,21 +4769,21 @@ Resource Sharing Report for design PU_repetition_weight_buffer_0 in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r186     | DW01_cmp2    | width=3    |               | lt_42                |
-| r188     | DW01_cmp2    | width=3    |               | lt_42_I2             |
-| r190     | DW01_cmp2    | width=3    |               | lt_42_I3             |
-| r192     | DW01_cmp2    | width=3    |               | lt_42_I4             |
-| r194     | DW01_cmp2    | width=3    |               | lt_42_I5             |
-| r196     | DW01_cmp2    | width=3    |               | lt_42_I6             |
-| r198     | DW01_cmp2    | width=3    |               | lt_42_I7             |
-| r200     | DW01_cmp2    | width=3    |               | lt_42_I8             |
-| r202     | DW_rash      | A_width=64 |               | srl_55               |
+| r248     | DW01_cmp2    | width=3    |               | lt_42                |
+| r250     | DW01_cmp2    | width=3    |               | lt_42_I2             |
+| r252     | DW01_cmp2    | width=3    |               | lt_42_I3             |
+| r254     | DW01_cmp2    | width=3    |               | lt_42_I4             |
+| r256     | DW01_cmp2    | width=3    |               | lt_42_I5             |
+| r258     | DW01_cmp2    | width=3    |               | lt_42_I6             |
+| r260     | DW01_cmp2    | width=3    |               | lt_42_I7             |
+| r262     | DW01_cmp2    | width=3    |               | lt_42_I8             |
+| r264     | DW_rash      | A_width=64 |               | srl_55               |
 |          |              | SH_width=3 |               |                      |
-| r204     | DW01_dec     | width=64   |               | sub_55               |
-| r206     | DW01_dec     | width=64   |               | sub_57               |
-| r208     | DW01_add     | width=6    |               | add_66               |
-| r210     | DW01_sub     | width=6    |               | sub_69               |
-| r212     | DW01_inc     | width=32   |               | add_206              |
+| r266     | DW01_dec     | width=64   |               | sub_55               |
+| r268     | DW01_dec     | width=64   |               | sub_57               |
+| r270     | DW01_add     | width=6    |               | add_66               |
+| r272     | DW01_sub     | width=6    |               | sub_69               |
+| r274     | DW01_inc     | width=32   |               | add_206              |
 ===============================================================================
 
 
@@ -4841,12 +4808,12 @@ Resource Sharing Report for design PU_unique_weight_buffer_0 in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r153     | DW_rash      | A_width=64 |               | srl_50               |
+| r215     | DW_rash      | A_width=64 |               | srl_50               |
 |          |              | SH_width=2 |               |                      |
-| r155     | DW01_add     | width=6    |               | add_59               |
-| r157     | DW01_sub     | width=6    |               | sub_62               |
-| r159     | DW01_sub     | width=6    |               | sub_64               |
-| r161     | DW01_inc     | width=32   |               | add_205              |
+| r217     | DW01_add     | width=6    |               | add_59               |
+| r219     | DW01_sub     | width=6    |               | sub_62               |
+| r221     | DW01_sub     | width=6    |               | sub_64               |
+| r223     | DW01_inc     | width=32   |               | add_205              |
 ===============================================================================
 
 
