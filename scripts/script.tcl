@@ -31,7 +31,7 @@ read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 4
+set CLK_PERIOD 3.7
 set CLK_MEM_PERIOD 50
 
 #/***********************************************************/
@@ -176,10 +176,10 @@ if {  $dc_shell_status != [list] } {
   #write -f db -hier -output $output_path/$filename
 
   report_timing -transition_time -max_paths 10 -input_pins -nets -attributes -nosplit > $report_path/timing.rpt
-  report_area -nosplit -hierarchy > $report_path/area.rpt
+  report_area -nosplit -hier > $report_path/area.rpt
   report_power -nosplit -hier > $report_path/power.rpt
-  report_reference -nosplit -hierarchy > $report_path/reference.rpt
-  report_resources -nosplit -hierarchy > $report_path/resources.rpt
+  report_reference -nosplit -hier > $report_path/reference.rpt
+  report_resources -nosplit -hier > $report_path/resources.rpt
   report_constraint -all_violators > $report_path/violations.rpt
 
   remove_design -all

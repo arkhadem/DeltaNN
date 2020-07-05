@@ -82,7 +82,6 @@ module DeltaAcc(
 
 
     wire [(`INPUT_CHANNEL - 1) : 0] IB_w_enable;
-	wire [(`INPUT_CHANNEL - 1) : 0] IB_r_enable;
     wire [($clog2(`INPUT_HEIGHT) - 1) : 0] IB_SRAM_r;
     wire [($clog2(`INPUT_WIDTH) - 1) : 0] IB_SRAM_c;
 
@@ -277,7 +276,6 @@ module DeltaAcc(
 
 		    .w_enable(IB_w_enable[IBuff_itr]),
 
-		    .r_enable(IB_r_enable[IBuff_itr]),
 
 		    .SRAM_in(Input_SRAM_r_d),
 		    .SRAM_r(IB_SRAM_r),
@@ -340,7 +338,6 @@ module DeltaAcc(
 
 	    // Input Buffer ports
 	    .IB_w_enable(IB_w_enable),
-		.IB_r_enable(IB_r_enable),
 	    .IB_SRAM_r(IB_SRAM_r),
 	    .IB_SRAM_c(IB_SRAM_c),
 

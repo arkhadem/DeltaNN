@@ -51,7 +51,6 @@ module Delta_controller(
 
     // Input Buffer ports
     output [(`INPUT_CHANNEL - 1) : 0] IB_w_enable,
-	output [(`INPUT_CHANNEL - 1) : 0] IB_r_enable,
     output [($clog2(`INPUT_HEIGHT) - 1) : 0] IB_SRAM_r,
     output [($clog2(`INPUT_WIDTH) - 1) : 0] IB_SRAM_c,
 

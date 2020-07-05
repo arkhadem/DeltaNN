@@ -4,7 +4,6 @@ module Input_buffer(
     input clock,
 
     input w_enable,
-    input r_enable,
 
     input [((`BIN_LEN * `INPUT_SRAM_LEN) - 1) : 0] SRAM_in,
     input [($clog2(`INPUT_HEIGHT) - 1) : 0] SRAM_r,
@@ -24,9 +23,11 @@ module Input_buffer(
 		end
 	end
 
-	for (i = 0; i < `INPUT_HEIGHT; i++) begin: HEIGHT_GENERATE
-		for (j = 0; j < `INPUT_WIDTH; j++) begin: HEIGHT_GENERATE
-			assign r_val[i][j] = r_enable ? my_register[i][j] : `BIN_LEN'bz;
-		end
-	end
+	assign r_val = my_register;
+
+	// for (i = 0; i < `INPUT_HEIGHT; i++) begin: HEIGHT_GENERATE
+	// 	for (j = 0; j < `INPUT_WIDTH; j++) begin: HEIGHT_GENERATE
+	// 		assign r_val[i][j] = r_enable ? my_register[i][j] : `BIN_LEN'bz;
+	// 	end
+	// end
 endmodule
