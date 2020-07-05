@@ -17,8 +17,7 @@ set source_path $design_path/HDL
 #/***********************************************************/
 set SYN_DIR ./
 # set target_library "/afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mns.db_ccs"
-set target_library "/afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mxs.db_ccs"
-set target_library "/n/calumet/v/arkhadem/DeltaNN/memory/sram_32_2048_scn4m_subm_TT_5p0V_25C.db"
+set target_library [list /afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mxs.db_ccs /n/calumet/v/arkhadem/DeltaNN/memory/sram_32_2048_scn4m_subm_TT_5p0V_25C.db]
 
 set link_library [concat  "*" $target_library]
 

@@ -29,8 +29,8 @@ module Pool_array (
 							AF_outputs_pooled[i][j] = 0;
 							for (int k_r = 0; k_r < Pool_kernel_size; k_r++) begin
 								for (int k_c = 0; k_c < Pool_kernel_size; k_c++) begin
-									if(AF_outputs_pooled[i][j] < AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
-										AF_outputs_pooled[i][j] = AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
+									if(AF_outputs_pooled[i][j] < AF_outputs[k_r][k_c]) begin// AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
+										AF_outputs_pooled[i][j] = AF_outputs[k_r][k_c]; // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
 									end else begin
 										AF_outputs_pooled[i][j] = AF_outputs_pooled[i][j];
 									end

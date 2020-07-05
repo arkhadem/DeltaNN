@@ -5,8 +5,8 @@
 `define OUT_BIN_LEN 16
 `define INPUT_CHANNEL 4
 `define OUTPUT_CHANNEL 4
-`define KERNEL_WIDTH 4
-`define KERNEL_HEIGHT 4
+`define KERNEL_WIDTH 16
+`define KERNEL_HEIGHT 16
 `define INPUT_WIDTH 40
 `define INPUT_HEIGHT 40
 `define STRIDE_LEN 3
