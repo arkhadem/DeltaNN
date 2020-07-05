@@ -280,7 +280,7 @@ module Delta_controller(
 					o_r = o_r + `OUTPUT_HEIGHT;
 					if(o_r == my_ORC_Size) begin
 						o_r = 0;
-						o_ch = o_ch + (`OUTPUT_CHANNEL * `PU_NUM);
+						o_ch = o_ch + 16; // (`OUTPUT_CHANNEL * `PU_NUM);
 					end
 				end
 			end

@@ -27,15 +27,15 @@ module Pool_array (
 						`POOL_NONE: AF_outputs_pooled[i][j] = AF_outputs[i][j];
 						`POOL_MAX: begin
 							AF_outputs_pooled[i][j] = 0;
-							for (int k_r = 0; k_r < Pool_kernel_size; k_r++) begin
-								for (int k_c = 0; k_c < Pool_kernel_size; k_c++) begin
-									if(AF_outputs_pooled[i][j] < AF_outputs[k_r][k_c]) begin// AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
-										AF_outputs_pooled[i][j] = AF_outputs[k_r][k_c]; // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
-									end else begin
-										AF_outputs_pooled[i][j] = AF_outputs_pooled[i][j];
-									end
-								end
-							end
+							// for (int k_r = 0; k_r < Pool_kernel_size; k_r++) begin
+							// 	for (int k_c = 0; k_c < Pool_kernel_size; k_c++) begin
+							// 		if(AF_outputs_pooled[i][j] < AF_outputs[k_r][k_c]) begin // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
+							// 			AF_outputs_pooled[i][j] = AF_outputs[k_r][k_c]; // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
+							// 		end else begin
+							// 			AF_outputs_pooled[i][j] = AF_outputs_pooled[i][j];
+							// 		end
+							// 	end
+							// end
 						end
 						default : AF_outputs_pooled[i][j] = {`OUT_BIN_LEN{1'bz}};
 					endcase

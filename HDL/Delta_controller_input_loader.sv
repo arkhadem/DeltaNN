@@ -79,10 +79,10 @@ module Delta_controller_input_loader(
 				if(i_r_first == my_RC_Size) begin
 					i_r_first = 0;
 					i_ch_first = i_ch_first + `INPUT_CHANNEL;
-					my_input_SRAM_start_address = my_input_SRAM_start_address + ((my_RC_Size * my_RC_Size) << 2) - (my_RC_Size * my_RC_Size);
+					my_input_SRAM_start_address = my_input_SRAM_start_address + (my_RC_Size << 2) - my_RC_Size;// ((my_RC_Size * my_RC_Size) << 2) - (my_RC_Size * my_RC_Size);
 				end else begin
 					i_r_first = i_r_first + (stride << 3);
-					my_input_SRAM_start_address = my_input_SRAM_start_address + (((stride - 1) << 3) * my_RC_Size);
+					my_input_SRAM_start_address = my_input_SRAM_start_address + (((stride - 1) << 3); // * my_RC_Size);
 				end
 			end else begin
 				i_c_first = i_c_first + (stride << 3);
@@ -103,7 +103,7 @@ module Delta_controller_input_loader(
 				if(i_r_2 == T_input_size) begin
 					i_r_2 = 0;
 					i_ch_2 = i_ch_2 + 1;
-					my_input_SRAM_add_address = my_input_SRAM_add_address + (my_RC_Size * my_RC_Size) - (T_input_size * T_input_size);
+					my_input_SRAM_add_address = my_input_SRAM_add_address + my_RC_Size - T_input_size;// (my_RC_Size * my_RC_Size) - (T_input_size * T_input_size);
 				end else begin
 					i_r_2 = i_r_2 + 1;
 					my_input_SRAM_add_address = my_input_SRAM_add_address + my_RC_Size - T_input_size;

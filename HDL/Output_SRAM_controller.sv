@@ -35,8 +35,8 @@ module Output_SRAM_controller (
                 .csb0(~chip_select[row_itr]),
                 .web0(~write_enable[row_itr]),
                 .addr0(chip_address),
-                .din0(w_d[(((column_itr + 1) * 32) - 1) : (column_itr * 32)]),
-                .dout0(data_out[row_itr][(((column_itr + 1) * 32) - 1) : (column_itr * 32)])
+                .din0(w_d[(((column_itr + 1) << 5) - 1) : (column_itr << 5)]),
+                .dout0(data_out[row_itr][(((column_itr + 1) << 5) - 1) : (column_itr << 5)])
             );
         end
     end

@@ -85,7 +85,7 @@ module Delta_controller_weight_manager(
 		if(reset == 1'b1) begin
 			first_address = 0;
 		end else if(first_addr_inc_en == 1'b1) begin		// increamented when delta cycle is finished
-			first_address = first_address + (`PU_NUM * `INPUT_CHANNEL * `MAX_WEIGHT_LEN_BYTE);
+			first_address = first_address + 512; // (`PU_NUM * `INPUT_CHANNEL * `MAX_WEIGHT_LEN_BYTE);
 		end
 	end
 
@@ -116,7 +116,7 @@ module Delta_controller_weight_manager(
 					o_r_first = o_r_first + `OUTPUT_HEIGHT;
 					if(o_r_first == my_ORC_Size) begin
 						o_r_first = 0;
-						o_ch_first = o_ch_first + (`OUTPUT_CHANNEL * `PU_NUM);
+						o_ch_first = o_ch_first + 16; // (`OUTPUT_CHANNEL * `PU_NUM);
 					end
 				end
 			end

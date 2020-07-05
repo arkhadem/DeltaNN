@@ -90,10 +90,10 @@ module Delta_controller_output_extractor(
 				if(o_r_first == my_ORC_Size) begin
 					o_r_first = 0;
 					o_ch_first = o_ch_first + `OUTPUT_CHANNEL;
-					my_Output_SRAM_start_address = my_Output_SRAM_start_address + ((my_ORC_Size * my_ORC_Size) << 2) - (my_ORC_Size * my_ORC_Size);
+					my_Output_SRAM_start_address = my_Output_SRAM_start_address + (my_ORC_Size << 2) - my_ORC_Size;// ((my_ORC_Size * my_ORC_Size) << 2) - (my_ORC_Size * my_ORC_Size);
 				end else begin
 					o_r_first = o_r_first + `OUTPUT_HEIGHT;
-					my_Output_SRAM_start_address = my_Output_SRAM_start_address + ((`OUTPUT_HEIGHT - 1) * my_ORC_Size);
+					my_Output_SRAM_start_address = my_Output_SRAM_start_address + (my_ORC_Size << 3); //((`OUTPUT_HEIGHT - 1) * my_ORC_Size);
 				end
 			end else begin
 				o_c_first = o_c_first + `OUTPUT_WIDTH;
@@ -114,7 +114,7 @@ module Delta_controller_output_extractor(
 				if(o_r_2 == `OUTPUT_HEIGHT) begin
 					o_r_2 = 0;
 					o_ch_2 = o_ch_2 + 1;
-					my_Output_SRAM_add_address = my_Output_SRAM_add_address + (my_ORC_Size * my_ORC_Size) - (`OUTPUT_HEIGHT * `OUTPUT_WIDTH);
+					my_Output_SRAM_add_address = my_Output_SRAM_add_address + my_ORC_Size - `OUTPUT_HEIGHT; // (my_ORC_Size * my_ORC_Size) - (`OUTPUT_HEIGHT * `OUTPUT_WIDTH);
 				end else begin
 					o_r_2 = o_r_2 + 1;
 					my_Output_SRAM_add_address = my_Output_SRAM_add_address + my_ORC_Size - `OUTPUT_WIDTH;
@@ -260,7 +260,7 @@ module Delta_controller_output_extractor(
             S_FINISH: next_state = WAIT_FOR_START;
 
 			B_CHECK_IDX: begin
-				if((o_ch_2 == (`OUTPUT_CHANNEL * `PU_NUM)) && (o_r_2 == `OUTPUT_HEIGHT) && (o_c_2 == `OUTPUT_WIDTH)) begin
+				if((o_ch_2 == 16) && (o_r_2 == `OUTPUT_HEIGHT) && (o_c_2 == `OUTPUT_WIDTH)) begin
             		next_state = B_FIRST_IDX_PLUS;
             	end else begin
             		next_state = B_BUFF_LD;

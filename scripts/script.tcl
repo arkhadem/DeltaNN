@@ -31,8 +31,8 @@ read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 10
-set CLK_PERIOD_MEM 55
+set CLK_PERIOD 4
+set CLK_MEM_PERIOD 50
 
 #/***********************************************************/
 #/*  Clk Periods/uncertainty/transition                     */
@@ -103,7 +103,7 @@ create_clock -period $CLK_PERIOD $clock_name
 set_dont_touch_network $clock_name
 set_fix_hold $clock_name
 
-create_clock -period $CLK_PERIODـMEM $clock_name_mem
+create_clock -period $CLK_MEM_PERIOD $clock_name_mem
 set_dont_touch_network $clock_name_mem
 set_fix_hold $clock_name_mem
 

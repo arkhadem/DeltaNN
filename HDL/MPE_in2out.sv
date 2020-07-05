@@ -13,7 +13,7 @@ module MPE_in2out(
 
 	for (i = 0; i < `OUTPUT_HEIGHT; i++) begin: HEIGHT_GENERATE
 		for (j = 0; j < `OUTPUT_WIDTH; j++) begin: HEIGHT_GENERATE
-			assign out_vals[i][j] = in_vals[i * stride + weight_height][j * stride + weight_width];
+			assign out_vals[i][j] = in_vals[i + stride][j + weight_width]; // in_vals[i * stride + weight_height][j * stride + weight_width];
 		end
 	end
 
