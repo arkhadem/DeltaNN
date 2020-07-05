@@ -48,20 +48,20 @@ module DRAM_slave (
 	always@(*) begin
 		if(ChipSelect == 1'b1) begin
 			if(Read == 1'b1) begin
-				ReadData <= Registers[Address];
+				ReadData = Registers[Address];
 			end
 			else begin
-				ReadData <= 32'bz;
+				ReadData = 32'bz;
 			end
 		end
 		else begin
-			ReadData <= 32'bz;
+			ReadData = 32'bz;
 		end
 	end
 	always@(posedge clock) begin
 		if(reset == 1'b1) begin
 			for (i = 0; i < 5; i = i + 1)
-				Registers[i] <= 32'b0;
+				Registers[i] = 32'b0;
 		end
 		else begin
 			if(ack == 1'b1) begin
@@ -72,7 +72,7 @@ module DRAM_slave (
 			end
 			if(ChipSelect == 1'b1) begin
 				if(Write == 1'b1) begin
-					Registers[Address] <= WriteData;
+					Registers[Address] = WriteData;
 					Registers[0][31] = 1'b0;
 				end
 			end
