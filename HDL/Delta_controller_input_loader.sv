@@ -82,7 +82,7 @@ module Delta_controller_input_loader(
 					my_input_SRAM_start_address = my_input_SRAM_start_address + (my_RC_Size << 2) - my_RC_Size;// ((my_RC_Size * my_RC_Size) << 2) - (my_RC_Size * my_RC_Size);
 				end else begin
 					i_r_first = i_r_first + (stride << 3);
-					my_input_SRAM_start_address = my_input_SRAM_start_address + (((stride - 1) << 3); // * my_RC_Size);
+					my_input_SRAM_start_address = my_input_SRAM_start_address + ((stride - 1) << 3); // * my_RC_Size);
 				end
 			end else begin
 				i_c_first = i_c_first + (stride << 3);
