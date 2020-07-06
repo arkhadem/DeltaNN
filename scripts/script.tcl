@@ -25,13 +25,13 @@ set link_library [concat  "*" $target_library]
 #/* The following lines must be updated for every           */
 #/* new design                                              */
 #/***********************************************************/
-set src_files [list $source_path/sys_defs.svh $source_path/AF_array.sv $source_path/APE_adder.sv $source_path/APE_buffer.sv $source_path/Pool_array.sv $source_path/DRAM_master.sv $source_path/DRAM_slave.sv $source_path/Input_buffer.sv $source_path/Input_SRAM_controller.sv $source_path/Output_SRAM_controller.sv $source_path/PU_controller.sv $source_path/PU_idx_buffer.sv $source_path/PU_in_line_controller.sv $source_path/PU_repetition_weight_buffer.sv $source_path/PU_test.sv $source_path/PU_unique_weight_buffer.sv $source_path/PU_WB_SRAM_controller.sv $source_path/Weight_SRAM_controller.sv $source_path/crossbar.sv $source_path/APE.sv $source_path/MPE_in2out.sv $source_path/MPE_multiplier.sv $source_path/MPE.sv $source_path/PU.sv $source_path/Delta_controller_bias_loader.sv $source_path/Delta_controller_input_loader.sv $source_path/Delta_controller_output_extractor.sv $source_path/Delta_controller_weight_manager.sv $source_path/Delta_controller.sv $source_path/DeltaAcc.sv]
+set src_files [list $source_path/sys_defs.svh $source_path/AF_array.sv $source_path/APE_adder.sv $source_path/APE_buffer.sv $source_path/Pool_array.sv $source_path/DRAM_master.sv $source_path/DRAM_slave.sv $source_path/Input_buffer.sv $source_path/Input_SRAM_controller.sv $source_path/Output_SRAM_controller.sv $source_path/PU_controller.sv $source_path/PU_idx_buffer.sv $source_path/PU_in_line_controller.sv $source_path/PU_repetition_weight_buffer.sv $source_path/PU_unique_weight_buffer.sv $source_path/PU_WB_SRAM_controller.sv $source_path/Weight_SRAM_controller.sv $source_path/crossbar.sv $source_path/APE.sv $source_path/MPE_in2out.sv $source_path/MPE_multiplier.sv $source_path/MPE.sv $source_path/PU.sv $source_path/Delta_controller_bias_loader.sv $source_path/Delta_controller_input_loader.sv $source_path/Delta_controller_output_extractor.sv $source_path/Delta_controller_weight_manager.sv $source_path/Delta_controller.sv $source_path/DeltaAcc.sv]
 set design_name DeltaAcc
 read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 3.7
+set CLK_PERIOD 3
 set CLK_MEM_PERIOD 50
 
 #/***********************************************************/
@@ -65,7 +65,7 @@ set AVG_FANOUT_LOAD 10
 ###############################################################
 analyze -library WORK -format sverilog $src_files
 elaborate $design_name
-current_design $design_name
+current_design $source_path/DeltaAcc.sv:DeltaAcc
 link
 uniquify
 check_design
