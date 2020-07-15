@@ -3,7 +3,7 @@
 Report : resources
 Design : DeltaAcc
 Version: O-2018.06
-Date   : Sun Jul  5 16:32:02 2020
+Date   : Wed Jul  8 10:28:56 2020
 ****************************************
 
 
@@ -15,34 +15,34 @@ No implementations to report
 Design : Delta_controller
 ****************************************
 Resource Sharing Report for design Delta_controller in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Delta_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Delta_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r142     | DW01_add     | width=11   |               | add_274 add_292      |
-| r148     | DW01_add     | width=11   |               | add_283 add_304      |
-| r153     | DW01_sub     | width=2    |               | sub_301 sub_307      |
-|          |              |            |               | sub_313 sub_319      |
-| r160     | DW01_cmp6    | width=10   |               | eq_412_2 eq_454      |
-| r181     | DW01_cmp6    | width=10   |               | eq_275               |
-| r183     | DW01_add     | width=8    |               | add_277              |
-| r185     | DW01_cmp6    | width=8    |               | eq_278               |
-| r187     | DW01_add     | width=8    |               | add_280              |
-| r189     | DW01_cmp6    | width=8    |               | eq_281               |
-| r191     | DW01_cmp2    | width=11   |               | lte_292              |
-| r193     | DW01_sub     | width=2    |               | sub_295              |
-| r195     | DW01_add     | width=11   |               | add_298              |
-| r197     | DW01_cmp2    | width=11   |               | lte_298              |
-| r199     | DW01_cmp2    | width=11   |               | lte_304              |
-| r201     | DW01_add     | width=11   |               | add_310              |
-| r203     | DW01_cmp2    | width=11   |               | lte_310              |
-| r205     | DW01_add     | width=11   |               | add_316              |
-| r207     | DW01_cmp2    | width=11   |               | lte_316              |
-| r209     | DW01_cmp6    | width=10   |               | eq_412               |
-| r211     | DW01_cmp6    | width=8    |               | eq_412_3             |
-| r213     | DW01_cmp6    | width=8    |               | eq_412_4             |
+| r142     | DW01_add     | width=11   |               | add_273 add_291      |
+| r148     | DW01_add     | width=11   |               | add_282 add_303      |
+| r153     | DW01_sub     | width=2    |               | sub_300 sub_306      |
+|          |              |            |               | sub_312 sub_318      |
+| r160     | DW01_cmp6    | width=10   |               | eq_411_2 eq_453      |
+| r181     | DW01_cmp6    | width=10   |               | eq_274               |
+| r183     | DW01_add     | width=8    |               | add_276              |
+| r185     | DW01_cmp6    | width=8    |               | eq_277               |
+| r187     | DW01_add     | width=8    |               | add_279              |
+| r189     | DW01_cmp6    | width=8    |               | eq_280               |
+| r191     | DW01_cmp2    | width=11   |               | lte_291              |
+| r193     | DW01_sub     | width=2    |               | sub_294              |
+| r195     | DW01_add     | width=11   |               | add_297              |
+| r197     | DW01_cmp2    | width=11   |               | lte_297              |
+| r199     | DW01_cmp2    | width=11   |               | lte_303              |
+| r201     | DW01_add     | width=11   |               | add_309              |
+| r203     | DW01_cmp2    | width=11   |               | lte_309              |
+| r205     | DW01_add     | width=11   |               | add_315              |
+| r207     | DW01_cmp2    | width=11   |               | lte_315              |
+| r209     | DW01_cmp6    | width=10   |               | eq_411               |
+| r211     | DW01_cmp6    | width=8    |               | eq_411_3             |
+| r213     | DW01_cmp6    | width=8    |               | eq_411_4             |
 ===============================================================================
 
 
@@ -52,7 +52,7 @@ No implementations to report
 Design : Delta_controller_weight_manager
 ****************************************
 Resource Sharing Report for design Delta_controller_weight_manager in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Delta_controller_weight_manager.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Delta_controller_weight_manager.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -78,11 +78,11 @@ Implementation Report
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
 | add_0_root_add_0_root_add_100_2       |                    |                |
-|                    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_101            | DW01_add         | cla                |                |
 | add_1_root_add_0_root_add_100_2       |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_88             | DW01_add         | rpl                |                |
-| add_101            | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_88             | DW01_add         | cla                |                |
 ===============================================================================
 
  
@@ -90,7 +90,7 @@ Implementation Report
 Design : Delta_controller_output_extractor
 ****************************************
 Resource Sharing Report for design Delta_controller_output_extractor in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Delta_controller_output_extractor.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Delta_controller_output_extractor.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -123,23 +123,23 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| gte_169            | DW01_cmp2        | rpl                |                |
 | add_168            | DW01_add         | cla                |                |
-| add_173            | DW01_inc         | cla                |                |
+| gte_169            | DW01_cmp2        | rpl                |                |
+| add_124            | DW01_add         | cla                |                |
+| add_194            | DW01_add         | cla                |                |
+| add_96             | DW01_add         | cla                |                |
+| add_100            | DW01_add         | cla                |                |
+| add_186            | DW01_add         | cla                |                |
 | add_0_root_sub_0_root_sub_93          |                    |                |
-|                    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_175            | DW01_inc         | cla                |                |
+| add_95             | DW01_add         | cla                |                |
+| add_99             | DW01_add         | cla                |                |
+| add_173            | DW01_inc         | cla                |                |
 | r184               | DW01_cmp6        | rpl                |                |
 | eq_88              | DW01_cmp6        | rpl                |                |
 | eq_90              | DW01_cmp6        | rpl                |                |
-| add_95             | DW01_add         | rpl                |                |
-| add_96             | DW01_add         | rpl                |                |
-| add_99             | DW01_add         | rpl                |                |
-| add_100            | DW01_add         | rpl                |                |
-| add_124            | DW01_add         | rpl                |                |
 | add_149            | DW01_add         | rpl                |                |
-| add_175            | DW01_inc         | rpl                |                |
-| add_186            | DW01_add         | rpl                |                |
-| add_194            | DW01_add         | rpl                |                |
 | eq_229             | DW01_cmp6        | rpl                |                |
 | eq_229_3           | DW01_cmp6        | rpl                |                |
 ===============================================================================
@@ -149,7 +149,7 @@ Implementation Report
 Design : Delta_controller_input_loader
 ****************************************
 Resource Sharing Report for design Delta_controller_input_loader in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Delta_controller_input_loader.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Delta_controller_input_loader.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -194,24 +194,24 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| gte_163            | DW01_cmp2        | rpl                |                |
 | add_162            | DW01_add         | cla                |                |
-| add_167            | DW01_inc         | cla                |                |
+| add_0_root_r238    | DW01_add         | cla                |                |
+| gte_163            | DW01_cmp2        | rpl                |                |
+| add_188            | DW01_add         | cla                |                |
+| add_113            | DW01_add         | cla                |                |
+| add_180            | DW01_add         | cla                |                |
 | add_0_root_sub_0_root_sub_82          |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_85             | DW01_add         | rpl                |                |
-| add_0_root_r238    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_85             | DW01_add         | cla                |                |
+| add_89             | DW01_add         | cla                |                |
+| add_169            | DW01_inc         | cla                |                |
+| add_84             | DW01_add         | cla                |                |
+| add_88             | DW01_add         | cla                |                |
+| add_167            | DW01_inc         | cla                |                |
 | r247               | DW01_cmp6        | rpl                |                |
 | eq_77              | DW01_cmp6        | rpl                |                |
 | eq_79              | DW01_cmp6        | rpl                |                |
-| add_84             | DW01_add         | rpl                |                |
-| add_88             | DW01_add         | rpl                |                |
-| add_89             | DW01_add         | rpl                |                |
-| add_113            | DW01_add         | rpl                |                |
 | add_131            | DW01_add         | rpl                |                |
-| add_169            | DW01_inc         | rpl                |                |
-| add_180            | DW01_add         | rpl                |                |
-| add_188            | DW01_add         | rpl                |                |
 | eq_222             | DW01_cmp6        | rpl                |                |
 | eq_222_3           | DW01_cmp6        | rpl                |                |
 ===============================================================================
@@ -221,7 +221,7 @@ Implementation Report
 Design : Delta_controller_bias_loader
 ****************************************
 Resource Sharing Report for design Delta_controller_bias_loader in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Delta_controller_bias_loader.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Delta_controller_bias_loader.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -239,7 +239,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_70             | DW01_add         | rpl                |                |
+| add_70             | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -295,7 +295,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_0
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -321,14 +321,14 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_0_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
 | add_1_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_0_root_r140    | DW01_add         | rpl                |                |
-| add_1_root_r140    | DW01_add         | rpl                |                |
-| add_0_root_r142    | DW01_add         | rpl                |                |
-| add_1_root_r142    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_1_root_r140    | DW01_add         | cla                |                |
+| add_1_root_r142    | DW01_add         | cla                |                |
+| add_0_root_add_0_root_add_49_2        |                    |                |
+|                    | DW01_add         | cla                |                |
+| add_0_root_r140    | DW01_add         | cla                |                |
+| add_0_root_r142    | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -477,70 +477,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -587,70 +587,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -697,70 +697,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -792,7 +792,7 @@ No implementations to report
 Design : PU_idx_buffer_0
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -810,8 +810,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -826,9 +826,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -843,7 +843,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -945,7 +945,7 @@ No implementations to report
 Design : PU_idx_buffer_1
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -963,8 +963,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -979,9 +979,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -996,7 +996,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -1098,7 +1098,7 @@ No implementations to report
 Design : PU_idx_buffer_2
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1116,8 +1116,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -1132,9 +1132,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -1149,7 +1149,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -1251,7 +1251,7 @@ No implementations to report
 Design : PU_idx_buffer_3
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1269,8 +1269,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -1285,9 +1285,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -1302,7 +1302,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -1412,7 +1412,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_1
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1438,14 +1438,14 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_0_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
 | add_1_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_0_root_r140    | DW01_add         | rpl                |                |
-| add_1_root_r140    | DW01_add         | rpl                |                |
-| add_0_root_r142    | DW01_add         | rpl                |                |
-| add_1_root_r142    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_1_root_r140    | DW01_add         | cla                |                |
+| add_1_root_r142    | DW01_add         | cla                |                |
+| add_0_root_add_0_root_add_49_2        |                    |                |
+|                    | DW01_add         | cla                |                |
+| add_0_root_r140    | DW01_add         | cla                |                |
+| add_0_root_r142    | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -1594,70 +1594,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -1704,70 +1704,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -1814,70 +1814,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -1909,7 +1909,7 @@ No implementations to report
 Design : PU_idx_buffer_4
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1927,8 +1927,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -1943,9 +1943,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -1960,7 +1960,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -2062,7 +2062,7 @@ No implementations to report
 Design : PU_idx_buffer_5
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2080,8 +2080,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -2096,9 +2096,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -2113,7 +2113,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -2215,7 +2215,7 @@ No implementations to report
 Design : PU_idx_buffer_6
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2233,8 +2233,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -2249,9 +2249,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -2266,7 +2266,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -2368,7 +2368,7 @@ No implementations to report
 Design : PU_idx_buffer_7
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2386,8 +2386,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -2402,9 +2402,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -2419,7 +2419,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -2529,7 +2529,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_2
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2555,14 +2555,14 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_0_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
 | add_1_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_0_root_r140    | DW01_add         | rpl                |                |
-| add_1_root_r140    | DW01_add         | rpl                |                |
-| add_0_root_r142    | DW01_add         | rpl                |                |
-| add_1_root_r142    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_1_root_r140    | DW01_add         | cla                |                |
+| add_1_root_r142    | DW01_add         | cla                |                |
+| add_0_root_add_0_root_add_49_2        |                    |                |
+|                    | DW01_add         | cla                |                |
+| add_0_root_r140    | DW01_add         | cla                |                |
+| add_0_root_r142    | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -2711,70 +2711,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -2821,70 +2821,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -2931,70 +2931,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -3026,7 +3026,7 @@ No implementations to report
 Design : PU_idx_buffer_8
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3044,8 +3044,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -3060,9 +3060,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -3077,7 +3077,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -3179,7 +3179,7 @@ No implementations to report
 Design : PU_idx_buffer_9
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3197,8 +3197,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -3213,9 +3213,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -3230,7 +3230,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -3332,7 +3332,7 @@ No implementations to report
 Design : PU_idx_buffer_10
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3350,8 +3350,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -3366,9 +3366,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -3383,7 +3383,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -3485,7 +3485,7 @@ No implementations to report
 Design : PU_idx_buffer_11
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3503,8 +3503,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -3519,9 +3519,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -3536,7 +3536,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -3638,7 +3638,7 @@ No implementations to report
 Design : PU_controller_3
 ****************************************
 Resource Sharing Report for design PU_controller_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3661,7 +3661,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_3
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3689,14 +3689,14 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_0_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
 | add_1_root_add_0_root_add_49_2        |                    |                |
-|                    | DW01_add         | rpl                |                |
-| add_0_root_r140    | DW01_add         | rpl                |                |
-| add_1_root_r140    | DW01_add         | rpl                |                |
-| add_0_root_r142    | DW01_add         | rpl                |                |
-| add_1_root_r142    | DW01_add         | rpl                |                |
+|                    | DW01_add         | cla                |                |
+| add_1_root_r140    | DW01_add         | cla                |                |
+| add_1_root_r142    | DW01_add         | cla                |                |
+| add_0_root_add_0_root_add_49_2        |                    |                |
+|                    | DW01_add         | cla                |                |
+| add_0_root_r140    | DW01_add         | cla                |                |
+| add_0_root_r142    | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -3845,70 +3845,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -3955,70 +3955,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -4042,7 +4042,7 @@ No implementations to report
 Design : Pool_array_15
 ****************************************
 Resource Sharing Report for design Pool_array_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/Pool_array.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/Pool_array.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4072,7 +4072,7 @@ No implementations to report
 Design : APE_adder_15
 ****************************************
 Resource Sharing Report for design APE_adder_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/APE_adder.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/APE_adder.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4150,70 +4150,70 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_16             | DW01_add         | rpl                |                |
-| add_16_G2_G1       | DW01_add         | rpl                |                |
-| add_16_G3_G1       | DW01_add         | rpl                |                |
-| add_16_G4_G1       | DW01_add         | rpl                |                |
-| add_16_G5_G1       | DW01_add         | rpl                |                |
-| add_16_G6_G1       | DW01_add         | rpl                |                |
-| add_16_G7_G1       | DW01_add         | rpl                |                |
-| add_16_G8_G1       | DW01_add         | rpl                |                |
-| add_16_G2          | DW01_add         | rpl                |                |
-| add_16_G2_G2       | DW01_add         | rpl                |                |
-| add_16_G3_G2       | DW01_add         | rpl                |                |
-| add_16_G4_G2       | DW01_add         | rpl                |                |
-| add_16_G5_G2       | DW01_add         | rpl                |                |
-| add_16_G6_G2       | DW01_add         | rpl                |                |
-| add_16_G7_G2       | DW01_add         | rpl                |                |
-| add_16_G8_G2       | DW01_add         | rpl                |                |
-| add_16_G3          | DW01_add         | rpl                |                |
-| add_16_G2_G3       | DW01_add         | rpl                |                |
-| add_16_G3_G3       | DW01_add         | rpl                |                |
-| add_16_G4_G3       | DW01_add         | rpl                |                |
-| add_16_G5_G3       | DW01_add         | rpl                |                |
-| add_16_G6_G3       | DW01_add         | rpl                |                |
-| add_16_G7_G3       | DW01_add         | rpl                |                |
-| add_16_G8_G3       | DW01_add         | rpl                |                |
-| add_16_G4          | DW01_add         | rpl                |                |
-| add_16_G2_G4       | DW01_add         | rpl                |                |
-| add_16_G3_G4       | DW01_add         | rpl                |                |
-| add_16_G4_G4       | DW01_add         | rpl                |                |
-| add_16_G5_G4       | DW01_add         | rpl                |                |
-| add_16_G6_G4       | DW01_add         | rpl                |                |
-| add_16_G7_G4       | DW01_add         | rpl                |                |
-| add_16_G8_G4       | DW01_add         | rpl                |                |
-| add_16_G5          | DW01_add         | rpl                |                |
-| add_16_G2_G5       | DW01_add         | rpl                |                |
-| add_16_G3_G5       | DW01_add         | rpl                |                |
-| add_16_G4_G5       | DW01_add         | rpl                |                |
-| add_16_G5_G5       | DW01_add         | rpl                |                |
-| add_16_G6_G5       | DW01_add         | rpl                |                |
-| add_16_G7_G5       | DW01_add         | rpl                |                |
-| add_16_G8_G5       | DW01_add         | rpl                |                |
-| add_16_G6          | DW01_add         | rpl                |                |
-| add_16_G2_G6       | DW01_add         | rpl                |                |
-| add_16_G3_G6       | DW01_add         | rpl                |                |
-| add_16_G4_G6       | DW01_add         | rpl                |                |
-| add_16_G5_G6       | DW01_add         | rpl                |                |
-| add_16_G6_G6       | DW01_add         | rpl                |                |
-| add_16_G7_G6       | DW01_add         | rpl                |                |
-| add_16_G8_G6       | DW01_add         | rpl                |                |
-| add_16_G7          | DW01_add         | rpl                |                |
-| add_16_G2_G7       | DW01_add         | rpl                |                |
-| add_16_G3_G7       | DW01_add         | rpl                |                |
-| add_16_G4_G7       | DW01_add         | rpl                |                |
-| add_16_G5_G7       | DW01_add         | rpl                |                |
-| add_16_G6_G7       | DW01_add         | rpl                |                |
-| add_16_G7_G7       | DW01_add         | rpl                |                |
-| add_16_G8_G7       | DW01_add         | rpl                |                |
-| add_16_G8          | DW01_add         | rpl                |                |
-| add_16_G2_G8       | DW01_add         | rpl                |                |
-| add_16_G3_G8       | DW01_add         | rpl                |                |
-| add_16_G4_G8       | DW01_add         | rpl                |                |
-| add_16_G5_G8       | DW01_add         | rpl                |                |
-| add_16_G6_G8       | DW01_add         | rpl                |                |
-| add_16_G7_G8       | DW01_add         | rpl                |                |
-| add_16_G8_G8       | DW01_add         | rpl                |                |
+| add_16             | DW01_add         | cla                |                |
+| add_16_G2_G1       | DW01_add         | cla                |                |
+| add_16_G3_G1       | DW01_add         | cla                |                |
+| add_16_G4_G1       | DW01_add         | cla                |                |
+| add_16_G5_G1       | DW01_add         | cla                |                |
+| add_16_G6_G1       | DW01_add         | cla                |                |
+| add_16_G7_G1       | DW01_add         | cla                |                |
+| add_16_G8_G1       | DW01_add         | cla                |                |
+| add_16_G2          | DW01_add         | cla                |                |
+| add_16_G2_G2       | DW01_add         | cla                |                |
+| add_16_G3_G2       | DW01_add         | cla                |                |
+| add_16_G4_G2       | DW01_add         | cla                |                |
+| add_16_G5_G2       | DW01_add         | cla                |                |
+| add_16_G6_G2       | DW01_add         | cla                |                |
+| add_16_G7_G2       | DW01_add         | cla                |                |
+| add_16_G8_G2       | DW01_add         | cla                |                |
+| add_16_G3          | DW01_add         | cla                |                |
+| add_16_G2_G3       | DW01_add         | cla                |                |
+| add_16_G3_G3       | DW01_add         | cla                |                |
+| add_16_G4_G3       | DW01_add         | cla                |                |
+| add_16_G5_G3       | DW01_add         | cla                |                |
+| add_16_G6_G3       | DW01_add         | cla                |                |
+| add_16_G7_G3       | DW01_add         | cla                |                |
+| add_16_G8_G3       | DW01_add         | cla                |                |
+| add_16_G4          | DW01_add         | cla                |                |
+| add_16_G2_G4       | DW01_add         | cla                |                |
+| add_16_G3_G4       | DW01_add         | cla                |                |
+| add_16_G4_G4       | DW01_add         | cla                |                |
+| add_16_G5_G4       | DW01_add         | cla                |                |
+| add_16_G6_G4       | DW01_add         | cla                |                |
+| add_16_G7_G4       | DW01_add         | cla                |                |
+| add_16_G8_G4       | DW01_add         | cla                |                |
+| add_16_G5          | DW01_add         | cla                |                |
+| add_16_G2_G5       | DW01_add         | cla                |                |
+| add_16_G3_G5       | DW01_add         | cla                |                |
+| add_16_G4_G5       | DW01_add         | cla                |                |
+| add_16_G5_G5       | DW01_add         | cla                |                |
+| add_16_G6_G5       | DW01_add         | cla                |                |
+| add_16_G7_G5       | DW01_add         | cla                |                |
+| add_16_G8_G5       | DW01_add         | cla                |                |
+| add_16_G6          | DW01_add         | cla                |                |
+| add_16_G2_G6       | DW01_add         | cla                |                |
+| add_16_G3_G6       | DW01_add         | cla                |                |
+| add_16_G4_G6       | DW01_add         | cla                |                |
+| add_16_G5_G6       | DW01_add         | cla                |                |
+| add_16_G6_G6       | DW01_add         | cla                |                |
+| add_16_G7_G6       | DW01_add         | cla                |                |
+| add_16_G8_G6       | DW01_add         | cla                |                |
+| add_16_G7          | DW01_add         | cla                |                |
+| add_16_G2_G7       | DW01_add         | cla                |                |
+| add_16_G3_G7       | DW01_add         | cla                |                |
+| add_16_G4_G7       | DW01_add         | cla                |                |
+| add_16_G5_G7       | DW01_add         | cla                |                |
+| add_16_G6_G7       | DW01_add         | cla                |                |
+| add_16_G7_G7       | DW01_add         | cla                |                |
+| add_16_G8_G7       | DW01_add         | cla                |                |
+| add_16_G8          | DW01_add         | cla                |                |
+| add_16_G2_G8       | DW01_add         | cla                |                |
+| add_16_G3_G8       | DW01_add         | cla                |                |
+| add_16_G4_G8       | DW01_add         | cla                |                |
+| add_16_G5_G8       | DW01_add         | cla                |                |
+| add_16_G6_G8       | DW01_add         | cla                |                |
+| add_16_G7_G8       | DW01_add         | cla                |                |
+| add_16_G8_G8       | DW01_add         | cla                |                |
 ===============================================================================
 
 
@@ -4245,7 +4245,7 @@ No implementations to report
 Design : PU_idx_buffer_12
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4263,8 +4263,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -4279,9 +4279,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -4296,7 +4296,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -4398,7 +4398,7 @@ No implementations to report
 Design : PU_idx_buffer_13
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4416,8 +4416,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -4432,9 +4432,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -4449,7 +4449,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -4551,7 +4551,7 @@ No implementations to report
 Design : PU_idx_buffer_14
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4569,8 +4569,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
 
@@ -4585,9 +4585,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
 
@@ -4602,7 +4602,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -4704,7 +4704,7 @@ No implementations to report
 Design : PU_idx_buffer_15
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4754,8 +4754,8 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
+| add_239            | DW01_inc         | cla                |                |
 | sub_108            | DW01_sub         | rpl                |                |
-| add_239            | DW01_inc         | rpl                |                |
 ===============================================================================
 
  
@@ -4763,7 +4763,7 @@ Implementation Report
 Design : PU_repetition_weight_buffer_15
 ****************************************
 Resource Sharing Report for design PU_repetition_weight_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_repetition_weight_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_repetition_weight_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4792,9 +4792,9 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| sub_55             | DW01_dec         | rpl                |                |
-| sub_57             | DW01_dec         | rpl                |                |
-| add_206            | DW01_inc         | rpl                |                |
+| add_206            | DW01_inc         | cla                |                |
+| sub_57             | DW01_dec         | cla                |                |
+| sub_55             | DW01_dec         | cla                |                |
 ===============================================================================
 
  
@@ -4802,7 +4802,7 @@ Implementation Report
 Design : PU_unique_weight_buffer_15
 ****************************************
 Resource Sharing Report for design PU_unique_weight_buffer_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/PU_unique_weight_buffer.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/PU_unique_weight_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4822,7 +4822,7 @@ Implementation Report
 |                    |                  | Current            | Set            |
 | Cell               | Module           | Implementation     | Implementation |
 ===============================================================================
-| add_205            | DW01_inc         | rpl                |                |
+| add_205            | DW01_inc         | cla                |                |
 ===============================================================================
 
 
@@ -4838,7 +4838,7 @@ No implementations to report
 Design : MPE_multiplier_15
 ****************************************
 Resource Sharing Report for design MPE_multiplier_0 in file
-        /n/calumet/v/arkhadem/DeltaNN/HDL/MPE_multiplier.sv
+        /n/calumet/v/arkhadem/DeltaNN8/HDL/MPE_multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
