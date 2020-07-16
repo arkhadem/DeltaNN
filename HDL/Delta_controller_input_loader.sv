@@ -22,7 +22,7 @@ module Delta_controller_input_loader(
 	input DRAM_DataReady,
 
 	// Input SRAM access ports
-    output [63 : 0] Input_SRAM_w_d,
+    output [127 : 0] Input_SRAM_w_d,
     output reg [31 : 0] Input_SRAM_w_addr,
     output reg [31 : 0] Input_SRAM_r_addr,
     output reg Input_SRAM_w_en,
@@ -44,9 +44,11 @@ module Delta_controller_input_loader(
 	reg [31 : 0] my_DRAM_Address;
 	reg [31 : 0] my_Input_SRAM_w_addr;
 
-    reg [63 : 0] SRAM_store;
+    reg [127 : 0] SRAM_store;
     reg first_SRAM_store;
     reg second_SRAM_store;
+    reg third_SRAM_store;
+    reg fourth_SRAM_store;
 
     reg [($clog2(`MAX_FEATURE_SIZE) - 1) : 0] T_input_size;
 
@@ -150,6 +152,10 @@ module Delta_controller_input_loader(
     		SRAM_store[31 : 0] = DRAM_ReadData;
     	end else if (second_SRAM_store == 1'b1) begin
     		SRAM_store[63 : 32] = DRAM_ReadData;
+    	end else if (third_SRAM_store == 1'b1) begin
+    		SRAM_store[95 : 64] = DRAM_ReadData;
+    	end else if (fourth_SRAM_store == 1'b1) begin
+    		SRAM_store[127 : 96] = DRAM_ReadData;
     	end
     end
 
@@ -189,20 +195,24 @@ module Delta_controller_input_loader(
 		end
 	end
 
-	parameter WAIT_FOR_START = 4'd0,
-			S_CHECK_IDX = 4'd1,
-			S_DRAM_WAIT_FIRST = 4'd2,
-			S_IDX_PLUS_FIRST = 4'd3,
-			S_DRAM_WAIT_SECOND = 4'd4,
-			S_SRAM_ST = 4'd5,
-			S_IDX_PLUS_SECOND = 4'd6,
-			S_FINISH = 4'd7,
-			B_CHECK_IDX = 4'd8,
-			B_SRAM_LD = 4'd9,
-			B_BUFF_ST = 4'd10,
-			B_IDX_PLUS = 4'd11,
-			B_FIRST_IDX_PLUS = 4'd12,
-			B_FINISH = 4'd13;
+	parameter WAIT_FOR_START = 5'd0,
+			S_CHECK_IDX = 5'd1,
+			S_DRAM_WAIT_FIRST = 5'd2,
+			S_IDX_PLUS_FIRST = 5'd3,
+			S_DRAM_WAIT_SECOND = 5'd4,
+			S_IDX_PLUS_SECOND = 5'd5,
+			S_DRAM_WAIT_THIRD = 5'd6,
+			S_IDX_PLUS_THIRD = 5'd7,
+			S_DRAM_WAIT_FOURTH = 5'd8,
+			S_SRAM_ST = 5'd9,
+			S_IDX_PLUS_FOURTH = 5'd10,
+			S_FINISH = 5'd11,
+			B_CHECK_IDX = 5'd12,
+			B_SRAM_LD = 5'd13,
+			B_BUFF_ST = 5'd14,
+			B_IDX_PLUS = 5'd15,
+			B_FIRST_IDX_PLUS = 5'd16,
+			B_FINISH = 5'd17;
 
 	reg [3:0] state, next_state;
 
@@ -236,20 +246,38 @@ module Delta_controller_input_loader(
 
             S_DRAM_WAIT_SECOND:
             	if(DRAM_DataReady == 1'b1) begin
-            		next_state = S_SRAM_ST;
+            		next_state = S_IDX_PLUS_SECOND;
             	end else begin
             		next_state = S_DRAM_WAIT_SECOND;
             	end
 
+            S_IDX_PLUS_SECOND: next_state = S_DRAM_WAIT_THIRD;
+
+            S_DRAM_WAIT_THIRD:
+            	if(DRAM_DataReady == 1'b1) begin
+            		next_state = S_IDX_PLUS_THIRD;
+            	end else begin
+            		next_state = S_DRAM_WAIT_THIRD;
+            	end
+
+            S_IDX_PLUS_THIRD: next_state = S_DRAM_WAIT_FOURTH;
+
+            S_DRAM_WAIT_FOURTH:
+            	if(DRAM_DataReady == 1'b1) begin
+            		next_state = S_SRAM_ST;
+            	end else begin
+            		next_state = S_DRAM_WAIT_FOURTH;
+            	end
+
             S_SRAM_ST: begin
             	if(Input_SRAM_w_done == 1'b1) begin        		
-	            	next_state = S_IDX_PLUS_SECOND;
+	            	next_state = S_IDX_PLUS_FOURTH;
 	            end else begin
 	            	next_state = S_SRAM_ST;
 	            end
             end
 
-            S_IDX_PLUS_SECOND: next_state = S_CHECK_IDX;
+            S_IDX_PLUS_FOURTH: next_state = S_CHECK_IDX;
 
             S_FINISH: next_state = WAIT_FOR_START;
 
@@ -288,6 +316,8 @@ module Delta_controller_input_loader(
 		i_SRAM_inc = 1'b0;
 		first_SRAM_store = 1'b0;
 		second_SRAM_store = 1'b0;
+		third_SRAM_store = 1'b0;
+		fourth_SRAM_store = 1'b0;
 		Input_SRAM_w_en = 1'b0;
 		Input_SRAM_r_en = 1'b0;
 		first_inc_enable = 1'b0;
@@ -311,11 +341,29 @@ module Delta_controller_input_loader(
 				second_SRAM_store = 1'b1;
             end
 
+            S_IDX_PLUS_SECOND: begin
+            	i_DRAM_inc = 1'b1;
+            end
+
+            S_DRAM_WAIT_THIRD: begin
+				DRAM_Read = 1'b1;
+				third_SRAM_store = 1'b1;
+            end
+
+            S_IDX_PLUS_THIRD: begin
+            	i_DRAM_inc = 1'b1;
+            end
+
+            S_DRAM_WAIT_FOURTH: begin
+				DRAM_Read = 1'b1;
+				fourth_SRAM_store = 1'b1;
+            end
+
             S_SRAM_ST: begin
             	Input_SRAM_w_en = 1'b1;
             end
 
-            S_IDX_PLUS_SECOND: begin
+            S_IDX_PLUS_FOURTH: begin
             	i_SRAM_inc = 1'b1;
             	i_DRAM_inc = 1'b1;
             end
@@ -351,6 +399,8 @@ module Delta_controller_input_loader(
 				i_SRAM_inc = 1'b0;
 				first_SRAM_store = 1'b0;
 				second_SRAM_store = 1'b0;
+				third_SRAM_store = 1'b0;
+				fourth_SRAM_store = 1'b0;
 				first_inc_enable = 1'b0;
 				add_inc_enable = 1'b0;
 				add_inc_reset = 1'b0;

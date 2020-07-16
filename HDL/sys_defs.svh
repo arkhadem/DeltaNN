@@ -1,8 +1,8 @@
 `ifndef __SYS_DEFS_V__
 `define __SYS_DEFS_V__
 
-`define BIN_LEN 8
-`define OUT_BIN_LEN 16
+`define BIN_LEN 16
+`define OUT_BIN_LEN 24
 `define INPUT_CHANNEL 4
 `define OUTPUT_CHANNEL 4
 `define KERNEL_WIDTH 16
