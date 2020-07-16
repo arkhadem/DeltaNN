@@ -25,7 +25,7 @@ module Weight_SRAM_controller (
     reg [4 : 0] row_turn;
 
     for (row_itr = 0; row_itr < 25; row_itr++) begin: Weight_SRAM_banks
-        sram_32_2048_scn4m_subm sram_32_2048_scn4m_subm_inst(
+        sram_32_2048_freepdk45 sram_32_2048_freepdk45_inst(
             .clk0(clock),
             .csb0(~chip_select[row_itr]),
             .web0(~write_enable[row_itr]),
