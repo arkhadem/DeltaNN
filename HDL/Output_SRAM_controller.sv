@@ -30,7 +30,7 @@ module Output_SRAM_controller (
 
     for (row_itr = 0; row_itr < 6; row_itr++) begin: Output_SRAM_banks_row
         for (column_itr = 0; column_itr < 2; column_itr++) begin: Output_SRAM_banks_column
-            sram_32_2048_scn4m_subm sram_32_2048_scn4m_subm_inst(
+            sram_32_2048_freepdk45 sram_32_2048_freepdk45_inst(
                 .clk0(clock),
                 .csb0(~chip_select[row_itr]),
                 .web0(~write_enable[row_itr]),
