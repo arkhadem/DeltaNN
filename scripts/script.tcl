@@ -4,7 +4,7 @@
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set design_path "/n/calumet/v/arkhadem/NanGatePDK/DeltaNN4"
+set design_path "/n/calumet/v/arkhadem/NanGatePDK/DeltaNN7"
 set output_path $design_path/outputs
 set report_path $design_path/reports
 set library_path $design_path/library
@@ -31,7 +31,7 @@ read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 3
+set CLK_PERIOD 2.90
 set CLK_MEM_PERIOD 10
 
 #/***********************************************************/

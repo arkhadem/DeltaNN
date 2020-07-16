@@ -3,7 +3,7 @@
 Report : resources
 Design : DeltaAcc
 Version: O-2018.06
-Date   : Wed Jul  8 07:15:29 2020
+Date   : Thu Jul 16 04:47:45 2020
 ****************************************
 
 
@@ -15,7 +15,7 @@ No implementations to report
 Design : Delta_controller
 ****************************************
 Resource Sharing Report for design Delta_controller in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Delta_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Delta_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -52,7 +52,7 @@ No implementations to report
 Design : Delta_controller_weight_manager
 ****************************************
 Resource Sharing Report for design Delta_controller_weight_manager in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Delta_controller_weight_manager.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Delta_controller_weight_manager.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -90,7 +90,7 @@ Implementation Report
 Design : Delta_controller_output_extractor
 ****************************************
 Resource Sharing Report for design Delta_controller_output_extractor in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Delta_controller_output_extractor.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Delta_controller_output_extractor.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -149,7 +149,7 @@ Implementation Report
 Design : Delta_controller_input_loader
 ****************************************
 Resource Sharing Report for design Delta_controller_input_loader in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Delta_controller_input_loader.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Delta_controller_input_loader.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -221,7 +221,7 @@ Implementation Report
 Design : Delta_controller_bias_loader
 ****************************************
 Resource Sharing Report for design Delta_controller_bias_loader in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Delta_controller_bias_loader.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Delta_controller_bias_loader.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -295,7 +295,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_0
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -792,7 +792,7 @@ No implementations to report
 Design : PU_idx_buffer_0
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -945,7 +945,7 @@ No implementations to report
 Design : PU_idx_buffer_1
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1098,7 +1098,7 @@ No implementations to report
 Design : PU_idx_buffer_2
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1251,7 +1251,7 @@ No implementations to report
 Design : PU_idx_buffer_3
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1412,7 +1412,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_1
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -1909,7 +1909,7 @@ No implementations to report
 Design : PU_idx_buffer_4
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2062,7 +2062,7 @@ No implementations to report
 Design : PU_idx_buffer_5
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2215,7 +2215,7 @@ No implementations to report
 Design : PU_idx_buffer_6
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2368,7 +2368,7 @@ No implementations to report
 Design : PU_idx_buffer_7
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -2529,7 +2529,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_2
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3026,7 +3026,7 @@ No implementations to report
 Design : PU_idx_buffer_8
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3179,7 +3179,7 @@ No implementations to report
 Design : PU_idx_buffer_9
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3332,7 +3332,7 @@ No implementations to report
 Design : PU_idx_buffer_10
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3485,7 +3485,7 @@ No implementations to report
 Design : PU_idx_buffer_11
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3638,7 +3638,7 @@ No implementations to report
 Design : PU_controller_3
 ****************************************
 Resource Sharing Report for design PU_controller_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -3661,7 +3661,7 @@ No implementations to report
 Design : PU_WB_SRAM_controller_3
 ****************************************
 Resource Sharing Report for design PU_WB_SRAM_controller_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_WB_SRAM_controller.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_WB_SRAM_controller.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4042,7 +4042,7 @@ No implementations to report
 Design : Pool_array_15
 ****************************************
 Resource Sharing Report for design Pool_array_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/Pool_array.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/Pool_array.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4072,7 +4072,7 @@ No implementations to report
 Design : APE_adder_15
 ****************************************
 Resource Sharing Report for design APE_adder_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/APE_adder.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/APE_adder.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4245,7 +4245,7 @@ No implementations to report
 Design : PU_idx_buffer_12
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4398,7 +4398,7 @@ No implementations to report
 Design : PU_idx_buffer_13
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4551,7 +4551,7 @@ No implementations to report
 Design : PU_idx_buffer_14
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4704,7 +4704,7 @@ No implementations to report
 Design : PU_idx_buffer_15
 ****************************************
 Resource Sharing Report for design PU_idx_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_idx_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_idx_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4763,7 +4763,7 @@ Implementation Report
 Design : PU_repetition_weight_buffer_15
 ****************************************
 Resource Sharing Report for design PU_repetition_weight_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_repetition_weight_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_repetition_weight_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4802,7 +4802,7 @@ Implementation Report
 Design : PU_unique_weight_buffer_15
 ****************************************
 Resource Sharing Report for design PU_unique_weight_buffer_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/PU_unique_weight_buffer.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/PU_unique_weight_buffer.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
@@ -4838,7 +4838,7 @@ No implementations to report
 Design : MPE_multiplier_15
 ****************************************
 Resource Sharing Report for design MPE_multiplier_0 in file
-        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN4/HDL/MPE_multiplier.sv
+        /n/calumet/v/arkhadem/NanGatePDK/DeltaNN7/HDL/MPE_multiplier.sv
 
 ===============================================================================
 |          |              |            | Contained     |                      |
