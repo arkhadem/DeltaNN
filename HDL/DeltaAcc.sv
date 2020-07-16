@@ -91,9 +91,9 @@ module DeltaAcc(
     genvar PU_itr, IBuff_itr;
 
     // Input SRAM ports
-    wire [63 : 0] Input_SRAM_w_d;
+    wire [127 : 0] Input_SRAM_w_d;
     wire [31 : 0] Input_SRAM_w_addr;
-    wire [63 : 0] Input_SRAM_r_d;
+    wire [127 : 0] Input_SRAM_r_d;
     wire [31 : 0] Input_SRAM_r_addr;
     wire Input_SRAM_w_en;
     wire Input_SRAM_r_en;

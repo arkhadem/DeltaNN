@@ -4,7 +4,7 @@
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set design_path "/n/calumet/v/arkhadem/NanGatePDK/DeltaNN7"
+set design_path "/n/calumet/v/arkhadem/NanGatePDK/DeltaNN"
 set output_path $design_path/outputs
 set report_path $design_path/reports
 set library_path $design_path/library
@@ -17,7 +17,7 @@ set source_path $design_path/HDL
 #/***********************************************************/
 set SYN_DIR ./
 # set target_library "/afs/eecs.umich.edu/kits/ARM/IBM_soi12s0/sc12_hvt/db-ccs/sc12_base_v31_hvt_soi12s0_ffl_nominal_min_1p10v_125c_mns.db_ccs"
-set target_library [list $library_path/NangateOpenCellLibrary45_typical_ccs.db /n/calumet/v/arkhadem/DeltaNN/memory/sram_32_2048_scn4m_subm_TT_5p0V_25C.db]
+set target_library [list $library_path/NangateOpenCellLibrary45_typical_ccs.db /n/calumet/v/arkhadem/DeltaNN/memory/sram_32_2048_freepdk45_TT_1p0V_25C.db]
 
 set link_library [concat  "*" $target_library]
 

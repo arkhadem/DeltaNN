@@ -67,7 +67,7 @@ module Delta_controller(
     input Weight_SRAM_w_done,
 
     // Input SRAM ports
-    output [63 : 0] Input_SRAM_w_d,
+    output [127 : 0] Input_SRAM_w_d,
     output [31 : 0] Input_SRAM_w_addr,
     output [31 : 0] Input_SRAM_r_addr,
     output Input_SRAM_w_en,
