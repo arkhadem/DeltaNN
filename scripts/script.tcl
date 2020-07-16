@@ -4,7 +4,7 @@
 #/*   Usage       : dc_shell -tcl_mode -f script.scr          */
 #/*   You'll need to minimally set design_name & read files */
 #/***********************************************************/
-set design_path "/n/calumet/v/arkhadem/DeltaNN8"
+set design_path "/n/calumet/v/arkhadem/DeltaNN"
 set output_path $design_path/outputs
 set report_path $design_path/reports
 set library_path $design_path/library
