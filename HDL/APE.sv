@@ -63,7 +63,7 @@ module APE(
 	Pool_array Pool_array_inst (
 		.clock(clock),
 		.reset(reset),
-		.finish(finish),
+		// .finish(finish),
 		.AF_outputs(AF_outputs),
 		.Pool_type(Pool_type),
 		.Pool_stride(Pool_stride),
