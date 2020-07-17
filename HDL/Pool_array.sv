@@ -4,7 +4,7 @@ module Pool_array (
 	input clock,
 	input reset,
 	
-	input finish,
+	// input finish,
 	input [(`OUT_BIN_LEN - 1) : 0] AF_outputs [(`OUTPUT_HEIGHT - 1) : 0][(`OUTPUT_WIDTH - 1) : 0],
 	input [1 : 0] Pool_type,
 	input [2 : 0] Pool_stride,
@@ -19,35 +19,35 @@ module Pool_array (
     reg [(`OUT_BIN_LEN - 1) : 0] AF_outputs_pooled [(`OUTPUT_HEIGHT - 1) : 0][(`OUTPUT_WIDTH - 1) : 0];
 
 	always@(*) begin
-		if(finish) begin
-			for (int i = 0; i < `OUTPUT_HEIGHT; i++) begin
-				for (int j = 0; j < `OUTPUT_WIDTH; j++) begin
-					// for each output
-					case (Pool_type)
-						`POOL_NONE: AF_outputs_pooled[i][j] = AF_outputs[i][j];
-						`POOL_MAX: begin
-							AF_outputs_pooled[i][j] = Pool_stride + Pool_kernel_size;	//fake
-							// for (int k_r = 0; k_r < Pool_kernel_size; k_r++) begin
-							// 	for (int k_c = 0; k_c < Pool_kernel_size; k_c++) begin
-							// 		if(AF_outputs_pooled[i][j] < AF_outputs[k_r][k_c]) begin // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
-							// 			AF_outputs_pooled[i][j] = AF_outputs[k_r][k_c]; // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
-							// 		end else begin
-							// 			AF_outputs_pooled[i][j] = AF_outputs_pooled[i][j];
-							// 		end
-							// 	end
-							// end
-						end
-						default : AF_outputs_pooled[i][j] = 0;
-					endcase
-				end
-			end
-		end else begin
-			for (int i = 0; i < `OUTPUT_HEIGHT; i++) begin
-				for (int j = 0; j < `OUTPUT_WIDTH; j++) begin
-					AF_outputs_pooled[i][j] = {`OUT_BIN_LEN{1'bz}};
-				end
+		// if(finish) begin
+		for (int i = 0; i < `OUTPUT_HEIGHT; i++) begin
+			for (int j = 0; j < `OUTPUT_WIDTH; j++) begin
+				// for each output
+				case (Pool_type)
+					`POOL_NONE: AF_outputs_pooled[i][j] = AF_outputs[i][j];
+					`POOL_MAX: begin
+						AF_outputs_pooled[i][j] = Pool_stride + Pool_kernel_size;	//fake
+						// for (int k_r = 0; k_r < Pool_kernel_size; k_r++) begin
+						// 	for (int k_c = 0; k_c < Pool_kernel_size; k_c++) begin
+						// 		if(AF_outputs_pooled[i][j] < AF_outputs[k_r][k_c]) begin // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c]) begin
+						// 			AF_outputs_pooled[i][j] = AF_outputs[k_r][k_c]; // AF_outputs[(i*Pool_stride)+k_r][(j*Pool_stride)+k_c];
+						// 		end else begin
+						// 			AF_outputs_pooled[i][j] = AF_outputs_pooled[i][j];
+						// 		end
+						// 	end
+						// end
+					end
+					default : AF_outputs_pooled[i][j] = 0;
+				endcase
 			end
 		end
+		// end else begin
+		// 	for (int i = 0; i < `OUTPUT_HEIGHT; i++) begin
+		// 		for (int j = 0; j < `OUTPUT_WIDTH; j++) begin
+		// 			AF_outputs_pooled[i][j] = {`OUT_BIN_LEN{1'bz}};
+		// 		end
+		// 	end
+		// end
 	end
 
 	always@(posedge clock) begin
