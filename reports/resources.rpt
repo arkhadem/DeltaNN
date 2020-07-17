@@ -3,7 +3,7 @@
 Report : resources
 Design : DeltaAcc
 Version: O-2018.06
-Date   : Fri Jul 17 05:17:15 2020
+Date   : Fri Jul 17 10:44:58 2020
 ****************************************
 
 
@@ -5129,48 +5129,77 @@ Resource Sharing Report for design MPE_in2out_0 in file
 |          |              |            | Contained     |                      |
 | Resource | Module       | Parameters | Resources     | Contained Operations |
 ===============================================================================
-| r42117   | DW01_inc     | width=5    |               | add_16_2_G2_G1       |
-|          |              |            |               | add_16_2_G2_G2       |
-|          |              |            |               | add_16_2_G2_G3       |
-|          |              |            |               | add_16_2_G2_G4       |
-| r42118   | DW01_add     | width=5    |               | add_16_2_G3_G1       |
+| r42176   | DW01_add     | width=5    |               | add_16_4_G2_G1       |
+|          |              |            |               | add_16_4_G2_G3       |
+|          |              |            |               | add_16_4_G2_G5       |
+|          |              |            |               | add_16_4_G2_G7       |
+| r42178   | DW01_add     | width=5    |               | add_16_4_G3_G1       |
+|          |              |            |               | add_16_4_G3_G3       |
+|          |              |            |               | add_16_4_G3_G5       |
+|          |              |            |               | add_16_4_G3_G7       |
+| r42180   | DW01_add     | width=5    |               | add_16_4_G4_G1       |
+|          |              |            |               | add_16_4_G4_G3       |
+|          |              |            |               | add_16_4_G4_G5       |
+|          |              |            |               | add_16_4_G4_G7       |
+| r42181   | DW01_add     | width=5    |               | add_16_2_G5_G1       |
+|          |              |            |               | add_16_2_G6_G1       |
+|          |              |            |               | add_16_2_G7_G1       |
+|          |              |            |               | add_16_2_G8_G1       |
+| r42183   | DW01_add     | width=5    |               | add_16_4_G5_G1       |
+|          |              |            |               | add_16_4_G5_G3       |
+|          |              |            |               | add_16_4_G5_G5       |
+|          |              |            |               | add_16_4_G5_G7       |
+| r42185   | DW01_add     | width=5    |               | add_16_4_G6_G1       |
+|          |              |            |               | add_16_4_G6_G3       |
+|          |              |            |               | add_16_4_G6_G5       |
+|          |              |            |               | add_16_4_G6_G7       |
+| r42187   | DW01_add     | width=5    |               | add_16_4_G7_G1       |
+|          |              |            |               | add_16_4_G7_G3       |
+|          |              |            |               | add_16_4_G7_G5       |
+|          |              |            |               | add_16_4_G7_G7       |
+| r42189   | DW01_add     | width=5    |               | add_16_4_G8_G1       |
+|          |              |            |               | add_16_4_G8_G3       |
+|          |              |            |               | add_16_4_G8_G5       |
+|          |              |            |               | add_16_4_G8_G7       |
+| r42190   | DW01_add     | width=5    |               | add_16_2_G2          |
 |          |              |            |               | add_16_2_G3_G2       |
-|          |              |            |               | add_16_2_G3_G3       |
-|          |              |            |               | add_16_2_G3_G4       |
-| r42119   | DW01_add     | width=5    |               | add_16_2_G4_G1       |
-|          |              |            |               | add_16_2_G4_G2       |
-|          |              |            |               | add_16_2_G4_G3       |
-|          |              |            |               | add_16_2_G4_G4       |
-| r42120   | DW01_add     | width=5    |               | add_16_2_G5_G1       |
 |          |              |            |               | add_16_2_G5_G2       |
-|          |              |            |               | add_16_2_G5_G3       |
-|          |              |            |               | add_16_2_G5_G4       |
-| r42121   | DW01_add     | width=5    |               | add_16_2_G6_G1       |
-|          |              |            |               | add_16_2_G6_G2       |
-|          |              |            |               | add_16_2_G6_G3       |
-|          |              |            |               | add_16_2_G6_G4       |
-| r42122   | DW01_add     | width=5    |               | add_16_2_G7_G1       |
 |          |              |            |               | add_16_2_G7_G2       |
+| r42191   | DW01_add     | width=5    |               | add_16_2_G3          |
+|          |              |            |               | add_16_2_G3_G3       |
+|          |              |            |               | add_16_2_G5_G3       |
 |          |              |            |               | add_16_2_G7_G3       |
+| r42192   | DW01_add     | width=5    |               | add_16_2_G3_G4       |
+|          |              |            |               | add_16_2_G4          |
+|          |              |            |               | add_16_2_G5_G4       |
 |          |              |            |               | add_16_2_G7_G4       |
-| r42123   | DW01_add     | width=5    |               | add_16_2_G8_G1       |
-|          |              |            |               | add_16_2_G8_G2       |
-|          |              |            |               | add_16_2_G8_G3       |
-|          |              |            |               | add_16_2_G8_G4       |
-| r42124   | DW01_inc     | width=4    |               | add_16_G2            |
-|          |              |            |               | add_16_G2_G2         |
-| r42125   | DW01_add     | width=4    |               | add_16_G2_G3         |
-|          |              |            |               | add_16_G3            |
-| r42126   | DW01_add     | width=4    |               | add_16_G2_G4         |
-|          |              |            |               | add_16_G4            |
-| r42127   | DW01_add     | width=4    |               | add_16_G2_G5         |
-|          |              |            |               | add_16_G5            |
-| r42128   | DW01_add     | width=4    |               | add_16_G2_G6         |
-|          |              |            |               | add_16_G6            |
-| r42129   | DW01_add     | width=4    |               | add_16_G2_G7         |
-|          |              |            |               | add_16_G7            |
-| r42130   | DW01_add     | width=4    |               | add_16_G2_G8         |
-|          |              |            |               | add_16_G8            |
+| r42193   | DW01_add     | width=5    |               | add_16_2_G3_G5       |
+|          |              |            |               | add_16_2_G5          |
+|          |              |            |               | add_16_2_G5_G5       |
+|          |              |            |               | add_16_2_G7_G5       |
+| r42194   | DW01_add     | width=5    |               | add_16_4_G5          |
+|          |              |            |               | add_16_4_G6          |
+|          |              |            |               | add_16_4_G7          |
+|          |              |            |               | add_16_4_G8          |
+| r42195   | DW01_add     | width=5    |               | add_16_2_G3_G6       |
+|          |              |            |               | add_16_2_G5_G6       |
+|          |              |            |               | add_16_2_G6          |
+|          |              |            |               | add_16_2_G7_G6       |
+| r42196   | DW01_add     | width=5    |               | add_16_2_G3_G7       |
+|          |              |            |               | add_16_2_G5_G7       |
+|          |              |            |               | add_16_2_G7          |
+|          |              |            |               | add_16_2_G7_G7       |
+| r42197   | DW01_add     | width=5    |               | add_16_2_G3_G8       |
+|          |              |            |               | add_16_2_G5_G8       |
+|          |              |            |               | add_16_2_G7_G8       |
+|          |              |            |               | add_16_2_G8          |
+| r42206   | DW01_inc     | width=4    |               | add_16_3_G2_G1       |
+| r42208   | DW01_add     | width=4    |               | add_16_3_G3_G1       |
+| r42210   | DW01_add     | width=4    |               | add_16_3_G4_G1       |
+| r42212   | DW01_add     | width=4    |               | add_16_3_G5_G1       |
+| r42214   | DW01_add     | width=4    |               | add_16_3_G6_G1       |
+| r42216   | DW01_add     | width=4    |               | add_16_3_G7_G1       |
+| r42218   | DW01_add     | width=4    |               | add_16_3_G8_G1       |
 ===============================================================================
 
 

@@ -31,7 +31,7 @@ read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 3.20
+set CLK_PERIOD 3.12
 set CLK_MEM_PERIOD 10
 
 #/***********************************************************/
@@ -118,7 +118,7 @@ set my_output_delay_ns 0
 #/* Set some flags for optimization */
 
 set compile_top_all_paths "true"
-set auto_wire_load_selection "false"
+set auto_wire_load_selection "true"
 
 
 #/***********************************************************/
