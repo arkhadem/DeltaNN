@@ -31,7 +31,7 @@ read_file -f sverilog $src_files
 set clock_name clock
 set clock_name_mem clock_mem
 set reset_name reset
-set CLK_PERIOD 2.50
+set CLK_PERIOD 3.20
 set CLK_MEM_PERIOD 10
 
 #/***********************************************************/
