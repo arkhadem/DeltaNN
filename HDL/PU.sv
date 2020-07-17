@@ -233,7 +233,7 @@ module processing_unit(
             .clock(clock),
             .reset(reset),
 
-            .enable(APE_enable[j]),       // shows if we don't have stall
+            .enable(APE_enable[j]&channel_en[j]),       // shows if we don't have stall
             .finish(total_finished),       // shows if indices are finished
 
             .AF_type(AF_type),
@@ -258,7 +258,6 @@ module processing_unit(
         .clock(clock),
         .reset(reset),
 
-        .WB_SRAM_in(WB_SRAM_in),
         .WB_SRAM_ready(WB_SRAM_ready),
         .WB_SRAM_read(WB_SRAM_read),
         .WB_SRAM_address(WB_SRAM_address),

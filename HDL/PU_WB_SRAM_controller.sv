@@ -4,7 +4,6 @@ module PU_WB_SRAM_controller (
     input clock,
     input reset,
 
-    input [(`WEIGHT_SRAM_LEN - 1) : 0] WB_SRAM_in,
     input WB_SRAM_ready,
     output reg WB_SRAM_read,
     output reg [31 : 0] WB_SRAM_address,

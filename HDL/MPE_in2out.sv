@@ -2,7 +2,7 @@
 
 module MPE_in2out(
 	input [(`BIN_LEN - 1) : 0] in_vals [(`INPUT_HEIGHT - 1) : 0][(`INPUT_WIDTH - 1) : 0],
-	input [(`BIN_LEN - 1) : 0] out_vals [(`OUTPUT_HEIGHT - 1) : 0][(`OUTPUT_WIDTH - 1) : 0],
+	output [(`BIN_LEN - 1) : 0] out_vals [(`OUTPUT_HEIGHT - 1) : 0][(`OUTPUT_WIDTH - 1) : 0],
 	input [($clog2(`KERNEL_HEIGHT) - 1) : 0] weight_height, 
 	input [($clog2(`KERNEL_WIDTH) - 1) : 0] weight_width,
 	input [2 : 0] stride

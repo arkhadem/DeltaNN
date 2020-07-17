@@ -16,17 +16,10 @@ module Delta_controller(
     input [3 : 0] kernel_size,
     input [2 : 0] stride,
 
-    input [($clog2(`MAX_WEIGHT_DELTA_LEN) - 1) : 0] weight_delta_len,
-    input [($clog2(`MAX_WEIGHT_NUM_LEN) - 1) : 0] weight_num_len,
-    input [($clog2(`MAX_IDX_DELTA_LEN) - 1) : 0] idx_delta_len,
-
     input load_input,
 	input store_output,
 
 	input [31 : 0] weight_start_address,
-	input [31 : 0] weight_idx_start_offset,
-	input [31 : 0] weight_unique_start_offset,
-	input [31 : 0] weight_repetition_start_offset,
 	input [31 : 0] bias_start_address,
 	input [31 : 0] input_start_address,
 	input [31 : 0] output_start_address,
@@ -76,8 +69,8 @@ module Delta_controller(
     input Input_SRAM_w_done,
 
     // Output SRAM ports
-    output [63 : 0] Output_SRAM_w_d,
-    input [63 : 0] Output_SRAM_r_d,
+    output [127 : 0] Output_SRAM_w_d,
+    input [127 : 0] Output_SRAM_r_d,
     output [31 : 0] Output_SRAM_w_addr,
     output [31 : 0] Output_SRAM_r_addr,
     output Output_SRAM_w_en,
@@ -116,7 +109,6 @@ module Delta_controller(
 		.reset(reset),
 		.start(start_bias_load),
 
-		.OC_Num(OC_Num),
 	    .ORC_Size(ORC_Size),
 
 	    .bias_start_address(bias_start_address),
