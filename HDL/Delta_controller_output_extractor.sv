@@ -19,8 +19,8 @@ module Delta_controller_output_extractor(
     output reg [($clog2(`OUTPUT_WIDTH) - 1) : 0] OB_SRAM_c_out,
 
     // Output SRAM ports
-    output [63 : 0] Output_SRAM_w_d,
-    input [63 : 0] Output_SRAM_r_d,
+    output [127 : 0] Output_SRAM_w_d,
+    input [127 : 0] Output_SRAM_r_d,
     output [31 : 0] Output_SRAM_w_addr,
     output [31 : 0] Output_SRAM_r_addr,
     output reg Output_SRAM_w_en,
@@ -46,6 +46,8 @@ module Delta_controller_output_extractor(
     reg [63 : 0] SRAM_store;
     reg first_SRAM_store;
     reg second_SRAM_store;
+    reg third_SRAM_store;
+    reg fourth_SRAM_store;
 
 	reg [(`MAX_OUTPUT_CHANNEL - 1) : 0] o_ch_1, o_ch_first;
 	reg [(`MAX_FEATURE_SIZE - 1) : 0] o_r_1, o_r_first;
@@ -109,9 +111,9 @@ module Delta_controller_output_extractor(
 			o_r_2 = 0;
 			o_c_2 = 0;			
 		end else if(add_inc_enable == 1'b1) begin
-			if(o_c_2 == `OUTPUT_WIDTH) begin
+			if(o_c_2 == (`OUTPUT_WIDTH - 1)) begin
 				o_c_2 = 0;
-				if(o_r_2 == `OUTPUT_HEIGHT) begin
+				if(o_r_2 == (`OUTPUT_HEIGHT - 1)) begin
 					o_r_2 = 0;
 					o_ch_2 = o_ch_2 + 1;
 					my_Output_SRAM_add_address = my_Output_SRAM_add_address + my_ORC_Size - `OUTPUT_HEIGHT; // (my_ORC_Size * my_ORC_Size) - (`OUTPUT_HEIGHT * `OUTPUT_WIDTH);
@@ -156,6 +158,10 @@ module Delta_controller_output_extractor(
     		DRAM_WriteData = Output_SRAM_r_d[31 : 0];
     	end else if (second_SRAM_store == 1'b1) begin
     		DRAM_WriteData = Output_SRAM_r_d[63 : 32];
+    	end else if (third_SRAM_store == 1'b1) begin
+    		DRAM_WriteData = Output_SRAM_r_d[95 : 64];
+    	end else if (fourth_SRAM_store == 1'b1) begin
+    		DRAM_WriteData = Output_SRAM_r_d[127 : 96];
     	end
     end
 
@@ -195,23 +201,27 @@ module Delta_controller_output_extractor(
 		end
 	end
 
-	parameter WAIT_FOR_START = 4'd0,
-			S_CHECK_IDX = 4'd1,
-			S_SRAM_LD = 4'd2,
-			S_DRAM_WAIT_FIRST = 4'd3,
-			S_IDX_PLUS_FIRST = 4'd4,
-			S_DRAM_WAIT_SECOND = 4'd5,
-			S_IDX_PLUS_SECOND = 4'd6,
-			S_FINISH = 4'd7,
+	parameter WAIT_FOR_START = 5'd0,
+			S_CHECK_IDX = 5'd1,
+			S_SRAM_LD = 5'd2,
+			S_DRAM_WAIT_FIRST = 5'd3,
+			S_IDX_PLUS_FIRST = 5'd4,
+			S_DRAM_WAIT_SECOND = 5'd5,
+			S_IDX_PLUS_SECOND = 5'd6,
+			S_DRAM_WAIT_THIRD = 5'd7,
+			S_IDX_PLUS_THIRD = 5'd8,
+			S_DRAM_WAIT_FOURTH = 5'd9,
+			S_IDX_PLUS_FOURTH = 5'd10,
+			S_FINISH = 5'd11,
 
-			B_CHECK_IDX = 4'd8,
-			B_BUFF_LD = 4'd9,
-			B_SRAM_ST = 4'd10,
-			B_IDX_PLUS = 4'd11,
-			B_FIRST_IDX_PLUS = 4'd12,
-			B_FINISH = 4'd13;
+			B_CHECK_IDX = 5'd12,
+			B_BUFF_LD = 5'd13,
+			B_SRAM_ST = 5'd14,
+			B_IDX_PLUS = 5'd15,
+			B_FIRST_IDX_PLUS = 5'd16,
+			B_FINISH = 5'd17;
 
-	reg [3:0] state, next_state;
+	reg [4:0] state, next_state;
 
     always@(*) begin
         next_state = WAIT_FOR_START;
@@ -255,12 +265,30 @@ module Delta_controller_output_extractor(
             		next_state = S_DRAM_WAIT_SECOND;
             	end
 
-            S_IDX_PLUS_SECOND: next_state = S_CHECK_IDX;
+            S_IDX_PLUS_SECOND: next_state = S_DRAM_WAIT_THIRD;
+
+            S_DRAM_WAIT_THIRD:
+            	if(DRAM_WriteDone == 1'b1) begin
+            		next_state = S_IDX_PLUS_THIRD;
+            	end else begin
+            		next_state = S_DRAM_WAIT_THIRD;
+            	end
+
+            S_IDX_PLUS_THIRD: next_state = S_DRAM_WAIT_FOURTH;
+
+            S_DRAM_WAIT_FOURTH:
+            	if(DRAM_WriteDone == 1'b1) begin
+            		next_state = S_IDX_PLUS_FOURTH;
+            	end else begin
+            		next_state = S_DRAM_WAIT_FOURTH;
+            	end
+
+            S_IDX_PLUS_FOURTH: next_state = S_CHECK_IDX;
 
             S_FINISH: next_state = WAIT_FOR_START;
 
 			B_CHECK_IDX: begin
-				if((o_ch_2 == 16) && (o_r_2 == `OUTPUT_HEIGHT) && (o_c_2 == `OUTPUT_WIDTH)) begin
+				if((o_ch_2 == 16) && (o_r_2 == (`OUTPUT_HEIGHT-1)) && (o_c_2 == (`OUTPUT_WIDTH-1))) begin
             		next_state = B_FIRST_IDX_PLUS;
             	end else begin
             		next_state = B_BUFF_LD;
@@ -293,6 +321,8 @@ module Delta_controller_output_extractor(
 		o_SRAM_inc = 1'b0;
 		first_SRAM_store = 1'b0;
 		second_SRAM_store = 1'b0;
+		third_SRAM_store = 1'b0;
+		fourth_SRAM_store = 1'b0;
 		Output_SRAM_w_en = 1'b0;
 		Output_SRAM_r_en = 1'b0;
 		first_inc_enable = 1'b0;
@@ -321,6 +351,25 @@ module Delta_controller_output_extractor(
             end
 
             S_IDX_PLUS_SECOND: begin
+            	o_SRAM_inc = 1'b1;
+            	o_DRAM_inc = 1'b1;
+            end
+
+            S_DRAM_WAIT_THIRD: begin
+				DRAM_Write = 1'b1;
+				third_SRAM_store = 1'b1;
+            end
+
+            S_IDX_PLUS_THIRD: begin
+            	o_DRAM_inc = 1'b1;
+            end
+
+            S_DRAM_WAIT_FOURTH: begin
+				DRAM_Write = 1'b1;
+				fourth_SRAM_store = 1'b1;
+            end
+
+            S_IDX_PLUS_FOURTH: begin
             	o_SRAM_inc = 1'b1;
             	o_DRAM_inc = 1'b1;
             end
@@ -357,6 +406,8 @@ module Delta_controller_output_extractor(
 				o_SRAM_inc = 1'b0;
 				first_SRAM_store = 1'b0;
 				second_SRAM_store = 1'b0;
+				third_SRAM_store = 1'b0;
+				fourth_SRAM_store = 1'b0;
 				first_inc_enable = 1'b0;
 				add_inc_enable = 1'b0;
 				add_inc_reset = 1'b0;

@@ -101,8 +101,8 @@ module DeltaAcc(
     wire Input_SRAM_w_done;
 
     // Output SRAM ports
-    wire [63 : 0] Output_SRAM_w_d;
-    wire [63 : 0] Output_SRAM_r_d;
+    wire [127 : 0] Output_SRAM_w_d;
+    wire [127 : 0] Output_SRAM_r_d;
     wire [31 : 0] Output_SRAM_w_addr;
     wire [31 : 0] Output_SRAM_r_addr;
     wire Output_SRAM_w_en;
@@ -303,17 +303,10 @@ module DeltaAcc(
 	    .kernel_size(kernel_size),
 	    .stride(stride),
 
-	    .weight_delta_len(weight_delta_len),
-	    .weight_num_len(weight_num_len),
-	    .idx_delta_len(idx_delta_len),
-
 	    .load_input(load_input),
 		.store_output(store_output),
 
 		.weight_start_address(weight_start_address),
-		.weight_idx_start_offset(weight_idx_start_offset),
-		.weight_unique_start_offset(weight_unique_start_offset),
-		.weight_repetition_start_offset(weight_repetition_start_offset),
 		.bias_start_address(bias_start_address),
 		.input_start_address(input_start_address),
 		.output_start_address(output_start_address),

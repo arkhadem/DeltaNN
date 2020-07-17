@@ -52,9 +52,9 @@ module Delta_controller_input_loader(
 
     reg [($clog2(`MAX_FEATURE_SIZE) - 1) : 0] T_input_size;
 
-	reg [(`MAX_INPUT_CHANNEL - 1) : 0] i_ch_1, i_ch_first;
-	reg [(`MAX_FEATURE_SIZE - 1) : 0] i_r_1, i_r_first;
-	reg [(`MAX_FEATURE_SIZE - 1) : 0] i_c_1, i_c_first;
+	reg [($clog2(`MAX_INPUT_CHANNEL) - 1) : 0] i_ch_1, i_ch_first;
+	reg [($clog2(`MAX_FEATURE_SIZE) - 1) : 0] i_r_1, i_r_first;
+	reg [($clog2(`MAX_FEATURE_SIZE) - 1) : 0] i_c_1, i_c_first;
 
 	reg [($clog2(`INPUT_CHANNEL) - 1) : 0] i_ch_2;
 	reg [($clog2(`INPUT_HEIGHT) - 1) : 0] i_r_2;
@@ -282,7 +282,7 @@ module Delta_controller_input_loader(
             S_FINISH: next_state = WAIT_FOR_START;
 
 			B_CHECK_IDX: begin
-				if((i_ch_2 == `INPUT_CHANNEL) && (i_r_2 == T_input_size) && (i_c_2 == T_input_size)) begin
+				if((i_ch_2 == (`INPUT_CHANNEL-1)) && (i_r_2 == T_input_size) && (i_c_2 == T_input_size)) begin
             		next_state = B_FIRST_IDX_PLUS;
             	end else begin
             		next_state = B_SRAM_LD;

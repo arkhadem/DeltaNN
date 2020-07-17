@@ -3,9 +3,9 @@ module Output_SRAM_controller (
 	input reset,
 
     input [31 : 0] w_addr,
-    input [63 : 0] w_d,
+    input [127 : 0] w_d,
     input [31 : 0] r_addr,
-    output [63 : 0] r_d,
+    output [127 : 0] r_d,
     input w_en,
     input r_en,
     output reg d_ready,
@@ -22,14 +22,14 @@ module Output_SRAM_controller (
 
     wire [10 : 0] chip_address;
 
-    wire [63 : 0] data_out [5 : 0];
+    wire [127 : 0] data_out [5 : 0];
 
     reg [2 : 0] row_turn;
 
     assign chip_address = (write_enable[row_turn] == 1) ? w_addr[10 : 0] : r_addr[10 : 0];
 
     for (row_itr = 0; row_itr < 6; row_itr++) begin: Output_SRAM_banks_row
-        for (column_itr = 0; column_itr < 2; column_itr++) begin: Output_SRAM_banks_column
+        for (column_itr = 0; column_itr < 4; column_itr++) begin: Output_SRAM_banks_column
             sram_32_2048_freepdk45 sram_32_2048_freepdk45_inst(
                 .clk0(clock),
                 .csb0(~chip_select[row_itr]),

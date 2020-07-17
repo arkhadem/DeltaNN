@@ -15,7 +15,7 @@ module PU_unique_weight_buffer (
 
     input [($clog2(`MAX_WEIGHT_DELTA_LEN) - 1) : 0] weight_delta_len,
 
-    output [(`BIN_LEN - 1) : 0] weight_val,
+    output reg [(`BIN_LEN - 1) : 0] weight_val,
     output reg weight_valid,
     output weight_abs,
     output reg busy,
@@ -37,6 +37,17 @@ module PU_unique_weight_buffer (
 	assign read_word = (my_register_valid_num < `WEIGHT_SRAM_LEN) ? 1 : 0;
 	assign weight_abs = my_register[0];
 
+    always@(*) begin
+        weight_val = 0;
+        if(my_register[0] == 1) begin
+            weight_val = my_register[`BIN_LEN : 1];
+        end else begin
+            for (int i = 0; i < weight_delta_len; i++) begin
+                weight_val[i] = my_register[1 + i];
+            end
+        end
+    end
+
 	always@(posedge clock) begin
 		if(reset) begin
 			my_register = 0;
@@ -45,9 +56,9 @@ module PU_unique_weight_buffer (
 				my_register[my_register_valid_num +: `WEIGHT_SRAM_LEN] = SRAM_in;
 			else if(word_shift)
 				if(my_register[0] == 1)
-					my_register = my_register >> `BIN_LEN;
+					my_register = my_register >> (`BIN_LEN + 1);
 				else
-					my_register = my_register >> weight_delta_len;
+					my_register = my_register >> (weight_delta_len + 1);
 		end
 	end
 
